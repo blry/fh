@@ -3,7 +3,7 @@ import { Background } from '../background/Background';
 const Footer = () => (
   <Background color="bg-neutral-600">
     <div
-      className="container flex py-5 justify-between items-center z-20 text-sm"
+      className="container flex flex-col lg:flex-row py-5 justify-between items-center z-20 text-sm"
       style={{ color: '#eeeeee' }}
     >
       <img
