@@ -12,10 +12,12 @@ const Footer = () => (
         alt="finhubss logo"
       />
 
-      <p>+4312675393</p>
-      <a href="mail:info@finhubss.com">info@finhubss.com</a>
-      <p>Finhub Software Solutions</p>
-      <p>Beatrixgasse 27, 1030 Wien, Austria</p>
+      <p className="pt-3">+4312675393</p>
+      <a className="pt-3" href="mail:info@finhubss.com">
+        info@finhubss.com
+      </a>
+      <p className="pt-3">Finhub Software Solutions</p>
+      <p className="pt-3">Beatrixgasse 27, 1030 Wien, Austria</p>
     </div>
 
     <div
