@@ -88,6 +88,16 @@ export default function Navbar() {
               {navItem}
             </a>
           ))}
+
+          {secondaryItems.map((navItem) => (
+            <a key={navItem} className="py-2" href="#">
+              {navItem}
+            </a>
+          ))}
+
+          <button className="bg-blue-700 px-4 py-2 text-neutral-white text-sm font-bold hover:button-brightness focus:outline-none focus:ring">
+            Contact Us
+          </button>
         </div>
       </div>
     </>
