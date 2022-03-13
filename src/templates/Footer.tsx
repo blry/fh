@@ -24,7 +24,7 @@ const Footer = () => (
       className="flex flex-col items-center text-center text-sm py-2"
       style={{ borderTop: '1px solid #666666', color: '#a3a3a3' }}
     >
-      <p>© 2020 - 2021 FinHub | Software Solutions</p>
+      <p>© 2020 - {new Date().getFullYear()} FinHub | Software Solutions</p>
     </div>
   </Background>
 );
