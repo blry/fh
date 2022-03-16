@@ -4,6 +4,7 @@ import { AppConfig } from '../utils/AppConfig';
 import { AboutUs } from './AboutUs';
 import { Footer } from './Footer';
 import { HomeBanner } from './HomeBanner';
+import { OtherLinks } from './OtherLinks';
 import { VerticalFeatures } from './VerticalFeatures';
 
 const Base = () => (
@@ -12,6 +13,7 @@ const Base = () => (
     <Navbar />
     <HomeBanner />
     <AboutUs />
+    <OtherLinks />
     <VerticalFeatures />
     <Footer />
   </div>
