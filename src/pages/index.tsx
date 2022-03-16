@@ -1,5 +1,15 @@
-import { Base } from '../templates/Base';
+import { AboutUs } from '../templates/AboutUs';
+import { HomeBanner } from '../templates/HomeBanner';
+import { OtherLinks } from '../templates/OtherLinks';
+import { VerticalFeatures } from '../templates/VerticalFeatures';
 
-const Index = () => <Base />;
+const Index = () => (
+  <>
+    <HomeBanner />
+    <AboutUs />
+    <OtherLinks />
+    <VerticalFeatures />
+  </>
+);
 
 export default Index;
