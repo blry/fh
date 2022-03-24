@@ -8,8 +8,7 @@ const OtherLinks = () => (
 
   <Section
     title="Your title here"
-    image="/assets/images/Symbol1.png"
-    imageAlt="symbol1"
+    image="/assets/images/symbol.svg"
   >
     <div className="w-full">
       <OtherLinksRow

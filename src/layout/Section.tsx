@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 
 type ISectionProps = {
   image?: string;
-  imageAlt?: string;
   title?: string;
   description?: string;
   yPadding?: string;
@@ -55,7 +54,7 @@ const Section = (props: ISectionProps) => {
             {props.image && (
               <img
                 src={`${router.basePath}${props.image}`}
-                alt={props.imageAlt}
+                alt={props.title}
                 style={style.logoImg}
               />
             )}
