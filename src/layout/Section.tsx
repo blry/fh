@@ -7,37 +7,41 @@ type ISectionProps = {
   title?: string;
   description?: string;
   yPadding?: string;
+  rightTitle?: string;
   children: ReactNode;
-};
-
-const style = {
-  sectionContainer: {
-    marginLeft: '-4rem',
-  },
-  content: {
-    width: '100%',
-  },
-  logoImg: {
-    height: '65px',
-    width: '36px',
-    margin: '0 auto',
-  },
-  title: {
-    margin: '0 26px',
-    backgroundColor: 'white',
-    borderBottom: '1px solid #2C4DCA',
-    lineHeight: '0',
-    padding: '0',
-    width: '100%',
-  },
-  titleSpan: {
-    background: '#fff',
-    padding: '0 15px',
-  },
 };
 
 const Section = (props: ISectionProps) => {
   const router = useRouter();
+
+  const style = {
+    sectionContainer: {
+      marginLeft: props.rightTitle ? '0' : '-4rem',
+      marginRight: props.rightTitle ? '-4rem' : '0',
+    },
+    content: {
+      width: '100%',
+      flexDirection: props.rightTitle ? 'row-reverse' : 'row',
+    },
+    logoImg: {
+      height: '65px',
+      width: '36px',
+      margin: '0 auto',
+    },
+    title: {
+      margin: '0 26px',
+      backgroundColor: 'white',
+      borderBottom: '1px solid #2C4DCA',
+      lineHeight: '0',
+      padding: '0',
+      width: '100%',
+      textAlign: props.rightTitle ? 'end' : 'start',
+    },
+    titleSpan: {
+      background: '#fff',
+      padding: '0 15px',
+    },
+  } as const;
 
   return (
     <div
