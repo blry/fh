@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import Link from 'next/link';
 
+import { ModalContactUs } from '../templates/ModalContactUs';
+
 const primaryItems = [
   'Product Development',
   'Team Extension',
@@ -11,6 +13,13 @@ const primaryItems = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [modal, setModal] = useState(false);
+
+  const ModalHandler = (e: any) => {
+    e.preventDefault();
+    setModal(!modal);
+  };
+
   return (
     <>
       <div className="fixed z-50 top-0 w-full bg-white">
@@ -51,11 +60,12 @@ export default function Navbar() {
             ))}
           </div>
 
-          <Link href="/contact-us">
-            <a className="hidden lg:block bg-blue-700 px-4 py-2 text-neutral-white text-sm font-bold hover:button-brightness focus:outline-none focus:ring">
-              Contact Us
-            </a>
-          </Link>
+          <button
+            className="hidden lg:block bg-blue-700 px-4 py-2 text-neutral-white text-sm font-bold hover:button-brightness focus:outline-none focus:ring"
+            onClick={ModalHandler}
+          >
+            Contact Us
+          </button>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -72,6 +82,7 @@ export default function Navbar() {
               alt=""
             />
           </button>
+          <ModalContactUs />
         </nav>
       </div>
 
