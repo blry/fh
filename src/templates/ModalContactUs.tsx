@@ -2,6 +2,8 @@ import React from 'react';
 
 import { useRouter } from 'next/router';
 
+import { ContactFormUs } from './ContactUsForm';
+
 // type IModalProps = {
 //   modal: React.Dispatch<React.SetStateAction<boolean>>;
 //   setModal: React.Dispatch<React.SetStateAction<any>>;
@@ -59,8 +61,11 @@ const ModalContactUs = () => {
       flexDirection: 'column' as 'column',
       alignItems: 'center',
     },
+    contentTitleText: {
+      fontSize: '21pt',
+    },
     span: {
-      width: '15px',
+      width: '21px',
       display: 'block',
       borderTop: '2px solid #2761D0',
     },
@@ -80,9 +85,10 @@ const ModalContactUs = () => {
           </div>
           <div>
             <div style={styles.contentTitle}>
-              <p>Contact Us</p>
+              <p style={styles.contentTitleText}>Contact Us</p>
               <span style={styles.span}></span>
             </div>
+            <ContactFormUs />
           </div>
           <div style={styles.footer}>
             <div style={styles.footerElem}>
