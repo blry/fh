@@ -47,11 +47,13 @@ const ContactFormUs = () => {
       justifyContent: 'center',
     },
     resultMessageContainer: {
-      display: submit ? 'flex' : 'none',
+      display: 'flex',
+      height: '24px',
       justifyContent: 'center',
       marginTop: '10px',
     },
     rezultMessageText: {
+      display: submit ? 'block' : 'none',
       color: '#2C4DCA',
       fontSize: '12pt',
     },
@@ -109,18 +111,18 @@ const ContactFormUs = () => {
             ></textarea>
           </div>
           <div style={styles.buttonContainer}>
-            <a
-              href="#"
+            <label
+              htmlFor="submit_form"
               style={styles.buttonLink}
               className=" text-gray-800 flex text-sm font-bold border-2 p-1.5 border-l-8 modal-contactus-send-button"
             >
-              <input type="submit" value="Send Message" />
+              <input id="submit_form" type="submit" value="Send Message" />
               <img
                 src="/icons/gray-arrow.svg"
                 alt=""
                 className="h-4 mt-0.5 ml-1 text-gray-900"
               />
-            </a>
+            </label>
           </div>
           <div style={styles.resultMessageContainer}>
             <p style={styles.rezultMessageText}>Your message has been sent</p>
