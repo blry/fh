@@ -20,6 +20,10 @@ export default function Navbar() {
     setModal(!modal);
   };
 
+  const closeModalCallback = () => {
+    setModal(false);
+  };
+
   return (
     <>
       <div className="fixed z-50 top-0 w-full bg-white">
@@ -82,7 +86,10 @@ export default function Navbar() {
               alt=""
             />
           </button>
-          <ModalContactUs />
+          <ModalContactUs
+            closeModalCallback={closeModalCallback}
+            modal={modal}
+          />
         </nav>
       </div>
 

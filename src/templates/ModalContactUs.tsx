@@ -4,18 +4,12 @@ import { useRouter } from 'next/router';
 
 import { ContactFormUs } from './ContactUsForm';
 
-// type IModalProps = {
-//   modal: React.Dispatch<React.SetStateAction<boolean>>;
-//   setModal: React.Dispatch<React.SetStateAction<any>>;
-// };
-
-const ModalContactUs = () => {
+const ModalContactUs = (props: any) => {
   const router = useRouter();
-  const modal = true;
 
   const styles = {
     modalContainer: {
-      display: modal ? 'flex' : 'none',
+      display: props.modal ? 'flex' : 'none',
       position: 'absolute' as 'absolute',
       width: '100%',
       height: '100vh',
@@ -25,7 +19,7 @@ const ModalContactUs = () => {
     },
     modalContent: {
       width: '870px',
-      height: '440px',
+      height: '490px',
       margin: 'auto',
       backgroundColor: 'white',
       flexDirection: 'column' as 'column',
@@ -76,7 +70,11 @@ const ModalContactUs = () => {
       <div className="flex" style={styles.modalContainer}>
         <div className="flex" style={styles.modalContent}>
           <div style={styles.closeRow}>
-            <div style={styles.closeContainer}>
+            <div
+              style={styles.closeContainer}
+              className="close-button-modal"
+              onClick={props.closeModalCallback}
+            >
               <img
                 src={`${router.basePath}/icons/icon-close-white.svg`}
                 alt="close"
@@ -88,6 +86,7 @@ const ModalContactUs = () => {
               <p style={styles.contentTitleText}>Contact Us</p>
               <span style={styles.span}></span>
             </div>
+
             <ContactFormUs />
           </div>
           <div style={styles.footer}>

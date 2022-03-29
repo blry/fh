@@ -24,3 +24,22 @@ body {
     }
   }
 }
+
+.close-button-modal {
+  cursor: pointer;
+}
+
+.close-button-modal:hover {
+  background-color: #ea3b3b !important;
+  transition: .5s;
+}
+
+.modal-contactus-input:hover {
+  border-color: #2C4DCA !important;
+}
+
+.modal-contactus-send-button:hover {
+  border-color: #2C4DCA !important;
+  border-left-width: 13px;
+  transition: .5s;
+}
