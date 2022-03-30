@@ -7,7 +7,7 @@ type ISectionProps = {
   title?: string;
   description?: string;
   yPadding?: string;
-  rightTitle?: string;
+  reverse?: string;
   children: ReactNode;
 };
 
@@ -16,12 +16,12 @@ const Section = (props: ISectionProps) => {
 
   const style = {
     sectionContainer: {
-      marginLeft: props.rightTitle ? '0' : '-4rem',
-      marginRight: props.rightTitle ? '-4rem' : '0',
+      marginLeft: props.reverse ? '0' : '-4rem',
+      marginRight: props.reverse ? '-4rem' : '0',
     },
     content: {
       width: '100%',
-      flexDirection: props.rightTitle ? 'row-reverse' : 'row',
+      flexDirection: props.reverse ? 'row-reverse' : 'row',
     },
     logoImg: {
       height: '65px',
@@ -35,7 +35,7 @@ const Section = (props: ISectionProps) => {
       lineHeight: '0',
       padding: '0',
       width: '100%',
-      textAlign: props.rightTitle ? 'end' : 'start',
+      textAlign: props.reverse ? 'end' : 'start',
     },
     titleSpan: {
       background: '#fff',
@@ -51,7 +51,7 @@ const Section = (props: ISectionProps) => {
     >
       {(props.title || props.description) && (
         <div
-          className="mb-12 text-left flex items-center flex-start"
+          className="mb-12 text-left flex items-center flex-start section-container"
           style={style.sectionContainer}
         >
           <div className="flex items-center" style={style.content}>

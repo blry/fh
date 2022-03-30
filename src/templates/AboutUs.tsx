@@ -5,7 +5,7 @@ import { Section } from "../layout/Section";
 const AboutUs = () => (
   <Section
     image="/assets/images/symbol.svg"
-    title="Your title here"
+    title="About Us"
   >
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <AboutUsItem

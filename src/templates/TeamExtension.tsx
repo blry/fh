@@ -38,7 +38,7 @@ const TeamExtension = () => {
     <Section
       image="/assets/images/symbol.svg"
       title="Your title here"
-      rightTitle="true"
+      reverse="true"
     >
       <div className="w-full">
         <div style={styles.container}>

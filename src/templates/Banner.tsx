@@ -16,23 +16,24 @@ const styles = {
     color: 'white',
   },
   bannerContent: {
-    width: '1150px',
     display: 'flex',
     justifyContent: 'space-between',
+    margin: '0 20px',
   },
   title: {
     fontSize: '18pt',
     marginTop: '10px',
   },
   span: {
-    height: '119px',
     width: '1px',
     borderLeft: '1px solid white',
+    margin: '0 60px',
   },
   description: {
-    width: '70%',
+    width: '50vw',
     fontSize: '8pt',
     marginTop: '10px',
+    marginRight: '50px',
   },
 };
 
@@ -40,10 +41,14 @@ const Banner = (props: IBannerProps) => {
   return (
     <>
       <div style={styles.bannerContainer}>
-        <div style={styles.bannerContent}>
-          <div style={styles.title}>{props.title}</div>
+        <div style={styles.bannerContent} className="teamBannerContent">
+          <div style={styles.title} className="teamBannerTitle">
+            {props.title}
+          </div>
           <span style={styles.span}></span>
-          <div style={styles.description}>{props.description}</div>
+          <div style={styles.description} className="teamBannerText">
+            {props.description}
+          </div>
         </div>
       </div>
     </>
