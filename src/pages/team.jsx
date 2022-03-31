@@ -66,7 +66,7 @@ const Team = () => {
             image="/assets/images/photo5.svg"
             title="Name Surname"
             jobTitle="Job Title"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
+            description="Lorem ipsum dolor sit amet, consectetur adipiscig elit, sed do eiusmod tempor incididuntut labore."
             phoneNumber="+37360735992"
             email="test@finhubss.com"
           />
