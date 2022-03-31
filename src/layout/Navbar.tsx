@@ -5,10 +5,22 @@ import Link from 'next/link';
 import { ModalContactUs } from '../templates/ModalContactUs';
 
 const primaryItems = [
-  'Product Development',
-  'Team Extension',
-  'Fundraising',
-  'Sales Solutions',
+  {
+    title: 'Product Development',
+    link: '/product-development',
+  },
+  {
+    title: 'Team Extension',
+    link: '/team-extension',
+  },
+  {
+    title: 'Fundraising',
+    link: '/fundraising',
+  },
+  {
+    title: 'Sales Solutions',
+    link: '/sales-solution',
+  },
 ];
 
 export default function Navbar() {
@@ -56,9 +68,9 @@ export default function Navbar() {
 
           <div className="hidden lg:block text-sm font-bold text-black">
             {primaryItems.map((navItem) => (
-              <Link href="/" key={`${navItem}`}>
+              <Link href={navItem.link} key={`${navItem.title}`}>
                 <a className="mx-4 py-2 hover:gradient-border-bottom">
-                  {navItem}
+                  {navItem.title}
                 </a>
               </Link>
             ))}
@@ -100,8 +112,8 @@ export default function Navbar() {
       >
         <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded">
           {primaryItems.map((navItem) => (
-            <Link key={navItem} href="/">
-              <a className="py-2">{navItem}</a>
+            <Link key={navItem.title} href={navItem.link}>
+              <a className="py-2">{navItem.title}</a>
             </Link>
           ))}
 

@@ -37,7 +37,7 @@ const TeamExtension = () => {
   return (
     <Section
       image="/assets/images/symbol.svg"
-      title="Your title here"
+      title="Our Tech Stack"
       reverse="true"
     >
       <div className="w-full">

@@ -15,7 +15,7 @@ const styles = {
 const Imprint = () => {
   return (
     <>
-      <Banner title="imprint" />
+      <Banner title="Imprint" />
       <div className="flex md:flex-row flex-col justify-center align-center md:justify-evenly mt-16 mb-32 lg:ml-12 xl:ml-32">
         <div className="flex items-center w-96 mb-12 md:mb-0">
           <img src="/icons/icon-f.svg" alt="logo" className="h-12" />
