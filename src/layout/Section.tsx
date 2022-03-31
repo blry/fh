@@ -64,7 +64,7 @@ const Section = (props: ISectionProps) => {
             )}
             {props.title && (
               <h2
-                className="text-3xl text-gray-900 font-bold margin"
+                className="text-2xl text-gray-900 font-bold margin"
                 style={style.title}
               >
                 <span style={style.titleSpan}>{props.title}</span>
