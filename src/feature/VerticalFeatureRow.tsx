@@ -44,7 +44,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         </div>
         <div className="w-full sm:w-2/3 text-left sm:px-9">
           <h3
-            className="text-3xl text-gray-900 font-semibold"
+            className="text-2xl text-gray-900 font-semibold"
             style={styles.title}
           >
             {props.title}
