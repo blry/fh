@@ -72,6 +72,17 @@ body {
     display: flex !important;
     justify-content: space-evenly !important;
   }
+  .modal-content {
+    height: auto !important;
+  }
+  .modal-footer {
+    height: auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .modal-footer * {
+    margin: 5px 0;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -97,6 +108,13 @@ body {
   .teamIT-imageContainer {
     width: 388px !important;
     height: 393px !important;
+  }
+  .first-line-modal-input{
+    width: auto !important;
+  }
+  .modal-form-inputs-cont{
+    width: auto !important;
+    margin: 20px 15px !important;
   }
 }
 

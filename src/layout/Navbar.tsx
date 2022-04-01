@@ -127,11 +127,12 @@ export default function Navbar() {
             <a className="py-2">Imprint</a>
           </Link>
 
-          <Link href="/contact-us">
-            <a className="bg-blue-700 px-4 py-2 text-neutral-white text-sm font-bold hover:button-brightness focus:outline-none focus:ring">
-              Contact Us
-            </a>
-          </Link>
+          <button
+            className="lg:block bg-blue-700 px-4 py-2 text-neutral-white text-sm font-bold hover:button-brightness focus:outline-none focus:ring"
+            onClick={ModalHandler}
+          >
+            Contact Us
+          </button>
         </div>
       </div>
     </>

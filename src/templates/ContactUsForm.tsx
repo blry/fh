@@ -78,21 +78,21 @@ const ContactFormUs = () => {
           setSubmit(true);
         }}
       >
-        <div style={styles.container}>
+        <div style={styles.container} className="modal-form-inputs-cont">
           <div style={styles.firstLineInputsContainer}>
             <input
               type="text"
               placeholder="Name"
               name="name"
               style={styles.input}
-              className="modal-contactus-input"
+              className="modal-contactus-input first-line-modal-input"
             />
             <input
               type="text"
               placeholder="Company"
               name="company"
               style={styles.input}
-              className="modal-contactus-input"
+              className="modal-contactus-input first-line-modal-input"
             />
           </div>
           <div>
