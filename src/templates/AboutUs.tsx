@@ -15,7 +15,7 @@ const AboutUs = () => (
           We include vision, product, team (location, contact info), traction, market size, and minimum financials are all included."
         image="/assets/images/AboutUs_Fundrasing.jpg"
         imageAlt="First feature alt text"
-        link="http://localhost:3000/"
+        link="fundraising"
       />
       <AboutUsItem
         title="Product Development"
@@ -25,7 +25,7 @@ const AboutUs = () => (
           We accomplish this by conducting extensive research."
         image="/assets/images/AboutUs_ProductDevelopment.jpg"
         imageAlt="Product Development"
-        link="http://localhost:3000/"
+        link="product-development"
       />
       <AboutUsItem
         title="Sales Solutions"
@@ -35,7 +35,7 @@ const AboutUs = () => (
           Since it might be difficult for your employees to try new things, an outsider's perspective is always helpful."
         image="/assets/images/AboutUs_SalesSolutions.jpg"
         imageAlt="Sales Solutions"
-        link="http://localhost:3000/"
+        link="sales-solution"
       />
     </div>
   </Section>

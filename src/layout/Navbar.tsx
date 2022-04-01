@@ -11,7 +11,7 @@ const primaryItems = [
   },
   {
     title: 'Team Extension',
-    link: '/team-extension',
+    link: '/product-development#team-extension',
   },
   {
     title: 'Fundraising',

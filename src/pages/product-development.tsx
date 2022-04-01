@@ -43,6 +43,7 @@ const ProductDevelopment = () => {
         and how the information is displayed are identified and defined by functional and visual design."
           image="/assets/images/product-photo3.svg"
           imageAlt="image"
+          falseElem="team-extension"
         />
         <VerticalFeatureRow
           title="Team Extension"
