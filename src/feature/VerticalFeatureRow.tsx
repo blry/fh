@@ -73,7 +73,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
           </div>
           <div style={styles.button}>
             <Link href={encodeURIComponent(props.link!)} passHref={true}>
-              <a className="float-right text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800">
+              <a className="float-right text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button">
                 Read More
                 <img
                   src="/icons/Blue Arrow.svg"
