@@ -99,6 +99,7 @@ body {
   .teamBannerTitle {
     margin-top: 0 !important;
   }
+}
 
 .carousel-container button[data-direction=left], .carousel-container button[data-direction=right] {
   background: url(https://cdn.dsmcdn.com/web/production/slick-arrow.svg) 50% no-repeat;
