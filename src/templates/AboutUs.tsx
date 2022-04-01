@@ -4,8 +4,8 @@ import { Section } from "../layout/Section";
 
 const AboutUs = () => (
   <Section
-    title="Your title here"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
+    image="/assets/images/symbol.svg"
+    title="About Us"
   >
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <AboutUsItem

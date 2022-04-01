@@ -25,6 +25,81 @@ body {
   }
 }
 
+.close-button-modal {
+  cursor: pointer;
+}
+
+.close-button-modal:hover {
+  background-color: #ea3b3b !important;
+  transition: .5s;
+}
+
+.modal-contactus-input:hover {
+  border-color: #2C4DCA !important;
+}
+
+.modal-contactus-send-button:hover {
+  border-color: #2C4DCA !important;
+  border-left-width: 13px;
+  transition: .5s;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 1228px) {
+  .section-container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .teamManagementItem-spanContainer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .teamIT-container {
+    margin: 10px 40px;
+  }
+  .section-teamIT-container {
+    display: flex !important;
+    justify-content: space-evenly !important;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .teamBannerContent {
+    flex-direction: column !important;
+  }
+  .teamBannerText {
+    font-size: 6pt !important;
+  }
+  .teamManagementItem-container {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .teamManagementItem-imageContainer {
+    margin-bottom: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 605px) {
+  .teamIT-container {
+    width: 370px !important;
+  }
+  .teamIT-imageContainer {
+    width: 388px !important;
+    height: 393px !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .teamBannerTitle {
+    margin-top: 0 !important;
+  }
+
 .carousel-container button[data-direction=left], .carousel-container button[data-direction=right] {
   background: url(https://cdn.dsmcdn.com/web/production/slick-arrow.svg) 50% no-repeat;
   border: none;

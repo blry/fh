@@ -2,7 +2,7 @@ import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
 import { Section } from '../layout/Section';
 
 const VerticalFeatures = () => (
-  <Section title="Social Responsibility" description="">
+  <Section title="Social Responsibility" image="/assets/images/symbol.svg">
     <VerticalFeatureRow
       title="About"
       description="FINHUB AC GmbH & Co KG supports the Cycling Federation as well as the Paralympic

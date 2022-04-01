@@ -7,8 +7,9 @@ const OtherLinks = () => (
 
 
   <Section
-    title="Your title here"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
+    title="Other Links"
+    image="/assets/images/symbol.svg"
+    reverse="True"
   >
     <div className="w-full">
       <OtherLinksRow

@@ -2,15 +2,40 @@ import { useState } from 'react';
 
 import Link from 'next/link';
 
+import { ModalContactUs } from '../templates/ModalContactUs';
+
 const primaryItems = [
-  'Product Development',
-  'Team Extension',
-  'Fundraising',
-  'Sales Solutions',
+  {
+    title: 'Product Development',
+    link: '/product-development',
+  },
+  {
+    title: 'Team Extension',
+    link: '/team-extension',
+  },
+  {
+    title: 'Fundraising',
+    link: '/fundraising',
+  },
+  {
+    title: 'Sales Solutions',
+    link: '/sales-solution',
+  },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [modal, setModal] = useState(false);
+
+  const ModalHandler = (e: any) => {
+    e.preventDefault();
+    setModal(!modal);
+  };
+
+  const closeModalCallback = () => {
+    setModal(false);
+  };
+
   return (
     <>
       <div className="fixed z-50 top-0 w-full bg-white">
@@ -43,19 +68,20 @@ export default function Navbar() {
 
           <div className="hidden lg:block text-sm font-bold text-black">
             {primaryItems.map((navItem) => (
-              <Link href="/" key={`${navItem}`}>
+              <Link href={navItem.link} key={`${navItem.title}`}>
                 <a className="mx-4 py-2 hover:gradient-border-bottom">
-                  {navItem}
+                  {navItem.title}
                 </a>
               </Link>
             ))}
           </div>
 
-          <Link href="/contact-us">
-            <a className="hidden lg:block bg-blue-700 px-4 py-2 text-neutral-white text-sm font-bold hover:button-brightness focus:outline-none focus:ring">
-              Contact Us
-            </a>
-          </Link>
+          <button
+            className="hidden lg:block bg-blue-700 px-4 py-2 text-neutral-white text-sm font-bold hover:button-brightness focus:outline-none focus:ring"
+            onClick={ModalHandler}
+          >
+            Contact Us
+          </button>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -72,6 +98,10 @@ export default function Navbar() {
               alt=""
             />
           </button>
+          <ModalContactUs
+            closeModalCallback={closeModalCallback}
+            modal={modal}
+          />
         </nav>
       </div>
 
@@ -82,8 +112,8 @@ export default function Navbar() {
       >
         <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded">
           {primaryItems.map((navItem) => (
-            <Link key={navItem} href="/">
-              <a className="py-2">{navItem}</a>
+            <Link key={navItem.title} href={navItem.link}>
+              <a className="py-2">{navItem.title}</a>
             </Link>
           ))}
 
