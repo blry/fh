@@ -1,7 +1,7 @@
 import { AboutUs } from '../templates/AboutUs';
 import { HomeBanner } from '../templates/HomeBanner';
 import { OtherLinks } from '../templates/OtherLinks';
-import PartenersCarousel from '../templates/PartenersCarousel';
+import { PartnersAndClients } from '../templates/PartnersAndClients';
 import { VerticalFeatures } from '../templates/VerticalFeatures';
 
 const Index = () => (
@@ -10,7 +10,7 @@ const Index = () => (
     <AboutUs />
     <OtherLinks />
     <VerticalFeatures />
-    <PartenersCarousel />
+    <PartnersAndClients />
   </>
 );
 
