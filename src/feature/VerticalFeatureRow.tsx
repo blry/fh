@@ -51,7 +51,11 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
   return (
     <div className={verticalFeatureClass}>
-      <div className="flex" style={styles.subContainer}>
+      <div
+        className={`flex flex-col ${
+          props.reverse ? 'sm:flex-row-reverse' : 'sm:flex-row'
+        }`}
+      >
         <div className="sm:w-5 verticalFutureRow-imgCont">
           <img
             src="/assets/images/symbol.svg"

@@ -6,10 +6,8 @@ const styles = {
   container: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
   },
   containerElement: {
-    width: '50%',
     marginBottom: '90px',
   },
   itemTitle: {
@@ -41,14 +39,16 @@ const TeamExtension = () => {
       reverse="true"
     >
       <div className="w-full">
-        <div style={styles.container}>
-          <div style={styles.containerElement}>
+        <div style={styles.container} className="justify-beetwen">
+          <div style={styles.containerElement} className="w-full md:w-1/2">
             <div className="flex">
               <img
                 src={`${router.basePath}/assets/images/ul_elem.svg`}
                 alt="ul"
               />
-              <p style={styles.itemTitle}>Frontend Development</p>
+              <p style={styles.itemTitle} className="teamextensions-title">
+                Frontend Development
+              </p>
             </div>
             <div style={styles.logoContainer}>
               <div style={styles.logoItem}>
@@ -83,7 +83,9 @@ const TeamExtension = () => {
                 src={`${router.basePath}/assets/images/ul_elem.svg`}
                 alt="ul"
               />
-              <p style={styles.itemTitle}>Mobile App Development</p>
+              <p style={styles.itemTitle} className="teamextensions-title">
+                Mobile App Development
+              </p>
             </div>
             <div style={styles.logoContainer}>
               <div style={styles.logoItem}>
@@ -118,7 +120,9 @@ const TeamExtension = () => {
                 src={`${router.basePath}/assets/images/ul_elem.svg`}
                 alt="ul"
               />
-              <p style={styles.itemTitle}>DevOps</p>
+              <p style={styles.itemTitle} className="teamextensions-title">
+                DevOps
+              </p>
             </div>
             <div style={styles.logoContainer}>
               <div style={styles.logoItem}>
@@ -154,7 +158,9 @@ const TeamExtension = () => {
                 src={`${router.basePath}/assets/images/ul_elem.svg`}
                 alt="ul"
               />
-              <p style={styles.itemTitle}>Backend & API</p>
+              <p style={styles.itemTitle} className="teamextensions-title">
+                Backend & API
+              </p>
             </div>
             <div style={styles.logoContainer}>
               <div style={styles.logoItem}>

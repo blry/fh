@@ -79,7 +79,10 @@ const ContactFormUs = () => {
         }}
       >
         <div style={styles.container} className="modal-form-inputs-cont">
-          <div style={styles.firstLineInputsContainer}>
+          <div
+            style={styles.firstLineInputsContainer}
+            className="firstlineInput-modal"
+          >
             <input
               type="text"
               placeholder="Name"

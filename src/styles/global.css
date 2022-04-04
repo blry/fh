@@ -128,7 +128,33 @@ body {
   .teamBannerTitle {
     margin-top: 0 !important;
   }
+  .firstlineInput-modal {
+    flex-direction: column;
+  }
+  .teamextensions-title {
+    font-size: 16pt !important;
+  }
+  .teamManagementItem-container {
+    width: 95% !important;
+  }
+  .team-management-text {
+    width: unset !important;
+  }
+  .teamBannerContainer {
+    height: 350px !important;
+  }
 }
+
+@media only screen and (max-width: 400px) {
+  .teamIT-container{
+    width: 311px !important;
+  }
+  .teamIT-imageContainer {
+    width: 340px !important;
+    height: 345px !important;
+  }
+}
+
 
 .carousel-container button[data-direction=left], .carousel-container button[data-direction=right] {
   background: url(https://cdn.dsmcdn.com/web/production/slick-arrow.svg) 50% no-repeat;

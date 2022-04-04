@@ -128,7 +128,9 @@ const TeamManagementItem = (props: ITeamItem) => {
               </div>
             </div>
           </div>
-          <div style={styles.description}>{props.description}</div>
+          <div style={styles.description} className="team-management-text">
+            {props.description}
+          </div>
           <div>
             <div className="flex items-center" style={styles.contactItem}>
               <div className="mr-1">
