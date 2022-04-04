@@ -52,7 +52,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
   return (
     <div className={verticalFeatureClass}>
       <div className="flex" style={styles.subContainer}>
-        <div className="sm:w-5">
+        <div className="sm:w-5 verticalFutureRow-imgCont">
           <img
             src="/assets/images/symbol.svg"
             alt="icon"
@@ -60,7 +60,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             style={styles.img}
           />
         </div>
-        <div className="w-full sm:w-2/3 text-left sm:px-9">
+        <div className="w-full sm:w-2/3 text-left sm:px-9 pt-2">
           <h3
             className="text-2xl text-gray-900 font-semibold"
             style={styles.title}

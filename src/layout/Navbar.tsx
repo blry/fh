@@ -30,6 +30,7 @@ export default function Navbar() {
   const ModalHandler = (e: any) => {
     e.preventDefault();
     setModal(!modal);
+    setIsOpen(false);
   };
 
   const closeModalCallback = () => {
@@ -113,18 +114,26 @@ export default function Navbar() {
         <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded">
           {primaryItems.map((navItem) => (
             <Link key={navItem.title} href={navItem.link}>
-              <a className="py-2">{navItem.title}</a>
+              <a className="py-2" onClick={() => setIsOpen(false)}>
+                {navItem.title}
+              </a>
             </Link>
           ))}
 
           <Link href="/about">
-            <a className="py-2">About us</a>
+            <a className="py-2" onClick={() => setIsOpen(false)}>
+              About us
+            </a>
           </Link>
           <Link href="/team">
-            <a className="py-2">Team</a>
+            <a className="py-2" onClick={() => setIsOpen(false)}>
+              Team
+            </a>
           </Link>
           <Link href="/imprint">
-            <a className="py-2">Imprint</a>
+            <a className="py-2" onClick={() => setIsOpen(false)}>
+              Imprint
+            </a>
           </Link>
 
           <button

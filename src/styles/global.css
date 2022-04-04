@@ -100,6 +100,12 @@ body {
     margin-bottom: 50px !important;
   }
 }
+@media only screen and (max-width: 640px) {
+  .verticalFutureRow-imgCont {
+    display: none;
+  }
+}
+
 
 @media only screen and (max-width: 605px) {
   .teamIT-container {
