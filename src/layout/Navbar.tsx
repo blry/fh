@@ -62,6 +62,7 @@ export default function Navbar() {
                   src="/assets/images/logo.png"
                   style={{ height: '35px' }}
                   alt="Finhub Software Solutions logo"
+                  onClick={() => setIsOpen(false)}
                 />
               </a>
             </Link>
