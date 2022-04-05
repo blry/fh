@@ -15,7 +15,7 @@ type IVerticalFeatureRowProps = {
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
-  const verticalFeatureClass = className('mt-10', 'flex', 'flex-wrap', {
+  const verticalFeatureClass = className('mt-10', 'flex', {
     'flex-row-reverse': props.reverse,
   });
 
@@ -51,11 +51,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
   return (
     <div className={verticalFeatureClass}>
-      <div
-        className={`flex flex-col ${
-          props.reverse ? 'sm:flex-row-reverse' : 'sm:flex-row'
-        }`}
-      >
+      <div className="flex mr-5">
         <div className="sm:w-5 verticalFutureRow-imgCont">
           <img
             src="/assets/images/symbol.svg"
@@ -64,34 +60,47 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             style={styles.img}
           />
         </div>
-        <div className="w-full sm:w-2/3 text-left sm:px-9 pt-2">
+      </div>
+      <div className="flex flex-col">
+        <div className="">
           <h3
-            className="text-2xl text-gray-900 font-semibold"
+            className="text-xl sm:text-2xl text-gray-900 font-semibold"
             style={styles.title}
           >
             {props.title}
           </h3>
           <span style={styles.span}></span>
-          <div className="mt-6 text-sm text-black leading-4">
-            {props.description}
-          </div>
-          <div style={styles.button}>
-            <Link href={encodeURIComponent(props.link!)} passHref={true}>
-              <a className="float-right text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button">
-                Read More
-                <img
-                  src="/icons/Blue Arrow.svg"
-                  alt=""
-                  className="h-4 mt-0.5 ml-1 text-gray-900"
-                />
-              </a>
-            </Link>
-          </div>
-          <span id={props.falseElem}></span>
         </div>
-
-        <div className="w-full sm:w-1/3 p-3 flex items-center">
-          <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+        <div
+          className={`flex flex-col-reverse ${
+            props.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
+          }`}
+        >
+          <div className="mt-6 sm:mr-14 md:w-3/5 text-sm text-black leading-4">
+            {props.description}
+            <div style={styles.button}>
+              <Link href={encodeURIComponent(props.link!)} passHref={true}>
+                <a className="float-right text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button">
+                  Read More
+                  <img
+                    src="/icons/Blue Arrow.svg"
+                    alt=""
+                    className="h-4 mt-0.5 ml-1 text-gray-900"
+                  />
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="p-3 lg:h-56 flex items-center justify-center">
+            <img
+              src={`${router.basePath}${props.image}`}
+              alt={props.imageAlt}
+              style={{ maxWidth: '75%' }}
+            />
+          </div>
+        </div>
+        <div>
+          <span id={props.falseElem}></span>
         </div>
       </div>
     </div>

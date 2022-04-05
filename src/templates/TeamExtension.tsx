@@ -8,7 +8,7 @@ const styles = {
     flexWrap: 'wrap',
   },
   containerElement: {
-    marginBottom: '90px',
+    marginBottom: '35px',
   },
   itemTitle: {
     marginLeft: '10px',
@@ -77,7 +77,7 @@ const TeamExtension = () => {
               </div>
             </div>
           </div>
-          <div style={styles.containerElement}>
+          <div style={styles.containerElement} className="w-full md:w-1/2">
             <div className="flex">
               <img
                 src={`${router.basePath}/assets/images/ul_elem.svg`}
@@ -114,7 +114,7 @@ const TeamExtension = () => {
               </div>
             </div>
           </div>
-          <div style={styles.containerElement}>
+          <div style={styles.containerElement} className="w-full md:w-1/2">
             <div className="flex">
               <img
                 src={`${router.basePath}/assets/images/ul_elem.svg`}
@@ -152,7 +152,7 @@ const TeamExtension = () => {
             </div>
           </div>
 
-          <div style={styles.containerElement}>
+          <div style={styles.containerElement} className="w-full md:w-1/2">
             <div className="flex">
               <img
                 src={`${router.basePath}/assets/images/ul_elem.svg`}
