@@ -45,30 +45,36 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       borderColor: '#707070',
       width: '165px',
     },
+    iconContainer: {
+      marginRight: props.icon ? '5px' : '0',
+      width: props.icon ? '' : '0',
+    },
   };
 
   const router = useRouter();
 
   return (
     <div className={verticalFeatureClass}>
-      <div className="flex mr-5">
-        <div className="sm:w-5 verticalFutureRow-imgCont">
-          <img
-            src="/assets/images/symbol.svg"
-            alt="icon"
-            className="h-12"
-            style={styles.img}
-          />
-        </div>
-      </div>
       <div className="flex flex-col">
         <div className="">
-          <h3
-            className="text-xl sm:text-2xl text-gray-900 font-semibold"
-            style={styles.title}
-          >
-            {props.title}
-          </h3>
+          <div className="flex">
+            <div
+              className="w-3 sm:w-5 verticalFutureRow-imgCont"
+              style={styles.iconContainer}
+            >
+              <img
+                src="/assets/images/symbol.svg"
+                alt="icon"
+                style={styles.img}
+              />
+            </div>
+            <h3
+              className="text-xl sm:text-2xl text-gray-900 font-semibold"
+              style={styles.title}
+            >
+              {props.title}
+            </h3>
+          </div>
           <span style={styles.span}></span>
         </div>
         <div
@@ -76,7 +82,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             props.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
           }`}
         >
-          <div className="mt-6 sm:mr-14 md:w-3/5 text-sm text-black leading-4">
+          <div className="mt-6 flex items-center sm:mr-14 md:w-3/5 text-sm text-black leading-4">
             {props.description}
             <div style={styles.button}>
               <Link href={encodeURIComponent(props.link!)} passHref={true}>
@@ -91,11 +97,12 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               </Link>
             </div>
           </div>
-          <div className="p-3 lg:h-56 flex items-center justify-center">
+          <div className="p-3 w-80 lg:h-56 flex items-center justify-center">
             <img
               src={`${router.basePath}${props.image}`}
               alt={props.imageAlt}
               style={{ maxWidth: '75%' }}
+              className="mb-3 sm:mb-0"
             />
           </div>
         </div>
