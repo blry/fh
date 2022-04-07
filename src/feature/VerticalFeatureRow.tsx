@@ -15,7 +15,7 @@ type IVerticalFeatureRowProps = {
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
-  const verticalFeatureClass = className('mt-10', 'flex', {
+  const verticalFeatureClass = className('mt-10', 'mb-24', 'flex', {
     'flex-row-reverse': props.reverse,
   });
 
@@ -45,10 +45,6 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       borderColor: '#707070',
       width: '165px',
     },
-    iconContainer: {
-      marginRight: props.icon ? '5px' : '0',
-      width: props.icon ? '' : '0',
-    },
   };
 
   const router = useRouter();
@@ -57,11 +53,8 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     <div className={verticalFeatureClass}>
       <div className="flex flex-col">
         <div className="">
-          <div className="flex">
-            <div
-              className="w-3 sm:w-5 verticalFutureRow-imgCont"
-              style={styles.iconContainer}
-            >
+          <div className="flex items-center">
+            <div className="w-3 sm:w-7 verticalFutureRow-imgCont mr-2">
               <img
                 src="/assets/images/symbol.svg"
                 alt="icon"
@@ -78,11 +71,11 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
           <span style={styles.span}></span>
         </div>
         <div
-          className={`flex flex-col-reverse ${
+          className={`flex flex-col-reverse verticalFeatureRow-text ${
             props.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
           }`}
         >
-          <div className="mt-6 flex items-center sm:mr-14 md:w-3/5 text-sm text-black leading-4">
+          <div className="mt-6 ml-0 sm:ml-10 flex items-center sm:mr-14 md:w-3/5 text-sm text-black leading-4">
             {props.description}
             <div style={styles.button}>
               <Link href={encodeURIComponent(props.link!)} passHref={true}>
@@ -97,7 +90,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               </Link>
             </div>
           </div>
-          <div className="p-3 w-80 lg:h-56 flex items-center justify-center">
+          <div className="p-3 md:w-64 lg:w-80 lg:h-56 flex items-center justify-center">
             <img
               src={`${router.basePath}${props.image}`}
               alt={props.imageAlt}
