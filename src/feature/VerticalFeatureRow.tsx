@@ -100,7 +100,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               </Link>
             </div>
           </div>
-          <div className="p-3 md:w-64 lg:w-80 lg:h-56 flex items-center justify-center">
+          <div className="p-3 md:w-64 lg:w-80 lg:max-h-56 flex items-center justify-center">
             <img
               src={`${router.basePath}${props.image}`}
               alt={props.imageAlt}
