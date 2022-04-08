@@ -49,9 +49,7 @@ body {
   transition: .2s;
 }
 
-.verticalFeatureRow-text {
-  margin-top: -56px;
-}
+
 
 /* responsive */
 
@@ -63,9 +61,7 @@ body {
 }
 
 @media only screen and (max-width: 1024px){
-  .verticalFeatureRow-text {
-    margin-top: -38px;
-  }
+  
 }
 
 @media only screen and (max-width: 992px) {
@@ -113,14 +109,13 @@ body {
   .teamManagementItem-imageContainer {
     margin-bottom: 50px !important;
   }
-  .verticalFeatureRow-text {
-    margin-top: 0px;
-  }
-}
-@media only screen and (max-width: 640px) {
-  
 }
 
+@media only screen and (min-width: 1120px) {
+  .marginLeft {
+    margin-left: -50px !important;
+  }
+}
 
 @media only screen and (max-width: 605px) {
   .teamIT-container {

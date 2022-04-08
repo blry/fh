@@ -53,8 +53,16 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
     <div className={verticalFeatureClass}>
       <div className="flex flex-col">
         <div className="">
-          <div className="flex items-center">
-            <div className="w-3 sm:w-7 verticalFutureRow-imgCont mr-2">
+          <div
+            className={`flex items-center ${
+              props.reverse ? 'flex-row-reverse' : ''
+            } ${props.icon ? 'ml-0 mr-0 marginLeft' : ''}`}
+          >
+            <div
+              className={`${
+                props.icon ? 'w-5 sm:w-8' : ''
+              } verticalFutureRow-imgCont`}
+            >
               <img
                 src="/assets/images/symbol.svg"
                 alt="icon"
@@ -62,7 +70,9 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               />
             </div>
             <h3
-              className="text-xl sm:text-2xl text-gray-900 font-semibold"
+              className={`text-xl sm:text-2xl text-gray-900 font-semibold ${
+                props.icon ? 'ml-1 mr-1 sm:ml-3 sm:mr-3' : ''
+              }`}
               style={styles.title}
             >
               {props.title}
@@ -75,7 +85,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             props.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
           }`}
         >
-          <div className="mt-6 ml-0 sm:ml-10 flex items-center sm:mr-14 md:w-3/5 text-sm text-black leading-4">
+          <div className="mt-6 ml-0 flex flex-col sm:mr-14 md:w-3/5 text-sm text-black leading-4">
             {props.description}
             <div style={styles.button}>
               <Link href={encodeURIComponent(props.link!)} passHref={true}>
