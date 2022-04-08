@@ -74,7 +74,7 @@ const About = () => (
         imageAlt="image"
         icon
         reverse
-        link="team-extension"
+        link="product-development#team-extension"
       />
     </div>
   </>

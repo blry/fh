@@ -49,6 +49,14 @@ body {
   transition: .2s;
 }
 
+.mobTitle {
+  display: flex;
+}
+
+.desktopTitle {
+  display: none;
+}
+
 
 
 /* responsive */
@@ -111,10 +119,22 @@ body {
   }
 }
 
+@media only screen and (min-width: 768px){ 
+  .mobTitle {
+    display: none;
+  }
+
+  .desktopTitle {
+    display: flex;
+  }
+}
+
 @media only screen and (min-width: 1120px) {
   .marginLeft {
     margin-left: -50px !important;
   }
+  .marginRight {
+  margin-right: -50px !important}
 }
 
 @media only screen and (max-width: 605px) {
