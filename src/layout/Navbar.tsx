@@ -11,7 +11,7 @@ const primaryItems = [
   },
   {
     title: 'Team Extension',
-    link: '/team-extension',
+    link: '/product-development#team-extension',
   },
   {
     title: 'Fundraising',
@@ -30,6 +30,7 @@ export default function Navbar() {
   const ModalHandler = (e: any) => {
     e.preventDefault();
     setModal(!modal);
+    setIsOpen(false);
   };
 
   const closeModalCallback = () => {
@@ -61,6 +62,7 @@ export default function Navbar() {
                   src="/assets/images/logo.png"
                   style={{ height: '35px' }}
                   alt="Finhub Software Solutions logo"
+                  onClick={() => setIsOpen(false)}
                 />
               </a>
             </Link>
@@ -113,25 +115,34 @@ export default function Navbar() {
         <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded">
           {primaryItems.map((navItem) => (
             <Link key={navItem.title} href={navItem.link}>
-              <a className="py-2">{navItem.title}</a>
+              <a className="py-2" onClick={() => setIsOpen(false)}>
+                {navItem.title}
+              </a>
             </Link>
           ))}
 
           <Link href="/about">
-            <a className="py-2">About us</a>
-          </Link>
-          <Link href="/team">
-            <a className="py-2">Team</a>
-          </Link>
-          <Link href="/imprint">
-            <a className="py-2">Imprint</a>
-          </Link>
-
-          <Link href="/contact-us">
-            <a className="bg-blue-700 px-4 py-2 text-neutral-white text-sm font-bold hover:button-brightness focus:outline-none focus:ring">
-              Contact Us
+            <a className="py-2" onClick={() => setIsOpen(false)}>
+              About us
             </a>
           </Link>
+          <Link href="/team">
+            <a className="py-2" onClick={() => setIsOpen(false)}>
+              Team
+            </a>
+          </Link>
+          <Link href="/imprint">
+            <a className="py-2" onClick={() => setIsOpen(false)}>
+              Imprint
+            </a>
+          </Link>
+
+          <button
+            className="lg:block bg-blue-700 px-4 py-2 text-neutral-white text-sm font-bold hover:button-brightness focus:outline-none focus:ring"
+            onClick={ModalHandler}
+          >
+            Contact Us
+          </button>
         </div>
       </div>
     </>

@@ -42,7 +42,7 @@ const Banner = (props: IBannerProps) => {
 
   return (
     <>
-      <div style={styles.bannerContainer}>
+      <div style={styles.bannerContainer} className="teamBannerContainer">
         <div style={styles.bannerContent} className="teamBannerContent">
           <div style={styles.title} className="teamBannerTitle">
             {props.title}

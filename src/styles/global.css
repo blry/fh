@@ -44,6 +44,21 @@ body {
   transition: .5s;
 }
 
+.boxshadow-animation:hover {
+  box-shadow: 0 5px 15px rgb(0 0 0 / 35%);
+  transition: .2s;
+}
+
+.mobTitle {
+  display: flex;
+}
+
+.desktopTitle {
+  display: none;
+}
+
+
+
 /* responsive */
 
 @media only screen and (max-width: 1228px) {
@@ -51,6 +66,10 @@ body {
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+}
+
+@media only screen and (max-width: 1024px){
+  
 }
 
 @media only screen and (max-width: 992px) {
@@ -67,14 +86,29 @@ body {
     display: flex !important;
     justify-content: space-evenly !important;
   }
+  .modal-content {
+    height: auto !important;
+  }
+  .modal-footer {
+    height: auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .modal-footer * {
+    margin: 5px 0;
+  }
 }
 
 @media only screen and (max-width: 750px) {
   .teamBannerContent {
     flex-direction: column !important;
   }
+  .teamBannerContainer {
+    height: 400px !important;
+  }
   .teamBannerText {
-    font-size: 6pt !important;
+    width: 70vw !important;
+    margin-right: unset !important;
   }
   .teamManagementItem-container {
     flex-direction: column !important;
@@ -85,6 +119,24 @@ body {
   }
 }
 
+@media only screen and (min-width: 768px){ 
+  .mobTitle {
+    display: none;
+  }
+
+  .desktopTitle {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  .marginLeft {
+    margin-left: -50px !important;
+  }
+  .marginRight {
+  margin-right: -50px !important}
+}
+
 @media only screen and (max-width: 605px) {
   .teamIT-container {
     width: 370px !important;
@@ -93,13 +145,48 @@ body {
     width: 388px !important;
     height: 393px !important;
   }
+  .first-line-modal-input{
+    width: auto !important;
+  }
+  .modal-form-inputs-cont{
+    width: auto !important;
+    margin: 20px 15px !important;
+  }
 }
 
 @media only screen and (max-width: 500px) {
   .teamBannerTitle {
     margin-top: 0 !important;
   }
+  .firstlineInput-modal {
+    flex-direction: column;
+  }
+  .teamextensions-title {
+    font-size: 16pt !important;
+  }
+  .teamManagementItem-container {
+    width: 95% !important;
+  }
+  .team-management-text {
+    width: unset !important;
+  }
+  .teamBannerContainer {
+    height: 460px !important;
+  }
+  .teamBannerText {
+  }
 }
+
+@media only screen and (max-width: 400px) {
+  .teamIT-container{
+    width: 311px !important;
+  }
+  .teamIT-imageContainer {
+    width: 340px !important;
+    height: 345px !important;
+  }
+}
+
 
 .carousel-container button[data-direction=left], .carousel-container button[data-direction=right] {
   background: url(https://cdn.dsmcdn.com/web/production/slick-arrow.svg) 50% no-repeat;

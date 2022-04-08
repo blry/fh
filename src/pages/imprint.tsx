@@ -16,8 +16,8 @@ const Imprint = () => {
   return (
     <>
       <Banner title="Imprint" />
-      <div className="flex md:flex-row flex-col justify-center align-center md:justify-evenly mt-16 mb-32 lg:ml-12 xl:ml-32">
-        <div className="flex items-center w-96 mb-12 md:mb-0">
+      <div className="flex md:flex-row flex-col justify-center align-center md:justify-evenly mt-16 mb-32 lg:ml-12 xl:ml-32 pl-3">
+        <div className="flex items-center md:mb-0">
           <img src="/icons/icon-f.svg" alt="logo" className="h-12" />
           <span style={styles.span} className="ml-12 mr-12"></span>
           <div style={styles.textContainer}>
@@ -29,9 +29,9 @@ const Imprint = () => {
             <div>Address: Beatrixgasse 27-2-15, 1030 Wien, Austria</div>
           </div>
         </div>
-        <div className="flex items-center w-96 md:w-64 mt-12 md:mt-0">
+        <div className="flex items-center w-full md:w-72 mt-12 md:mt-0">
           <img src="/icons/icon-person.svg" alt="person" className="h-10" />
-          <span style={styles.span} className="ml-9 mr-9"></span>
+          <span style={styles.span} className="ml-9 mr-11"></span>
           <div style={styles.textContainer}>
             <div>
               <div>Vitali Chebanu, </div>

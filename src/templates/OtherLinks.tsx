@@ -4,8 +4,6 @@ import { Section } from "../layout/Section";
 
 const OtherLinks = () => (
   
-
-
   <Section
     title="Other Links"
     image="/assets/images/symbol.svg"
@@ -21,7 +19,7 @@ const OtherLinks = () => (
         
         The Fund aims to produce positive returns with medium/high volatility (range and frequency of price movement).
         Part of net income the Fund generates will be reinvested and reflected in the value of your Shares."
-        image="/assets/images/Blue Arrow.svg"
+        image="/icons/icon-finhub.svg"
         imageAlt="Finhub image"
         link="https://www.finhubfund.com/"
       />
@@ -34,16 +32,15 @@ const OtherLinks = () => (
         Finhub unites projects in all countries of the world, with a strong focus on the DACH market, enabling users to view, analyze, invest and request investments for a particular project unlimitedly.
         We will advise you on all challenges as an investor or as an investment seeker for your project.
         Acting as financial operators we are ready to accompany your investments or projects from initial analysis to managing your assets."
-        image="/assets/images/Blue Arrow.svg"
+        image="/icons/icon-finhub.svg"
         imageAlt="Finhub image"
         link="https://finhubfund.co.uk/"
       />
       <OtherLinksRow
-        title="Anders Capital"
         description="Anders Capital GMbH is a financial consulting company, specialising in the development of projects in various sectors and industries: manufacturing, energy, construction, development, legal services and others.
         Our team assists your business on any step of its existence in terms of financial, development or managerial perspective.
         We offer a wide range of financial services, that insure high quality and loyalty to our customers."
-        image="/assets/images/Blue Arrow.svg"
+        image="/icons/icon-anders.svg"
         imageAlt="Finhub image"
         link="https://anderscapital.eu/"
       />

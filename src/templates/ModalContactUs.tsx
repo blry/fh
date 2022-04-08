@@ -68,7 +68,7 @@ const ModalContactUs = (props: any) => {
   return (
     <>
       <div className="flex" style={styles.modalContainer}>
-        <div className="flex" style={styles.modalContent}>
+        <div className="flex modal-content" style={styles.modalContent}>
           <div style={styles.closeRow}>
             <div
               style={styles.closeContainer}
@@ -89,7 +89,7 @@ const ModalContactUs = (props: any) => {
 
             <ContactFormUs />
           </div>
-          <div style={styles.footer}>
+          <div style={styles.footer} className="modal-footer">
             <div style={styles.footerElem}>
               <img
                 src={`${router.basePath}/icons/icon-phone.svg`}
