@@ -2,15 +2,20 @@
 import { Carousel } from '@trendyol-js/react-carousel';
 
 import { PartnersAndClientsItem } from '../feature/PartnersAndClientsItem';
+import useWindowDimensions from '../feature/UseWindowDimensions';
 import { Section } from '../layout/Section';
 
-const PartnersAndClients = () => (
-  <Section
-    title="Our Partners & Clients"
-    image="/assets/images/symbol.svg"
-    reverse="true"
-  >
-    <Carousel show={5} slide={2} transition={0.5} swiping={true}  useArrowKeys={false} className="carousel-container">
+const PartnersAndClients = () => {
+  const { width } = useWindowDimensions();
+  const showNrSlide = width != null && width <= 950 ? 3 : 5;
+
+  return(
+    <Section
+      title="Our Partners & Clients"
+      image="/assets/images/symbol.svg"
+      reverse="true"
+      >
+      <Carousel show={showNrSlide} slide={2} transition={0.5} swiping={true}  useArrowKeys={false} className="carousel-container">
         <PartnersAndClientsItem 
           image="/assets/images/our partners/Andy's.svg"
           imageAlt=""
@@ -55,8 +60,9 @@ const PartnersAndClients = () => (
           image="/assets/images/our partners/Vioinox.svg"
           imageAlt=""
         />
-    </Carousel>
-  </Section>
-);
+      </Carousel>
+    </Section>
+  );
+};
 
 export { PartnersAndClients };
