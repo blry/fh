@@ -1,8 +1,9 @@
 /* eslint-disable unused-imports/no-unused-vars */
-import React, { useState } from 'react';
+import React, { MutableRefObject, useRef, useState } from 'react';
 
 const ContactFormUs = () => {
   const [submit, setSubmit] = useState(false);
+  const nameInput = useRef() as MutableRefObject<HTMLInputElement>;
 
   const styles = {
     container: {
@@ -74,8 +75,15 @@ const ContactFormUs = () => {
           const company = target.company?.value;
           const email = target.email?.value;
           const message = target.message?.value;
-          console.log(name, company, email, message);
-          setSubmit(true);
+
+          if (
+            name !== '' ||
+            (company !== '' && email !== '' && message !== '')
+          ) {
+            setSubmit(true);
+          } else {
+            nameInput.current.focus();
+          }
         }}
       >
         <div style={styles.container} className="modal-form-inputs-cont">
@@ -87,6 +95,7 @@ const ContactFormUs = () => {
               type="text"
               placeholder="Name"
               name="name"
+              ref={nameInput}
               style={styles.input}
               className="modal-contactus-input first-line-modal-input"
             />
@@ -103,6 +112,7 @@ const ContactFormUs = () => {
               type="email"
               placeholder="E-mail"
               name="email"
+              required
               style={styles.inputLarge}
               className="modal-contactus-input"
             />
@@ -110,6 +120,7 @@ const ContactFormUs = () => {
               placeholder="Message"
               style={styles.textarea}
               name="message"
+              required
               className="modal-contactus-input"
             ></textarea>
           </div>

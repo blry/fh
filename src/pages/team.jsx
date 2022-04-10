@@ -20,7 +20,7 @@ const Team = () => {
       />
       <Section image="/assets/images/symbol.svg" title="Management">
         <TeamManagementItem
-          image="/assets/images/photo1.svg"
+          image="/assets/images/photo_2810.jpg"
           title="Artiom Cebanu"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
           magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
@@ -29,7 +29,7 @@ const Team = () => {
           email="test@finhubss.com"
         />
         <TeamManagementItem
-          image="/assets/images/photo2.svg"
+          image="/assets/images/photo_1.jpg"
           title="Name Surname"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
           magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."

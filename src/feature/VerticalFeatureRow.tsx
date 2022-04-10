@@ -95,14 +95,14 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             props.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
           }`}
         >
-          <div className="mt-6 ml-0 flex flex-col sm:mr-14 md:w-3/5 text-sm text-black leading-4">
+          <div className="mt-6 ml-0 flex flex-col sm:mr-14 md:w-3/5 text-sm text-black leading-4 sm:ml-12">
             {/* -------desktop version--------- */}
             <div className="desktopTitle flex-col">
               <div
                 className={`flex items-center ${
                   props.reverse
                     ? 'flex-row-reverse justify-between'
-                    : props.icon && 'marginLeft'
+                    : props.icon && ''
                 } ${props.icon ? 'ml-0 mr-0' : ''} ${
                   props.reverse ? props.icon && 'marginRight' : ''
                 }`}
@@ -110,7 +110,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
                 <div
                   className={`${
                     props.icon ? 'w-5 sm:w-8' : 'md:h-14'
-                  } verticalFutureRow-imgCont`}
+                  } verticalFutureRow-imgCont marginLeft`}
                 >
                   <img
                     src="/assets/images/symbol.svg"

@@ -129,7 +129,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1120px) {
+@media only screen and (min-width: 774px) {
   .marginLeft {
     margin-left: -50px !important;
   }
