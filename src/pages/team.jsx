@@ -20,31 +20,28 @@ const Team = () => {
       />
       <Section image="/assets/images/symbol.svg" title="Management">
         <TeamManagementItem
-          image="/assets/images/photo_2810.jpg"
+          image="/assets/images/team/Finhub2810.jpg"
           title="Artiom Cebanu"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
           magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
           jobTitle="Director of Corporate Affairs"
-          phoneNumber="060123654"
           email="test@finhubss.com"
         />
         <TeamManagementItem
-          image="/assets/images/photo_1.jpg"
-          title="Name Surname"
+          image="/assets/images/team/Finhub2762.jpg"
+          title="Dorian Bujor"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
           magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
           jobTitle="Job Title"
-          phoneNumber="060123654"
           email="test@finhubss.com"
           reverse="true"
         />
         <TeamManagementItem
-          image="/assets/images/photo3.svg"
+          image="/assets/images/team/Finhub2643.jpg"
           title="Name Surname"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
           magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
           jobTitle="Job Title"
-          phoneNumber="060123654"
           email="test@finhubss.com"
         />
       </Section>
@@ -55,35 +52,31 @@ const Team = () => {
       >
         <div className="flex justify-between flex-wrap section-teamIT-container">
           <TeamIT
-            image="/assets/images/photo4.svg"
+            image="/assets/images/team/Finhub2661.jpg"
             title="Name Surname"
             jobTitle="Job Title"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            phoneNumber="+37360735992"
             email="test@finhubss.com"
           />
           <TeamIT
-            image="/assets/images/photo5.svg"
+            image="/assets/images/team/Finhub2700.jpg"
             title="Name Surname"
             jobTitle="Job Title"
             description="Lorem ipsum dolor sit amet, consectetur adipiscig elit, sed do eiusmod tempor incididuntut labore."
-            phoneNumber="+37360735992"
             email="test@finhubss.com"
           />
           <TeamIT
-            image="/assets/images/photo6.svg"
+            image="/assets/images/team/Finhub2735.jpg"
             title="Name Surname"
             jobTitle="Job Title"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            phoneNumber="+37360735992"
             email="test@finhubss.com"
           />
           <TeamIT
-            image="/assets/images/photo7.svg"
+            image="/assets/images/team/Finhub2724.jpg"
             title="Name Surname"
             jobTitle="Job Title"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            phoneNumber="+37360735992"
             email="test@finhubss.com"
           />
         </div>
@@ -91,35 +84,31 @@ const Team = () => {
       <Section image="/assets/images/symbol.svg" title="Sales">
         <div className="flex justify-between flex-wrap section-teamIT-container">
           <TeamIT
-            image="/assets/images/photo4.svg"
+            image="/assets/images/team/Finhub2595.jpg"
             title="Name Surname"
             jobTitle="Job Title"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            phoneNumber="+37360735992"
             email="test@finhubss.com"
           />
           <TeamIT
-            image="/assets/images/photo5.svg"
+            image="/assets/images/team/Finhub2917.jpg"
             title="Name Surname"
             jobTitle="Job Title"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            phoneNumber="+37360735992"
             email="test@finhubss.com"
           />
           <TeamIT
-            image="/assets/images/photo6.svg"
+            image="/assets/images/team/Finhub2579.jpg"
             title="Name Surname"
             jobTitle="Job Title"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            phoneNumber="+37360735992"
             email="test@finhubss.com"
           />
           <TeamIT
-            image="/assets/images/photo7.svg"
+            image="/assets/images/team/Finhub2579.jpg"
             title="Name Surname"
             jobTitle="Job Title"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            phoneNumber="+37360735992"
             email="test@finhubss.com"
           />
         </div>
@@ -130,23 +119,21 @@ const Team = () => {
         reverse="true"
       >
         <TeamManagementItem
-          image="/assets/images/photo1.svg"
+          image="/assets/images/team/Finhub2810.jpg"
           title="Artiom Cebanu"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
           magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
           jobTitle="Director of Corporate Affairs"
-          phoneNumber="060123654"
           email="test@finhubss.com"
         />
       </Section>
       <Section image="/assets/images/symbol.svg" title="Finance">
         <TeamManagementItem
-          image="/assets/images/photo1.svg"
+          image="/assets/images/team/Finhub2938.jpg"
           title="Artiom Cebanu"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
           magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
           jobTitle="Director of Corporate Affairs"
-          phoneNumber="060123654"
           email="test@finhubss.com"
           reverse="true"
         />

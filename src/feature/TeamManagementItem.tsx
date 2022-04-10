@@ -69,7 +69,13 @@ const TeamManagementItem = (props: ITeamItem) => {
       border: '1px solid #A3A3A3',
       padding: '3px',
       width: '21px',
-      margin: '0 10px',
+      margin: props.reverse ? '0 0 0 10px' : '0 10px 0 0',
+    },
+    iconIn: {
+      border: '1px solid #A3A3A3',
+      padding: '3px',
+      width: '21px',
+      margin: props.reverse ? '0 10px 0 0' : '0 0 0 10px',
     },
     jobTitle: {
       margin: '0 8px',
@@ -120,7 +126,11 @@ const TeamManagementItem = (props: ITeamItem) => {
               <div style={styles.titleRow}>
                 {props.title}
                 <div>
-                  <img src="/icons/icon-in.svg" alt="in" style={styles.icon} />
+                  <img
+                    src="/icons/icon-in.svg"
+                    alt="in"
+                    style={styles.iconIn}
+                  />
                 </div>
               </div>
               <div style={styles.jobTitle} className="flex">
@@ -132,16 +142,6 @@ const TeamManagementItem = (props: ITeamItem) => {
             {props.description}
           </div>
           <div>
-            <div className="flex items-center" style={styles.contactItem}>
-              <div className="mr-1">
-                <img
-                  src="/icons/icon-phone.svg"
-                  alt="phone"
-                  style={styles.icon}
-                />
-              </div>
-              {props.phoneNumber}
-            </div>
             <div className="flex items-center" style={styles.contactItem}>
               <div className="mr-1">
                 <img
