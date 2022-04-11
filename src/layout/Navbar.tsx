@@ -57,13 +57,15 @@ export default function Navbar() {
         <nav className="container flex justify-between items-center z-20">
           <div className="my-3">
             <Link href="/">
-              <a>
-                <img
-                  src="/assets/images/logo.png"
-                  style={{ height: '35px' }}
-                  alt="Finhub Software Solutions logo"
-                  onClick={() => setIsOpen(false)}
-                />
+              <a onClick={() => setIsOpen(false)}>
+                <div className="flex items-center text-black">
+                  <img
+                    src="/assets/images/logo.png"
+                    style={{ height: '35px' }}
+                    alt="Finhub Software Solutions logo"
+                  />
+                  Scaling Solutions
+                </div>
               </a>
             </Link>
           </div>

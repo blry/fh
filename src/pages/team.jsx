@@ -20,11 +20,11 @@ const Team = () => {
       />
       <Section image="/assets/images/symbol.svg" title="Management">
         <TeamManagementItem
-          image="/assets/images/team/Finhub2810.jpg"
-          title="Artiom Cebanu"
+          image="/assets/images/team/Finhub2643.jpg"
+          title="Name Surname"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
           magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
-          jobTitle="Director of Corporate Affairs"
+          jobTitle="Job Title"
           email="test@finhubss.com"
         />
         <TeamManagementItem
@@ -37,11 +37,11 @@ const Team = () => {
           reverse="true"
         />
         <TeamManagementItem
-          image="/assets/images/team/Finhub2643.jpg"
-          title="Name Surname"
+          image="/assets/images/team/Finhub2810.jpg"
+          title="Artiom Cebanu"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
           magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
-          jobTitle="Job Title"
+          jobTitle="Director of Corporate Affairs"
           email="test@finhubss.com"
         />
       </Section>
