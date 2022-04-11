@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 type IVerticalFeatureRowProps = {
   title?: string;
   description: string;
+  listItems?: string[];
   image: string;
   imageAlt: string;
   reverse?: boolean;
@@ -91,7 +92,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         </div>
         {/* -------------------------- */}
         <div
-          className={`flex flex-col-reverse verticalFeatureRow-text ${
+          className={`flex flex-col-reverse items-center verticalFeatureRow-text ${
             props.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
           }`}
         >
@@ -109,8 +110,8 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               >
                 <div
                   className={`${
-                    props.icon ? 'w-5 sm:w-8' : 'md:h-14'
-                  } verticalFutureRow-imgCont marginLeft`}
+                    props.icon ? 'w-5 sm:w-8 marginLeft' : 'md:h-14'
+                  } verticalFutureRow-imgCont`}
                 >
                   <img
                     src="/assets/images/symbol.svg"
@@ -131,6 +132,16 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             </div>
             {/* ---------------------------------------------- */}
             {props.description}
+            {props.listItems?.map((item: string) => (
+              <div className="flex items-start mt-1" key={item}>
+                <img
+                  src={`${router.basePath}/assets/images/ul_elem.svg`}
+                  style={{ marginTop: '5px' }}
+                  alt="ul"
+                />
+                <p className="ml-3">{item}</p>
+              </div>
+            ))}
             <div style={styles.button}>
               <Link href={`${props.link}`} passHref>
                 <a className="float-right text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button">
