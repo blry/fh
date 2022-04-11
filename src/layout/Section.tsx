@@ -29,7 +29,7 @@ const Section = (props: ISectionProps) => {
       margin: '0 auto',
     },
     title: {
-      margin: '0 26px',
+      margin: '0 6px',
       backgroundColor: 'white',
       borderBottom: '1px solid #2C4DCA',
       lineHeight: '0',

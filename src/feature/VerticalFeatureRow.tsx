@@ -57,8 +57,8 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
         <div className="mobTitle flex-col">
           <div
             className={`flex items-center ${
-              props.reverse ? 'flex-row-reverse' : ''
-            } ${props.icon ? 'ml-0 mr-0 marginLeft' : ''}`}
+              props.icon ? 'ml-0 mr-0 marginLeft' : ''
+            }`}
           >
             <div
               className={`${
@@ -73,7 +73,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             </div>
             <h3
               className={`text-xl sm:text-2xl text-gray-900 font-semibold ${
-                props.icon ? 'ml-1 mr-1 sm:ml-3 sm:mr-3' : ''
+                props.icon ? 'ml-2 mr-2 sm:ml-3 sm:mr-3' : ''
               }`}
               style={styles.title}
             >
@@ -155,6 +155,9 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               </Link>
             </div>
           </div>
+          <div>
+            <span id={props.falseElem}></span>
+          </div>
           <div className="p-3 md:w-64 lg:w-80 lg:max-h-56 flex items-center justify-center desktopTitle">
             <img
               src={`${router.basePath}${props.image}`}
@@ -163,9 +166,6 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               className="mb-3 sm:mb-0"
             />
           </div>
-        </div>
-        <div>
-          <span id={props.falseElem}></span>
         </div>
       </div>
     </div>
