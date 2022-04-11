@@ -34,7 +34,7 @@ const Fundraising = () => {
           reverse
         />
         <VerticalFeatureRow
-          title="Proces"
+          title="Process"
           description="We invest time in developing diligence documents for a seed round, an executive summary and a slide deck we can 
           walk investors through and, potentially, leave behind so VCs can show to other partners. FINHUB is an expert in creating 
           accurate financial models and business plans that allow everyone to understand how numbers work, not just what numbers are. 
