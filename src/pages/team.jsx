@@ -20,29 +20,38 @@ const Team = () => {
       />
       <Section image="/assets/images/symbol.svg" title="Management">
         <TeamManagementItem
-          image="/assets/images/team/Finhub2643.jpg"
-          title="Name Surname"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-          magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
-          jobTitle="Job Title"
-          email="test@finhubss.com"
-        />
-        <TeamManagementItem
-          image="/assets/images/team/Finhub2762.jpg"
-          title="Dorian Bujor"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-          magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
-          jobTitle="Job Title"
-          email="test@finhubss.com"
-          reverse="true"
+          image="/assets/images/team/Finhub2012.jpg"
+          title="Vitali Chebanu"
+          jobTitle="CEO"
+          email="cob@finhubss.com"
         />
         <TeamManagementItem
           image="/assets/images/team/Finhub2810.jpg"
           title="Artiom Cebanu"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-          magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
-          jobTitle="Director of Corporate Affairs"
-          email="test@finhubss.com"
+          jobTitle="Managing Director"
+          email="acebanu@finhubss.com"
+          reverse
+        />
+        <TeamManagementItem
+          image="/assets/images/team/Finhub2762.jpg"
+          title="Dorian Bujor"
+          jobTitle="Vice-President of Business Development"
+          email="dbujor@finhubss.com"
+        />
+        <TeamManagementItem
+          image="/assets/images/team/Finhub2643.jpg"
+          title="Igor Shorin"
+          jobTitle="Chief Communications Officer"
+          email="ishorin@finhubss.com"
+          reverse="true"
+        />
+      </Section>
+      <Section image="/assets/images/symbol.svg" title="Legal">
+        <TeamManagementItem
+          image="/assets/images/team/Finhub2011.jpg"
+          title="Alexander Syrbu"
+          jobTitle="Chief Legal Officer"
+          email="sav@finhubfund.com"
         />
       </Section>
       <Section
@@ -53,31 +62,27 @@ const Team = () => {
         <div className="flex justify-between flex-wrap section-teamIT-container">
           <TeamIT
             image="/assets/images/team/Finhub2661.jpg"
-            title="Name Surname"
-            jobTitle="Job Title"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            email="test@finhubss.com"
+            title="Alexandru Sterpu"
+            jobTitle="Lead Software Developer"
+            email="asterpu@finhubss.com"
           />
           <TeamIT
             image="/assets/images/team/Finhub2700.jpg"
-            title="Name Surname"
-            jobTitle="Job Title"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscig elit, sed do eiusmod tempor incididuntut labore."
-            email="test@finhubss.com"
+            title="Marin Terentiev"
+            jobTitle="Lead Software Developer"
+            email="mterentiev@finhubss.com"
           />
           <TeamIT
             image="/assets/images/team/Finhub2735.jpg"
-            title="Name Surname"
-            jobTitle="Job Title"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            email="test@finhubss.com"
+            title="Andrei Tricolici"
+            jobTitle="Senior Software Developer"
+            email="tandrei@finhubss.com"
           />
           <TeamIT
             image="/assets/images/team/Finhub2724.jpg"
-            title="Name Surname"
-            jobTitle="Job Title"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            email="test@finhubss.com"
+            title="Liviu Leșan"
+            jobTitle="Senior Software Developer"
+            email="liviul@finhubss.com"
           />
         </div>
       </Section>
@@ -85,58 +90,29 @@ const Team = () => {
         <div className="flex justify-between flex-wrap section-teamIT-container">
           <TeamIT
             image="/assets/images/team/Finhub2595.jpg"
-            title="Name Surname"
-            jobTitle="Job Title"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            email="test@finhubss.com"
+            title="Victor Uncuta"
+            jobTitle="Account Executive"
+            email="uvictor@finhubss.com"
           />
           <TeamIT
             image="/assets/images/team/Finhub2917.jpg"
-            title="Name Surname"
-            jobTitle="Job Title"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            email="test@finhubss.com"
+            title="Tudor Craitamindra"
+            jobTitle="Business Development Representative"
+            email="ctudor@finhubss.com"
           />
           <TeamIT
             image="/assets/images/team/Finhub2579.jpg"
-            title="Name Surname"
-            jobTitle="Job Title"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            email="test@finhubss.com"
+            title="Ioan Ćorić"
+            jobTitle="Business Development Representative"
+            email="iciorici@finhubss.com"
           />
           <TeamIT
-            image="/assets/images/team/Finhub2579.jpg"
-            title="Name Surname"
-            jobTitle="Job Title"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore."
-            email="test@finhubss.com"
+            image="/assets/images/team/Finhub2938.jpg"
+            title="Lyubov Turcan"
+            jobTitle="Business Development Representative"
+            email="lturcanu@finhubss.com"
           />
         </div>
-      </Section>
-      <Section
-        image="/assets/images/symbol.svg"
-        title="Recruitment"
-        reverse="true"
-      >
-        <TeamManagementItem
-          image="/assets/images/team/Finhub2810.jpg"
-          title="Artiom Cebanu"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-          magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
-          jobTitle="Director of Corporate Affairs"
-          email="test@finhubss.com"
-        />
-      </Section>
-      <Section image="/assets/images/symbol.svg" title="Finance">
-        <TeamManagementItem
-          image="/assets/images/team/Finhub2938.jpg"
-          title="Artiom Cebanu"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-          magna aliqua. Id eu  nisl  nunc   mi ipsum faucibus. Tellus at urna condimentum mattis. Consequat  ac   felis."
-          jobTitle="Director of Corporate Affairs"
-          email="test@finhubss.com"
-          reverse="true"
-        />
       </Section>
     </>
   );
