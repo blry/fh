@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "PHP-FPM container is running"
+
+php-fpm

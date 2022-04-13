@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# DB_APP_PASSWORD=$(cat "$DB_APP_PASSWORD_FILE")
+
+{
+  echo "";
+  # echo "export DB_APP_PASSWORD=$DB_APP_PASSWORD";
+  echo "";
+  echo "cd /var/www/backend"
+} >> ~/.bashrc
+
+echo "PHP-CLI container is running"
+
+tail -f /dev/null

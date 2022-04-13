@@ -18,17 +18,48 @@ services:
     build:
       context: ./docker/nginx
     restart: on-failure
-    # network_mode: host # 8083
+    # network_mode: host # 8083, 8082
     volumes:
       - ./website/:/var/www/website/
       - ./docker/nginx/configs/${CONTAINER_ENV}/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./docker/nginx/configs/${CONTAINER_ENV}/sites/:/etc/nginx/sites-available/:ro
       - ./docker/shared/data/logs/nginx/:/var/log/nginx/
+    depends_on:
+      - php-fpm
     labels:
       - traefik.enable=true
+      - traefik.http.routers.website.service=website@docker
       - traefik.http.routers.website.rule=Host(`${TRAEFIK_WEBSITE_HOST}`)
       - traefik.http.routers.website.tls.certresolver=myresolver
       - traefik.http.services.website.loadbalancer.server.port=8083
+      - traefik.http.routers.backend.service=backend@docker
+      - traefik.http.routers.backend.rule=Host(`${TRAEFIK_BACKEND_HOST}`)
+      - traefik.http.routers.backend.tls.certresolver=myresolver
+      - traefik.http.services.backend.loadbalancer.server.port=8082
+
+  php-fpm:
+    build:
+      context: ./docker/php-fpm
+      args:
+        - TIMEZONE=${TIMEZONE}
+        - PUID=${PUID}
+        - PGID=${PGID}
+        - PHP_VERSION=${PHP_VERSION}
+        - XDEBUG_ENABLED=${XDEBUG_ENABLED}
+    restart: on-failure
+    volumes:
+      - ./backend/:/var/www/backend/
+      - ./docker/shared/configs/${CONTAINER_ENV}/php/php.ini:/usr/local/etc/php/php.ini
+      - ./docker/php-fpm/configs/${CONTAINER_ENV}/custom.php.ini:/usr/local/etc/php/conf.d/custom.php.ini
+      - ./docker/php-fpm/configs/${CONTAINER_ENV}/php-fpm.conf:/usr/local/etc/php-fpm.d/php-fpm.conf
+      - ./docker/shared/data/logs/php-fpm/php-fpm/:/var/log/php-fpm/
+      - ./docker/shared/data/logs/php-fpm/xdebug/:/var/log/xdebug/
+    environment:
+      - XDEBUG_CONFIG
+      - PHP_IDE_CONFIG
+    # network_mode: host # 9000
+    # ports:
+    #   - 9000:9000
 
   # builder:
   #   build:
