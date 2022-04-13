@@ -31,6 +31,4 @@ RUN chmod +x /usr/local/bin/nginx-run
 
 WORKDIR /var/www
 
-EXPOSE 3000
-
 CMD [ "nginx-run" ]
