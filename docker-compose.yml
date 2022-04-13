@@ -13,13 +13,12 @@ services:
     ports:
       - 80:80
       - 443:443
-      - 8080:8080
 
   nginx:
     build:
       context: ./docker/nginx
     restart: on-failure
-    # network_mode: host
+    # network_mode: host # 8083
     volumes:
       - ./website/:/var/www/website/
       - ./docker/nginx/configs/${CONTAINER_ENV}/nginx.conf:/etc/nginx/nginx.conf:ro
@@ -31,18 +30,18 @@ services:
       - traefik.http.routers.website.tls.certresolver=myresolver
       - traefik.http.services.website.loadbalancer.server.port=8083
 
-  builder:
-    build:
-      context: ./docker/node-cli
-      args:
-        - TIMEZONE=${TIMEZONE}
-        - PUID=${PUID}
-        - PGID=${PGID}
-        - NODE_VERSION=${NODE_VERSION}
-    volumes:
-      - ./website/:/var/www/website/
-    network_mode: host
-    environment:
-      - NODE_TLS_REJECT_UNAUTHORIZED
-    command: bash -c "cd /var/www/website && tail -f"
+  # builder:
+  #   build:
+  #     context: ./docker/node-cli
+  #     args:
+  #       - TIMEZONE=${TIMEZONE}
+  #       - PUID=${PUID}
+  #       - PGID=${PGID}
+  #       - NODE_VERSION=${NODE_VERSION}
+  #   volumes:
+  #     - ./website/:/var/www/website/
+  #   network_mode: host
+  #   environment:
+  #     - NODE_TLS_REJECT_UNAUTHORIZED
+  #   command: bash -c "cd /var/www/website && tail -f"
 
