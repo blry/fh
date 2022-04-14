@@ -1,11 +1,29 @@
-import { useState } from 'react';
+import { MainBannerText } from '../framer/MainBannerText';
+import { useState, useEffect } from 'react';
 
 const HomeBanner = () => {
-  const [title, setTitle] = useState('Finhub Scaling Solutions');
-  const interval = setInterval(() => {
-    setTitle('Trusted partner for thriving businesses');
-    clearInterval(interval);
-  }, 2000);
+  const [title, setTitle] = useState('Trusted partner for thriving businesses');
+  const [start, setStart] = useState(true);
+
+  useEffect(() => {
+    const interval2 = setInterval(() => {
+      setStart(false);
+      clearInterval(interval2);
+    }, 2700);
+  
+    const interval = setInterval(() => {
+      setStart(true);
+      setTitle('Finhub Scaling Solutions');
+      clearInterval(interval);
+    }, 3000);
+    return(() => {
+        clearInterval(interval)
+        clearInterval(interval2)
+    })
+},[])
+
+  
+
 
   return (
     <div
@@ -15,14 +33,14 @@ const HomeBanner = () => {
         height: 'calc(100vh - 75px)',
       }}
     >
-      <div className="container h-full max-w-screen-lg flex flex-col justify-center items-center text-center text-white">
+      <div className="container h-full flex flex-col justify-center items-center text-center text-white">
         <p
           className="text-3xl lg:text-6xl my-8 transition"
           style={{
-            filter: 'drop-shadow(2px 4px 6px black)',
+            filter: 'drop-shadow(2px 4px 6px black)'
           }}
         >
-          {title}
+          <MainBannerText title={title} start={start} />
         </p>
       </div>
     </div>

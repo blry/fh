@@ -96,7 +96,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             props.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
           }`}
         >
-          <div className="mt-6 ml-0 flex flex-col sm:mr-14 md:w-3/5 text-sm text-black leading-4 sm:ml-12">
+          <div className="mt-6 md:mt-0 ml-0 flex flex-col md:w-4/5 text-sm text-black leading-4 sm:ml-12">
             {/* -------desktop version--------- */}
             <div className="desktopTitle flex-col">
               <div
@@ -158,7 +158,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
           <div>
             <span id={props.falseElem}></span>
           </div>
-          <div className="p-3 md:w-64 lg:w-80 lg:max-h-56 flex items-center justify-center desktopTitle">
+          <div className="p-3 md:w-64 md:mt-12 md:ml-5 lg:w-80 lg:max-h-56 flex items-center justify-center desktopTitle">
             <img
               src={`${router.basePath}${props.image}`}
               alt={props.imageAlt}

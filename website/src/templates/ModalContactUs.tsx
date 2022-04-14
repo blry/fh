@@ -105,7 +105,7 @@ const ModalContactUs = (props: any) => {
 
             <div style={styles.footerElem}>
               <img src={`${router.basePath}/icons/icon-in.svg`} alt="phone" />
-              <p style={styles.footerElemText}>Finhub Software Solution</p>
+              <p style={styles.footerElemText}>FINHUB AC GmbH & Co KG</p>
             </div>
 
             <div style={styles.footerElem}>

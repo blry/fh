@@ -6,18 +6,21 @@ const Footer = () => (
       className="container flex flex-col lg:flex-row py-5 justify-between items-center z-20 text-sm"
       style={{ color: '#eeeeee' }}
     >
-      <img
-        src="/assets/images/logo-gray.png"
-        style={{ height: '40px' }}
-        alt="finhubss logo"
-      />
+      <div className="flex items-center text-white" style={{fontSize: '13pt'}}>
+        <img
+          src="/assets/images/logo-gray.png"
+          style={{ height: '35px' }}
+          alt="Finhub Software Solutions logo"
+        />
+        Scaling Solutions
+      </div>
 
-      <p className="pt-3">+4312675393</p>
-      <a className="pt-3" href="mail:info@finhubss.com">
+      <p className="pt-1">+4312675393</p>
+      <a className="pt-1" href="mail:info@finhubss.com">
         info@finhubss.com
       </a>
-      <p className="pt-3">Finhub Software Solutions</p>
-      <p className="pt-3">Beatrixgasse 27, 1030 Wien, Austria</p>
+      <p className="pt-1">FINHUB AC GmbH & Co KG</p>
+      <p className="pt-1">Beatrixgasse 27, 1030 Wien, Austria</p>
     </div>
 
     <div

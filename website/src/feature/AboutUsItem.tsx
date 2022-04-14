@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { motion } from 'framer-motion'
 
 type IAboutUsItemProps = {
   title: string;
@@ -10,16 +11,46 @@ type IAboutUsItemProps = {
   link: string;
 };
 
+const styles = {
+  imgContainer: {
+    height: "185px",
+    display: "flex",
+    alignItems: "flex-end"
+  }
+}
+
+const variants = {
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: .3
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+      staggerChildren: 0.3,
+    },
+  },
+}
+
 const AboutUsItem = (props: IAboutUsItemProps) => {
   const router = useRouter();
 
   return (
-    <div className="p-3 border-2 relative pb-9 boxshadow-animation">
-      <div className="">
+    <motion.div 
+      className="p-3 border-2 relative pb-9 boxshadow-animation" 
+      initial={variants.hidden}
+      variants={variants}
+      whileInView={variants.visible}
+      viewport={{ once: true }}
+    >
+      <div style={styles.imgContainer} className="mb-3">
         <img
           src={`${router.basePath}${props.image}`}
           alt={props.imageAlt}
-          style={{ height: "200px", margin: "0 auto" }}
+          style={{ margin: "0 auto" }}
         />
       </div>
       <div className="">
@@ -38,7 +69,7 @@ const AboutUsItem = (props: IAboutUsItemProps) => {
           </a>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

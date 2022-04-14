@@ -6,7 +6,7 @@ type IBannerProps = {
 const Banner = (props: IBannerProps) => {
   const styles = {
     bannerContainer: {
-      background: "url('/assets/images/team-banner.png') no-repeat",
+      background: "url('/assets/images/home-banner.jpg') no-repeat",
       borderBottom: '3px solid #2C4DCA',
       backgroundSize: 'cover',
       height: '270px',
@@ -24,11 +24,12 @@ const Banner = (props: IBannerProps) => {
     title: {
       fontSize: '18pt',
       marginTop: '10px',
+      filter: 'drop-shadow(2px 4px 6px black)'
     },
     span: {
       display: props.description ? 'block' : 'none',
       width: '1px',
-      borderLeft: '1px solid white',
+      borderLeft: '1px solid #1d4ed8',
       margin: '0 60px',
     },
     description: {
@@ -37,6 +38,7 @@ const Banner = (props: IBannerProps) => {
       fontSize: '8pt',
       marginTop: '10px',
       marginRight: '50px',
+      filter: 'drop-shadow(2px 4px 6px black)'
     },
   };
 
