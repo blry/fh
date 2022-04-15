@@ -1,24 +1,29 @@
 import className from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useRef, MutableRefObject } from 'react'
 
 type IVerticalFeatureRowProps = {
   title?: string;
   description: string;
   listItems?: string[];
   image: string;
+  imageFilter?: boolean;
   imageAlt: string;
   reverse?: boolean;
   icon?: boolean;
   line?: boolean;
   link?: string | undefined;
-  falseElem?: string;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
   const verticalFeatureClass = className('mt-10', 'mb-12', 'flex', {
     'flex-row-reverse': props.reverse,
   });
+
+  const imageRef = useRef() as MutableRefObject<HTMLImageElement>;
+  const containerRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const router = useRouter();
 
   const styles = {
     img: {
@@ -46,12 +51,33 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       borderColor: '#707070',
       width: '165px',
     },
+    div: {
+      boxShadow: props.imageFilter ? '0px 0px 10px #cdc3c3' : '',
+      borderRadius: '10px',
+      paddingBottom: '25px',
+    }
   };
 
-  const router = useRouter();
+  const imageColorHandler = () => {
+    if(props.imageFilter){
+      imageRef.current.classList.remove('image-gray-filter');
+    }
+  }
+
+  const imageColorLeaveHandler = () => {
+    if(props.imageFilter){
+      imageRef.current.classList.add('image-gray-filter');
+    }
+  }
 
   return (
-    <div className={verticalFeatureClass}>
+    <div 
+      className={verticalFeatureClass} 
+      onMouseOver={imageColorHandler} 
+      onMouseLeave={imageColorLeaveHandler}
+      ref={containerRef}
+      style={styles.div}
+    >
       <div className="flex flex-col">
         {/* only mobile resolution */}
         <div className="mobTitle flex-col">
@@ -155,15 +181,13 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               </Link>
             </div>
           </div>
-          <div>
-            <span id={props.falseElem}></span>
-          </div>
           <div className="p-3 md:w-64 md:mt-12 md:ml-5 lg:w-80 lg:max-h-56 flex items-center justify-center desktopTitle">
             <img
               src={`${router.basePath}${props.image}`}
               alt={props.imageAlt}
               style={{ maxWidth: '85%' }}
-              className="mb-3 sm:mb-0"
+              className={`mb-3 sm:mb-0 ${ props.imageFilter ? 'image-gray-filter' : ''}`}
+              ref={imageRef}
             />
           </div>
         </div>

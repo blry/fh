@@ -57,6 +57,11 @@ body {
   display: none;
 }
 
+.image-gray-filter {
+  filter: grayscale(1);
+  transition: 1s;
+}
+
 
 
 /* responsive */
