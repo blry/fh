@@ -22,6 +22,7 @@ const variants = {
 type Props = {
 	title: string;
 	start: boolean;
+	logo: boolean;
 }
 
 
@@ -31,7 +32,19 @@ export const MainBannerText = (props: Props) => {
 			variants={variants}
 			animate={props.start ? variants.start : variants.stop}
 		>
-			{props.title}
+			{
+				props.logo ? 
+				(
+					<div className="text-4xl flex items-center text-black">
+						<img
+							src="/assets/images/logo.png"
+							style={{ height: '72px' }}
+							alt="Finhub Software Solutions logo"
+						/>
+						Scaling Solutions
+				  	</div>
+				) : props.title
+			}
 		</motion.div>
 	)
 
