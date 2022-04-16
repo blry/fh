@@ -131,6 +131,11 @@ body {
   .teamManagementItem-imageContainer {
     margin-bottom: 50px !important;
   }
+
+  .vertical-feature-class {
+    box-shadow: unset !important;
+    padding-bottom: unset !important;
+  }
 }
 
 @media only screen and (min-width: 768px){ 

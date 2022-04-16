@@ -35,10 +35,10 @@ export const MainBannerText = (props: Props) => {
 			{
 				props.logo ? 
 				(
-					<div className="text-4xl flex items-center text-black">
+					<div className="text-xl sm:text-3xl lg:text-4xl flex items-center text-black">
 						<img
 							src="/assets/images/logo.png"
-							style={{ height: '72px' }}
+							className="h-9 sm:h-16"
 							alt="Finhub Software Solutions logo"
 						/>
 						Scaling Solutions

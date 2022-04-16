@@ -72,7 +72,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
   return (
     <div 
-      className={verticalFeatureClass} 
+      className={`${verticalFeatureClass} vertical-feature-class`} 
       onMouseOver={imageColorHandler} 
       onMouseLeave={imageColorLeaveHandler}
       ref={containerRef}
