@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
-
 import { Section } from '../layout/Section';
+
+import { motion } from 'framer-motion'
+import { OpacityVariants } from '../utils/motion/OpacityVariants'
 
 const styles = {
   container: {
@@ -38,7 +40,13 @@ const TeamExtension = () => {
       title="Our Tech Stack"
       reverse="true"
     >
-      <div className="w-full">
+      <motion.div 
+        className="w-full"
+        initial={OpacityVariants.hidden}
+        variants={OpacityVariants}
+        whileInView={OpacityVariants.visible}
+        viewport={{ once: true }}
+      >
         <div style={styles.container} className="justify-beetwen">
           <div style={styles.containerElement} className="w-full md:w-1/2">
             <div className="flex">
@@ -232,7 +240,7 @@ const TeamExtension = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Section>
   );
 };

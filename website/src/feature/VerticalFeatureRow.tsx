@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useRef, MutableRefObject } from 'react'
 
+import { motion } from 'framer-motion'
+import { OpacityVariants } from '../utils/motion/OpacityVariants'
+
 type IVerticalFeatureRowProps = {
   title?: string;
   description: string;
@@ -71,12 +74,16 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
   }
 
   return (
-    <div 
+    <motion.div 
       className={`${verticalFeatureClass} vertical-feature-class`} 
       onMouseOver={imageColorHandler} 
       onMouseLeave={imageColorLeaveHandler}
       ref={containerRef}
       style={styles.div}
+      initial={OpacityVariants.hidden}
+      variants={OpacityVariants}
+      whileInView={OpacityVariants.visible}
+      viewport={{ once: true }}
     >
       <div className="flex flex-col">
         {/* only mobile resolution */}
@@ -170,14 +177,16 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             ))}
             <div style={styles.button}>
               <Link href={`${props.link}`} passHref>
-                <a className="float-right text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button">
-                  Read More
-                  <img
-                    src="/icons/Blue Arrow.svg"
-                    alt=""
-                    className="h-4 mt-0.5 ml-1 text-gray-900"
-                  />
-                </a>
+                <motion.div whileTap={{scale: 0.9}}>
+                  <a className="float-right text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button">
+                    Read More
+                    <img
+                      src="/icons/Blue Arrow.svg"
+                      alt=""
+                      className="h-4 mt-0.5 ml-1 text-gray-900"
+                    />
+                  </a>
+                </motion.div>
               </Link>
             </div>
           </div>
@@ -192,7 +201,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

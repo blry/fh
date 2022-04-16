@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion'
+import { OpacityVariants } from '../utils/motion/OpacityVariants'
+
 type ITeamITProps = {
   image: string;
   title: string;
@@ -68,7 +71,14 @@ const TeamIT = (props: ITeamITProps) => {
 
   return (
     <>
-      <div style={styles.container} className="teamIT-container">
+      <motion.div 
+        style={styles.container} 
+        className="teamIT-container"
+        initial={OpacityVariants.hidden}
+        variants={OpacityVariants}
+        whileInView={OpacityVariants.visible}
+        viewport={{ once: true }}
+      >
         <div style={styles.imageContainer}>
           <div style={styles.image} className="teamIT-imageContainer"></div>
           <span style={styles.span}></span>
@@ -85,7 +95,7 @@ const TeamIT = (props: ITeamITProps) => {
           <div style={styles.contact}>{props.phoneNumber}</div>
           <div style={styles.contact}>{props.email}</div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

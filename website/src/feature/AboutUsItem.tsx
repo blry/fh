@@ -1,7 +1,9 @@
 /* eslint-disable prettier/prettier */
 import Link from "next/link";
 import { useRouter } from "next/router";
+
 import { motion } from 'framer-motion'
+import { OpacityVariants } from '../utils/motion/OpacityVariants'
 
 type IAboutUsItemProps = {
   title: string;
@@ -19,31 +21,15 @@ const styles = {
   }
 }
 
-const variants = {
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: .3
-    },
-  },
-  hidden: {
-    opacity: 0,
-    transition: {
-      when: "afterChildren",
-      staggerChildren: 0.3,
-    },
-  },
-}
-
 const AboutUsItem = (props: IAboutUsItemProps) => {
   const router = useRouter();
 
   return (
     <motion.div 
       className="p-3 border-2 relative pb-9 boxshadow-animation" 
-      initial={variants.hidden}
-      variants={variants}
-      whileInView={variants.visible}
+      initial={OpacityVariants.hidden}
+      variants={OpacityVariants}
+      whileInView={OpacityVariants.visible}
       viewport={{ once: true }}
     >
       <div style={styles.imgContainer} className="mb-3">
@@ -59,14 +45,16 @@ const AboutUsItem = (props: IAboutUsItemProps) => {
       </div>
       <div className="bottom-2 absolute right-3">
         <Link href={encodeURIComponent(props.link!)} passHref={true}>
-          <a className="float-right text-primary-500 flex text-sm font-bold" style={{color:"rgb(59 130 246)"}}>
-            Read More
-            <img
-              src="/icons/Blue Arrow.svg"
-              alt=""
-              className="h-4 mt-0.5 ml-1"
-            />
-          </a>
+          <motion.div whileHover={{scale: 1.1}}>
+            <a className="float-right text-primary-500 flex text-sm font-bold" style={{color:"rgb(59 130 246)"}}>
+              Read More
+              <img
+                src="/icons/Blue Arrow.svg"
+                alt=""
+                className="h-4 mt-0.5 ml-1"
+              />
+            </a>
+          </motion.div>
         </Link>
       </div>
     </motion.div>

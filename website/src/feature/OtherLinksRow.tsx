@@ -1,6 +1,9 @@
 /* eslint-disable prettier/prettier */
 import { useRouter } from "next/router";
 
+import { motion } from 'framer-motion'
+import { OpacityVariants } from '../utils/motion/OpacityVariants'
+
 type IOtherLinksRowProps = {
   title?: string;
   description: string;
@@ -21,7 +24,13 @@ const OtherLinksRow = (props: IOtherLinksRowProps) => {
   }
 
   return (
-    <div className="mb-8 p-3">
+    <motion.div 
+      className="mb-8 p-3"
+      initial={OpacityVariants.hidden}
+      variants={OpacityVariants}
+      whileInView={OpacityVariants.visible}
+      viewport={{ once: true }}
+    >
       <div className="mb-2 flex items-center">
         <div className="col-span-1 pr-2 pl-1">
           <img
@@ -37,16 +46,18 @@ const OtherLinksRow = (props: IOtherLinksRowProps) => {
       </div>
       <div className="flex flex-col-reverse sm:flex-row sm:grid-container sm:grid-cols-6 mb-2">
         <div className="w-36 sm:col-span-1">
-          <a href={props.link} className="float-right text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button">
-            Read More 
-            <img src="/icons/Blue Arrow.svg" alt="" className="h-4 mt-0.5 ml-1 text-gray-900" />
-          </a>
+          <motion.div whileTap={{scale: 0.9}}>
+            <a href={props.link} className="float-right text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button">
+              Read More 
+              <img src="/icons/Blue Arrow.svg" alt="" className="h-4 mt-0.5 ml-1 text-gray-900" />
+            </a>
+          </motion.div>
         </div>
         <div className="w-full sm:col-span-5 pl-1">
           <div className="text-sm">{props.description}</div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

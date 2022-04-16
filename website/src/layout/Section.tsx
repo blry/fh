@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
-
 import { useRouter } from 'next/router';
+
+import { motion } from 'framer-motion';
+import { OpacityVariants } from '../utils/motion/OpacityVariants'
 
 type ISectionProps = {
   image?: string;
@@ -50,9 +52,13 @@ const Section = (props: ISectionProps) => {
       }`}
     >
       {(props.title || props.description) && (
-        <div
+        <motion.div
           className="mb-12 text-left flex items-center flex-start section-container"
           style={style.sectionContainer}
+          initial={OpacityVariants.hidden}
+          variants={OpacityVariants}
+          whileInView={OpacityVariants.visible}
+          viewport={{ once: true }}
         >
           <div className="flex items-center" style={style.content}>
             {props.image && (
@@ -75,7 +81,7 @@ const Section = (props: ISectionProps) => {
           {props.description && (
             <div className="mt-4 text-xl md:px-20">{props.description}</div>
           )}
-        </div>
+        </motion.div>
       )}
 
       {props.children}

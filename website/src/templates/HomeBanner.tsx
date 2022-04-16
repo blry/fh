@@ -1,4 +1,4 @@
-import { MainBannerText } from '../framer/MainBannerText';
+import { MainBannerText } from '../utils/motion/MainBannerText';
 import { useState, useEffect } from 'react';
 
 const styles = {

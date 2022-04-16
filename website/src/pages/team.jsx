@@ -4,6 +4,7 @@ import { Section } from '../layout/Section';
 import { TeamManagementItem } from '../feature/TeamManagementItem';
 import { TeamIT } from '../feature/TeamIT';
 
+
 const Team = () => {
   return (
     <>

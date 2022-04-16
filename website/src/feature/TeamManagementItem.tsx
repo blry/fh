@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion'
+import { OpacityVariants } from '../utils/motion/OpacityVariants'
+
 type ITeamItem = {
   image: string;
   title: string;
@@ -105,7 +108,14 @@ const TeamManagementItem = (props: ITeamItem) => {
 
   return (
     <>
-      <div style={styles.container} className="teamManagementItem-container">
+      <motion.div 
+        style={styles.container} 
+        className="teamManagementItem-container"
+        initial={OpacityVariants.hidden}
+        variants={OpacityVariants}
+        whileInView={OpacityVariants.visible}
+        viewport={{ once: true }}
+      >
         <div
           style={styles.imageContainer}
           className="teamManagementItem-imageContainer"
@@ -157,7 +167,7 @@ const TeamManagementItem = (props: ITeamItem) => {
         <div className="flex items-center teamManagementItem-spanContainer">
           <span style={styles.span}></span>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

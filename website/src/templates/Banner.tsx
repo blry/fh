@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion'
+import { OpacityVariants } from '../utils/motion/OpacityVariants'
+
 type IBannerProps = {
   title: string;
   description?: string;
@@ -44,7 +47,14 @@ const Banner = (props: IBannerProps) => {
 
   return (
     <>
-      <div style={styles.bannerContainer} className="teamBannerContainer">
+      <motion.div 
+        style={styles.bannerContainer} 
+        className="teamBannerContainer"
+        initial={OpacityVariants.hidden}
+        variants={OpacityVariants}
+        whileInView={OpacityVariants.visible}
+        viewport={{ once: true }}
+      >
         <div style={styles.bannerContent} className="teamBannerContent">
           <div style={styles.title} className="teamBannerTitle">
             {props.title}
@@ -54,7 +64,7 @@ const Banner = (props: IBannerProps) => {
             {props.description}
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
