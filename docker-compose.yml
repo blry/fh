@@ -29,7 +29,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.website.service=website@docker
-      - traefik.http.routers.website.rule=Host(`${TRAEFIK_WEBSITE_HOST}`)
+      - traefik.http.routers.website.rule=Host(`${TRAEFIK_WEBSITE_HOST}`, `www.${TRAEFIK_WEBSITE_HOST}`)
       - traefik.http.routers.website.tls.certresolver=myresolver
       - traefik.http.services.website.loadbalancer.server.port=8083
       - traefik.http.routers.backend.service=backend@docker
