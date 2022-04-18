@@ -40,7 +40,6 @@ const ProductDevelopment = () => {
           features and functionality to the items we design."
           image="/assets/images/product-photo3.svg"
           imageAlt="image"
-          falseElem="team-extension"
         />
       </div>
     </>
