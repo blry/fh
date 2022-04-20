@@ -1,6 +1,6 @@
 export const AppConfig = {
   site_name: 'FinhubSS',
-  title: 'Finhub Software Solutions',
-  description: 'Finhub Software Solutions',
+  title: 'Finhub Scaling Solution',
+  description: 'Finhub Scaling Solutions',
   locale: 'en',
 };

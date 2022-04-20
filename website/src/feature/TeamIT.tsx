@@ -23,7 +23,7 @@ const TeamIT = (props: ITeamITProps) => {
     image: {
       background: `url(${props.image}) no-repeat`,
       backgroundSize: 'cover',
-      width: '210px',
+      width: '198px',
       height: '200px',
     },
     span: {

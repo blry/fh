@@ -9,7 +9,7 @@ type IBannerProps = {
 const Banner = (props: IBannerProps) => {
   const styles = {
     bannerContainer: {
-      background: "url('/assets/images/home-banner.jpg') no-repeat",
+      background: "url('/assets/images/home-banner-opacity.jpg') no-repeat",
       borderBottom: '3px solid #2C4DCA',
       backgroundSize: 'cover',
       height: '270px',
@@ -25,20 +25,20 @@ const Banner = (props: IBannerProps) => {
       margin: '0 20px',
     },
     title: {
-      fontSize: '18pt',
+      fontSize: '20pt',
       marginTop: '10px',
       filter: 'drop-shadow(2px 4px 6px black)'
     },
     span: {
       display: props.description ? 'block' : 'none',
       width: '1px',
-      borderLeft: '1px solid #1d4ed8',
+      borderLeft: '2px solid #1d4ed8',
       margin: '0 60px',
     },
     description: {
       display: props.description ? 'block' : 'none',
-      width: '50vw',
-      fontSize: '8pt',
+      width: '60vw',
+      fontSize: '10pt',
       marginTop: '10px',
       marginRight: '50px',
       filter: 'drop-shadow(2px 4px 6px black)'

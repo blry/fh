@@ -60,7 +60,7 @@ export default function Navbar() {
               <a onClick={() => setIsOpen(false)}>
                 <div className="flex items-center text-black">
                   <img
-                    src="/assets/images/logo.png"
+                    src="/assets/images/logo_white.svg"
                     style={{ height: '35px' }}
                     alt="Finhub Software Solutions logo"
                   />

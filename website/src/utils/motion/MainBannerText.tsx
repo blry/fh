@@ -37,7 +37,7 @@ export const MainBannerText = (props: Props) => {
 				(
 					<div className="text-xl sm:text-3xl lg:text-4xl flex items-center text-black">
 						<img
-							src="/assets/images/logo.png"
+							src="/assets/images/logo_white.svg"
 							className="h-9 sm:h-16"
 							alt="Finhub Software Solutions logo"
 						/>

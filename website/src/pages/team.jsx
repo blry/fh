@@ -59,7 +59,7 @@ const Team = () => {
         title="Information Technology"
         reverse="true"
       >
-        <div className="flex justify-between flex-wrap section-teamIT-container">
+        <div className="flex justify-evenly flex-wrap section-teamIT-container">
           <TeamIT
             image="/assets/images/team/Finhub2661.jpg"
             title="Alexandru Sterpu"
@@ -87,7 +87,7 @@ const Team = () => {
         </div>
       </Section>
       <Section image="/assets/images/symbol.svg" title="Sales">
-        <div className="flex justify-between flex-wrap section-teamIT-container">
+        <div className="flex justify-evenly flex-wrap section-teamIT-container">
           <TeamIT
             image="/assets/images/team/Finhub2595.jpg"
             title="Victor Uncuta"

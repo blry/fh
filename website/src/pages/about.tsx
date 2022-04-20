@@ -5,16 +5,23 @@ const About = () => (
   <>
     <Banner
       title="About Us"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-    incididunt ut labore et dolore magna aliqua. Viverra nam libero justo laoreet. At ultrices mi tempus imperdiet nulla 
-    malesuada pellentesque elit eget. Erat nam at lectus urna duis convallis convallis. Tortor id aliquet lectus proin 
-    nibh nisl condimentum id venenatis. Nibh cras pulvinar mattis nunc sed blandit libero volutpat. Eu augue ut lectus arcu bibendum 
-    at varius vel pharetra. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Mauris ultrices eros in 
-    cursus turpis massa. Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. Eget nunc scelerisque viverra mauris in. 
-    Erat pellentesque adipiscing commodo elit at. Sed sed risus pretium quam. Nisl tincidunt eget nullam non nisi. Sodales ut etiam sit 
-    amet nisl."
+      description="Finhub Scaling Solutions is a B2B consulting company,
+      offering a broad range of professional services, primarily
+      within Sales, IT and Finances & Legal. Based on our
+      experience of over a decade within the EU market and highly
+      skillful and dedicated team of experts, we deliver personalized
+      and cost-effective solutions to our customers.
+      Our values of Loyalty, Perseverence and Team-work ensure
+      that we are always there for our customers by working the
+      extra mile to exceed their expectations, while providing an
+      inclusive and learning-friendly working environment for our
+      employees.
+      With offices in both Vienna, Austria and Chisinau, Republic of
+      Moldova, our teams share the same high standards and are
+      open for everyone with respect to the local COVID-19
+      measures."
     />
-    <div className="max-w-screen-lg mx-auto px-3 mb-28">
+    <div className="max-w-screen-xl mx-auto px-3 mb-28">
       <VerticalFeatureRow
         title="Product Development"
         description="A good understanding of the requirements, users, target audience, and prospective market is required for 

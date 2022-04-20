@@ -194,7 +194,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             <img
               src={`${router.basePath}${props.image}`}
               alt={props.imageAlt}
-              style={{ maxWidth: '85%' }}
+              style={{ maxWidth: '100%' }}
               className={`mb-3 sm:mb-0 ${ props.imageFilter ? 'image-gray-filter' : ''}`}
               ref={imageRef}
             />

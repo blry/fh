@@ -68,7 +68,7 @@ module.exports = {
           sm: '2rem',
           lg: '3rem',
           xl: '4rem',
-          '2xl': '10rem',
+          '2xl': '6.5rem',
         },
       },
       inset: {

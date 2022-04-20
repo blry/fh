@@ -5,7 +5,7 @@ const ProductDevelopment = () => {
   return (
     <>
       <Banner title="Product Development" />
-      <div className="max-w-screen-lg mx-auto px-3">
+      <div className="max-w-screen-xl mx-auto px-3">
         <VerticalFeatureRow
           title="Description"
           description="A good understanding of the requirements, users, target audience, and prospective market is required for 

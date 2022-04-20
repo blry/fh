@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 const styles = {
   backgroundImage: {
-    background: "url('/assets/images/home-banner.jpg') no-repeat",
+    background: "url('/assets/images/home-banner-opacity.jpg') no-repeat",
     backgroundSize: 'cover',
     height: 'calc(100vh - 75px)',
   },
