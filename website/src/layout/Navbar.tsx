@@ -58,11 +58,12 @@ export default function Navbar() {
           <div className="my-3">
             <Link href="/">
               <a onClick={() => setIsOpen(false)}>
-                <div className="flex items-center text-black">
+                <div className="flex items-center text-black navbar-logo-text">
                   <img
                     src="/assets/images/logo_white.svg"
                     style={{ height: '35px' }}
-                    alt="Finhub Software Solutions logo"
+                    className="navbar-logo-img"
+                    alt="logo"
                   />
                   Scaling Solutions
                 </div>

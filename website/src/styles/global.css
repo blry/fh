@@ -26,6 +26,10 @@ body {
   }
 }
 
+.navbar-logo-img {
+  height: 35px;
+}
+
 .close-button-modal {
   cursor: pointer;
 }
@@ -68,7 +72,7 @@ body {
 }
 
 .transition-2s {
-  transition: .5s;
+  transition: .5s !important;
 }
 
 
@@ -190,7 +194,7 @@ body {
     width: unset !important;
   }
   .teamBannerContainer {
-    height: 460px !important;
+    height: 580px !important;
   }
   .teamBannerText {
   }
@@ -203,6 +207,12 @@ body {
   .teamIT-imageContainer {
     width: 340px !important;
     height: 345px !important;
+  }
+  .navbar-logo-img {
+    height: 27px;
+  }
+  .navbar-logo-text {
+    font-size: 11pt;
   }
 }
 

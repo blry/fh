@@ -21,53 +21,54 @@ const HomeBanner = () => {
   const [opacityStyle, setOpacityStyle] = useState(false);
   const [logo, setLogo] = useState(false);
   const [scale, setScale] = useState(false);
-  const [transition, setTransition] = useState(false);
+  const [transitionFast, setTransitionFast] = useState(false);
+  const [repeat, setRepeat] = useState(0);
 
   useEffect(() => {
 
+    setTransitionFast(false);
     setScale(true)
-    const firstInterval = setInterval(() => {
+    setTimeout(() => {
       setStart(true);
       setTitle('Trusted partner for thriving businesses');
-      clearInterval(firstInterval);
-    }, 2000);
+    }, 1000);
 
-    const endFirstInt = setInterval(() => {
+    setTimeout(() => {
       setStart(false);
       setOpacityStyle(true);
-      setTransition(true);
-      clearInterval(endFirstInt);
-    }, 5500);
+      setTransitionFast(true);
+    }, 5000);
 
-    const transitionInt = setInterval(() => {
-      setTransition(true);
-      clearInterval(transitionInt);
-    }, 6000);
+    setTimeout(() => {
+      setTransitionFast(true);
+    }, 5200);
 
-    const opacityInt = setInterval(() => {
+    setTimeout(() => {
       setScale(false)
       setBackgroundImage(false);
-      clearInterval(opacityInt);
-    }, 6500);
+    }, 5500);
   
-    const startSecondInt = setInterval(() => {
+    setTimeout(() => {
       setOpacityStyle(false);
       setStart(true);
       setLogo(true);
-      clearInterval(startSecondInt);
-    }, 6900);
+    }, 5900);
 
-    return(() => {
-        clearInterval(firstInterval)
-        clearInterval(opacityInt)
-        clearInterval(transitionInt)
-        clearInterval(endFirstInt)
-        clearInterval(startSecondInt)
-    })
-},[])
+    setTimeout( () => {
+      setStart(false);
+      setOpacityStyle(true);
+      setTransitionFast(true);
+    }, 9900);
 
-  
+    setTimeout(() => {
+      setTitle('');
+      setBackgroundImage(true);
+      setOpacityStyle(false);
+      setLogo(false);
+      setRepeat(repeat + 1);
+    }, 10900);
 
+},[repeat])
 
   return (
     <div
@@ -75,14 +76,14 @@ const HomeBanner = () => {
         backgroundImage ? styles.backgroundImage : styles.backgroundColor
       }
       className={`
-        ${opacityStyle ? 'opacity-0' : ''} 
+        ${opacityStyle ? 'opacity-0' : 'opacity-100'} 
         ${scale ? 'scale-125' : ''} 
-        ${transition ? 'transition-2s' : 'transition-30s'}
+        ${transitionFast ? 'transition-2s' : 'transition-30s'}
       `}
     >
       <div className="container h-full flex flex-col justify-center items-center text-center text-white">
         <p
-          className="text-3xl lg:text-6xl my-8 transition"
+          className="text-3xl lg:text-6xl sm:my-8 transition"
           style={{
             filter: `${ logo ? '' : 'drop-shadow(2px 4px 6px black)'}`
           }}
