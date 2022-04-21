@@ -61,18 +61,17 @@ services:
     # ports:
     #   - 9000:9000
 
-  # builder:
-  #   build:
-  #     context: ./docker/node-cli
-  #     args:
-  #       - TIMEZONE=${TIMEZONE}
-  #       - PUID=${PUID}
-  #       - PGID=${PGID}
-  #       - NODE_VERSION=${NODE_VERSION}
-  #   volumes:
-  #     - ./website/:/var/www/website/
-  #   network_mode: host
-  #   environment:
-  #     - NODE_TLS_REJECT_UNAUTHORIZED
-  #   command: bash -c "cd /var/www/website && tail -f"
-
+  builder:
+    build:
+      context: ./docker/node-cli
+      args:
+        - TIMEZONE=${TIMEZONE}
+        - PUID=${PUID}
+        - PGID=${PGID}
+        - NODE_VERSION=${NODE_VERSION}
+    volumes:
+      - ./website/:/var/www/website/
+    network_mode: host
+    environment:
+      - NODE_TLS_REJECT_UNAUTHORIZED
+    command: bash -c "cd /var/www/website && tail -f"
