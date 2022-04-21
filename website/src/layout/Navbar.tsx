@@ -61,7 +61,6 @@ export default function Navbar() {
                 <div className="flex items-center text-black navbar-logo-text">
                   <img
                     src="/assets/images/logo_white.svg"
-                    style={{ height: '35px' }}
                     className="navbar-logo-img"
                     alt="logo"
                   />
