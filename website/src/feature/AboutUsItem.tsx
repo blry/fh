@@ -43,7 +43,7 @@ const AboutUsItem = (props: IAboutUsItemProps) => {
         <h4 className="text-2xl text-gray-900 font-semibold">{props.title}</h4>
         <div className="mt-3 text-sm">{props.description}</div>
       </div>
-      <div className="flex md:absolute md:right-3 md:bottom-2 justify-end mt-5">
+      <div className="flex md:absolute md:right-3 md:bottom-2 justify-center mt-5">
         <Link href={encodeURIComponent(props.link!)} passHref={true}>
           <motion.div whileHover={{scale: 1.1}}>
             <a className="float-right text-primary-500 flex text-sm font-bold" style={{color:"rgb(59 130 246)"}}>

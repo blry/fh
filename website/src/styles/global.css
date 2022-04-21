@@ -198,6 +198,12 @@ body {
   }
   .teamBannerText {
   }
+  .navbar-logo-img {
+    height: 27px;
+  }
+  .navbar-logo-text {
+    font-size: 11pt;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -207,12 +213,6 @@ body {
   .teamIT-imageContainer {
     width: 340px !important;
     height: 345px !important;
-  }
-  .navbar-logo-img {
-    height: 27px;
-  }
-  .navbar-logo-text {
-    font-size: 11pt;
   }
 }
 
