@@ -58,7 +58,7 @@ export default function Navbar() {
           <div className="my-3">
             <Link href="/">
               <a onClick={() => setIsOpen(false)}>
-                <div className="flex items-center text-black navbar-logo-text">
+                <div className="flex items-center text-black navbar-logo-text" style={{width: '235px'}}>
                   <img
                     src="/assets/images/logo_white.svg"
                     className="navbar-logo-img"

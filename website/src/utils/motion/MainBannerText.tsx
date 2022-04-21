@@ -36,7 +36,7 @@ export const MainBannerText = (props: Props) => {
 				props.logo ? 
 				(
 					<div>
-						<div className="hidden sm:flex text-lg sm:text-3xl lg:text-4xl items-center text-black">
+						<div className="hidden sm:flex text-lg sm:text-3xl lg:text-4xl items-center text-black" style={{width: '500px'}}>
 							<img
 								src="/assets/images/logo_white.svg"
 								className="h-6 sm:h-16"

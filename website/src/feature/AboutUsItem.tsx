@@ -43,10 +43,10 @@ const AboutUsItem = (props: IAboutUsItemProps) => {
         <h4 className="text-2xl text-gray-900 font-semibold">{props.title}</h4>
         <div className="mt-3 text-sm">{props.description}</div>
       </div>
-      <div className="flex md:absolute md:right-3 md:bottom-2 justify-center mt-5">
+      <div className="flex md:absolute md:right-3 md:bottom-2 justify-center mt-5" style={{width: '135px'}}>
         <Link href={encodeURIComponent(props.link!)} passHref={true}>
-          <motion.div whileHover={{scale: 1.1}}>
-            <a className="float-right text-primary-500 flex text-sm font-bold" style={{color:"rgb(59 130 246)"}}>
+          <motion.div whileHover={{scale: 1.1}} className="w-full">
+            <a className="float-right text-primary-500 w-full flex text-sm font-bold" style={{color:"rgb(59 130 246)"}}>
               Read More
               <img
                 src="/icons/Blue Arrow.svg"
