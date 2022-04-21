@@ -35,14 +35,23 @@ export const MainBannerText = (props: Props) => {
 			{
 				props.logo ? 
 				(
-					<div className="text-lg sm:text-3xl lg:text-4xl flex items-center text-black">
-						<img
-							src="/assets/images/logo.jpg"
-							className="h-6 sm:h-16"
-							alt="logo"
-						/>
-						
-				  	</div>
+					<div>
+						<div className="hidden sm:flex text-lg sm:text-3xl lg:text-4xl items-center text-black">
+							<img
+								src="/assets/images/logo_white.svg"
+								className="h-6 sm:h-16"
+								alt="logo"
+							/>
+							Scaling Solutions
+						</div>
+						<div className="flex sm:hidden text-lg sm:text-3xl lg:text-4xl items-center text-black">
+							<img
+								src="/assets/images/logo.jpg"
+								className="h-6 sm:h-16"
+								alt="logo"
+							/>
+						</div>
+					</div>
 				) : props.title
 			}
 		</motion.div>
