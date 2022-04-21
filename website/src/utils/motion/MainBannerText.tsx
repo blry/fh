@@ -37,11 +37,11 @@ export const MainBannerText = (props: Props) => {
 				(
 					<div className="text-lg sm:text-3xl lg:text-4xl flex items-center text-black">
 						<img
-							src="/assets/images/logo_white.svg"
+							src="/assets/images/logo.jpg"
 							className="h-6 sm:h-16"
-							alt="Finhub Software Solutions logo"
+							alt="logo"
 						/>
-						Scaling Solutions
+						
 				  	</div>
 				) : props.title
 			}
