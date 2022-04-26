@@ -95,7 +95,7 @@ const ModalContactUs = (props: any) => {
                 src={`${router.basePath}/icons/icon-phone.svg`}
                 alt="phone"
               />
-              <p style={styles.footerElemText}>+4312675393</p>
+              <p style={styles.footerElemText}>+43 1 4170133</p>
             </div>
 
             <div style={styles.footerElem}>

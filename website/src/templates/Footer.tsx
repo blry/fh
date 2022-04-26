@@ -15,7 +15,7 @@ const Footer = () => (
         Scaling Solutions
       </div>
 
-      <p className="pt-1">+4312675393</p>
+      <p className="pt-1">+43 1 4170133</p>
       <a className="pt-1" href="mail:info@finhubss.com">
         info@finhubss.com
       </a>

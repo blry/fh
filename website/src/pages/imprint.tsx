@@ -38,7 +38,7 @@ const Imprint = () => {
               <div>Geschäftsführer</div>
             </div>
             <div className="mb-2 mt-2">E-mail: cob@finhubfund.com</div>
-            <div>Phone: +43 676 4260422</div>
+            <div>Phone: +43 1 4170133</div>
           </div>
         </div>
         <div></div>
