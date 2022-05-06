@@ -72,7 +72,7 @@ const SalesSolution = () => {
       <Section
         image="/assets/images/symbol.svg"
         titleBlack="Tools"
-        titleBlue='and Technologies'
+        titleBlue="and Technologies"
         reverse="true"
       >
         <SalesTools />

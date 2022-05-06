@@ -20,7 +20,7 @@ const TeamExtensionPage = () => {
           IT, we ensure best quality cooperation with all of our partners and customers worldwide."
           image="/assets/images/product-photo4.svg"
           imageAlt="image"
-          imageSize='120%'
+          imageSize="120%"
           icon
         />
       </div>

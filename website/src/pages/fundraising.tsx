@@ -31,7 +31,7 @@ const Fundraising = () => {
           Private equity, strategic partners, or an initial public offering are all options for investors at this point."
           image="/assets/images/fund-photo2.svg"
           imageAlt="image"
-          imageSize='120%'
+          imageSize="120%"
           reverse
         />
         <VerticalFeatureRow
@@ -45,7 +45,7 @@ const Fundraising = () => {
             version of your story. There is no fixed format or order, but the following parts are usually present. We create the pitch 
             that matches you, how you present, and how you want to represent your company."
           image="/assets/images/fund-photo3.svg"
-          imageSize='120%'
+          imageSize="120%"
           imageAlt="image"
         />
         <VerticalFeatureRow
@@ -59,7 +59,7 @@ const Fundraising = () => {
           Corporate Affairs & Communications."
           image="/assets/images/fund-photo4.svg"
           imageAlt="image"
-          imageSize='120%'
+          imageSize="120%"
           reverse
         />
       </div>

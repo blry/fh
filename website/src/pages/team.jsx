@@ -56,7 +56,7 @@ const Team = () => {
       </Section>
       <Section
         image="/assets/images/symbol.svg"
-        titleBlack=' '
+        titleBlack=" "
         titleBlue="Information Technology"
         reverse="true"
       >
@@ -86,7 +86,7 @@ const Team = () => {
             email="liviul@finhubss.com"
           />
         </div>
-        <div className='block sm:hidden'>
+        <div className="block sm:hidden">
           <TeamManagementItem
             image="/assets/images/team/Finhub2661.jpg"
             title="Alexandru Sterpu"
@@ -142,7 +142,7 @@ const Team = () => {
             email="lturcanu@finhubss.com"
           />
         </div>
-        <div className='block sm:hidden'>
+        <div className="block sm:hidden">
           <TeamManagementItem
             image="/assets/images/team/Finhub2595.jpg"
             title="Victor Uncuta"
