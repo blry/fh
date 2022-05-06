@@ -2,7 +2,11 @@ import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
 import { Section } from '../layout/Section';
 
 const VerticalFeatures = () => (
-  <Section title="Social Responsibility" image="/assets/images/symbol.svg">
+  <Section 
+    titleBlack="Social" 
+    titleBlue='Responsibility' 
+    image="/assets/images/symbol.svg"
+  >
     <VerticalFeatureRow
       title="About"
       description="FINHUB AC GmbH & Co KG supports the Cycling Federation as well as the Paralympic
@@ -27,7 +31,9 @@ const VerticalFeatures = () => (
       place from August 24 to September 5, 2021."
       image="/assets/images/index-photo2.svg"
       imageFilter={true}
+      imageSize="65%"
       imageAlt="two feature alt text"
+      fullRow
       line
     />
     <VerticalFeatureRow
@@ -40,6 +46,7 @@ const VerticalFeatures = () => (
       image="/assets/images/index-photo3.png"
       imageFilter={true}
       imageAlt="feature alt text"
+      fullRow
       line
     />
   </Section>

@@ -26,7 +26,7 @@ const AboutUsItem = (props: IAboutUsItemProps) => {
 
   return (
     <motion.div 
-      className="p-3 border-2 relative pb-9 boxshadow-animation" 
+      className="p-5 text-black border-2 border-app-color-200 relative pb-9 hover:shadow-xl transition" 
       initial={OpacityVariants.hidden}
       variants={OpacityVariants}
       whileInView={OpacityVariants.visible}
@@ -43,18 +43,18 @@ const AboutUsItem = (props: IAboutUsItemProps) => {
         <h4 className="text-2xl text-gray-900 font-semibold">{props.title}</h4>
         <div className="mt-3 text-sm">{props.description}</div>
       </div>
-      <div className="flex md:absolute md:right-3 md:bottom-2 justify-center mt-5" style={{width: '135px'}}>
+      <div className="flex md:justify-end justify-center mt-5">
         <Link href={encodeURIComponent(props.link!)} passHref={true}>
-          <motion.div whileHover={{scale: 1.1}} className="w-full">
-            <a className="float-right text-primary-500 w-full flex text-sm font-bold" style={{color:"rgb(59 130 246)"}}>
-              Read More
+          <div className="w-24 hover:pl-2" style={{transition: '.5s'}}>
+            <a className="float-right relative whitespace-nowrap text-app-color-600 w-full flex text-sm font-bold cursor-pointer">
+              <div className='bg-white z-10 w-[72px] whitespace-nowrap'>Read More</div>
               <img
                 src="/icons/Blue Arrow.svg"
                 alt=""
-                className="h-4 mt-0.5 ml-1"
+                className="h-4 mt-0.5 ml-1 absolute right-0"
               />
             </a>
-          </motion.div>
+          </div>
         </Link>
       </div>
     </motion.div>

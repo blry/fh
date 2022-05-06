@@ -18,8 +18,8 @@ const ModalContactUs = (props: any) => {
       top: '0',
     },
     modalContent: {
-      width: '870px',
-      height: '490px',
+      width: '980px',
+      height: '560px',
       margin: 'auto',
       backgroundColor: 'white',
       flexDirection: 'column' as 'column',
@@ -36,7 +36,6 @@ const ModalContactUs = (props: any) => {
     },
     footer: {
       height: '40px',
-      backgroundColor: '#707070',
       position: 'relative' as 'relative',
       color: 'white',
       fontSize: '10pt',
@@ -67,7 +66,7 @@ const ModalContactUs = (props: any) => {
 
   return (
     <>
-      <div className="flex" style={styles.modalContainer}>
+      <div className="flex text-app-color-500" style={styles.modalContainer}>
         <div className="flex modal-content" style={styles.modalContent}>
           <div style={styles.closeRow}>
             <div
@@ -89,7 +88,7 @@ const ModalContactUs = (props: any) => {
 
             <ContactFormUs />
           </div>
-          <div style={styles.footer} className="modal-footer">
+          <div style={styles.footer} className="modal-footer bg-app-color-400">
             <div style={styles.footerElem}>
               <img
                 src={`${router.basePath}/icons/icon-phone.svg`}

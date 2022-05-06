@@ -21,12 +21,13 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-start',
     flexWrap: 'wrap',
+    marginLeft: '12px'
   },
   logoItem: {
     padding: '15px',
     border: '1px solid #EEEEEE',
     display: 'flex',
-    height: '50px',
+    height: '55px',
     margin: '10px',
   },
 } as const;
@@ -37,7 +38,8 @@ const TeamExtension = () => {
   return (
     <Section
       image="/assets/images/symbol.svg"
-      title="Our Tech Stack"
+      titleBlack="Our"
+      titleBlue='Tech Stack'
       reverse="true"
     >
       <motion.div 

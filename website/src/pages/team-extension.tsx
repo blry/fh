@@ -6,7 +6,7 @@ const TeamExtensionPage = () => {
   return (
     <>
       <Banner title="Team Extension" />
-      <div className="max-w-screen-xl mx-auto px-3 mb-28">
+      <div className="max-w-screen-xl mx-auto mb-28">
         <VerticalFeatureRow
           title="Team Extension"
           description="If you don’t have specific knowledge in-house, can’t locate the proper personnel locally, or recruiting takes 
@@ -20,6 +20,7 @@ const TeamExtensionPage = () => {
           IT, we ensure best quality cooperation with all of our partners and customers worldwide."
           image="/assets/images/product-photo4.svg"
           imageAlt="image"
+          imageSize='120%'
           icon
         />
       </div>

@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 
 const styles = {
 	buttonLink: {
-		borderColor: '#707070',
 		width: '165px',
 	},
 	buttonContainer: {
@@ -21,7 +20,7 @@ const SendButton = ({title}: {title: string}) => {
                     <label
                         htmlFor="submit_form"
                         style={styles.buttonLink}
-                        className=" text-gray-800 flex text-sm font-bold border-2 p-1.5 border-l-8 modal-contactus-send-button"
+                        className=" text-gray-800 border-app-color-400 flex text-sm font-bold border-2 p-1.5 border-l-8 modal-contactus-send-button"
                     >
                         <input id="submit_form" type="submit" value={title} />
                         <img

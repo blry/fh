@@ -51,6 +51,12 @@ module.exports = {
           'very-light-gray': 'hsl(0, 0%, 98%)',
           white: 'hsl(0, 0%, 100%)',
         },
+        'app-color-100': '#FFFFFF',
+        'app-color-200': '#EEEEEE',
+        'app-color-300': '#A3A3A3',
+        'app-color-400': '#525252',
+        'app-color-500': '#1F1F1F',
+        'app-color-600': '#2C4DCA',
       },
       backgroundImage: () => ({
         'header-desktop': "url('/images/bg-intro-desktop.svg')",

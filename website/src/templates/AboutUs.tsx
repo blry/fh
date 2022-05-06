@@ -7,7 +7,8 @@ const AboutUs = () => {
   return(
   <Section
     image="/assets/images/symbol.svg"
-    title="About Us"
+    titleBlack="About"
+    titleBlue="Us"
   >
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <AboutUsItem

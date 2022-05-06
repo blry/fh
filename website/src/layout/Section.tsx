@@ -6,7 +6,8 @@ import { OpacityVariants } from '../utils/motion/OpacityVariants'
 
 type ISectionProps = {
   image?: string;
-  title?: string;
+  titleBlack?: string;
+  titleBlue?: string;
   description?: string;
   yPadding?: string;
   reverse?: string;
@@ -18,8 +19,8 @@ const Section = (props: ISectionProps) => {
 
   const style = {
     sectionContainer: {
-      marginLeft: props.reverse ? '0' : '-4rem',
-      marginRight: props.reverse ? '-4rem' : '0',
+      marginLeft: props.reverse ? '0' : '3.2rem',
+      marginRight: props.reverse ? '3.2rem' : '0',
     },
     content: {
       width: '100%',
@@ -39,41 +40,43 @@ const Section = (props: ISectionProps) => {
       width: '100%',
       textAlign: props.reverse ? 'end' : 'start',
     },
-    titleSpan: {
-      background: '#fff',
-      padding: '0 15px',
+    titleSpan1: {
+      color: props.reverse ? '#2C4DCA' : '#1F1F1F'
+    },
+    titleSpan2: {
+      color: props.reverse ? '#1F1F1F' : '#2C4DCA'
     },
   } as const;
 
   return (
     <div
-      className={`max-w-screen-xl mx-auto px-3 ${
+      className={`px-4 ${
         props.yPadding ? props.yPadding : 'py-6'
       }`}
     >
-      {(props.title || props.description) && (
+      {(props.titleBlack || props.description) && (
         <motion.div
-          className="mb-12 text-left flex items-center flex-start section-container"
-          style={style.sectionContainer}
+          className={`section-container 2xl:justify-center mb-12 ${props.reverse ? 'ml-0 mr-[3.2rem]' : 'ml-[3.2rem] mr-0'} text-left flex items-center flex-start`}
           initial={OpacityVariants.hidden}
           variants={OpacityVariants}
           whileInView={OpacityVariants.visible}
           viewport={{ once: true }}
         >
-          <div className="flex items-center" style={style.content}>
+          <div className="flex 2xl:max-w-screen-2xl items-center" style={style.content}>
             {props.image && (
               <img
                 src={`${router.basePath}${props.image}`}
-                alt={props.title}
+                alt={props.titleBlack}
                 style={style.logoImg}
               />
             )}
-            {props.title && (
+            {props.titleBlack && (
               <h2
                 className="text-2xl text-gray-900 font-bold margin"
                 style={style.title}
               >
-                <span style={style.titleSpan}>{props.title}</span>
+                <span style={style.titleSpan1} className='bg-white pl-6'>{props.titleBlack}</span>
+                <span style={style.titleSpan2} className='bg-white px-[15px]'>{props.titleBlue}</span>
               </h2>
             )}
           </div>
@@ -83,8 +86,10 @@ const Section = (props: ISectionProps) => {
           )}
         </motion.div>
       )}
-
-      {props.children}
+      <div className='max-w-screen-xl mx-auto'>
+        {props.children}
+      </div>
+      
     </div>
   );
 };

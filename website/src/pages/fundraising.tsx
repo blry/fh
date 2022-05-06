@@ -5,7 +5,7 @@ const Fundraising = () => {
   return (
     <>
       <Banner title="Fundraising" />
-      <div className="max-w-screen-xl mx-auto px-3 mb-28">
+      <div className="max-w-screen-xl mx-auto mb-28">
         <VerticalFeatureRow
           title="Introduction"
           description="Raising finance is an important component of starting and growing a business. After all, having enough funding 
@@ -31,6 +31,7 @@ const Fundraising = () => {
           Private equity, strategic partners, or an initial public offering are all options for investors at this point."
           image="/assets/images/fund-photo2.svg"
           imageAlt="image"
+          imageSize='120%'
           reverse
         />
         <VerticalFeatureRow
@@ -44,6 +45,7 @@ const Fundraising = () => {
             version of your story. There is no fixed format or order, but the following parts are usually present. We create the pitch 
             that matches you, how you present, and how you want to represent your company."
           image="/assets/images/fund-photo3.svg"
+          imageSize='120%'
           imageAlt="image"
         />
         <VerticalFeatureRow
@@ -57,6 +59,7 @@ const Fundraising = () => {
           Corporate Affairs & Communications."
           image="/assets/images/fund-photo4.svg"
           imageAlt="image"
+          imageSize='120%'
           reverse
         />
       </div>

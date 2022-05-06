@@ -49,6 +49,7 @@ const About = () => (
         imageAlt="image"
         icon
         reverse
+        imageSize='110%'
         link="fundraising"
       />
       <VerticalFeatureRow
@@ -80,6 +81,7 @@ const About = () => (
         image="/assets/images/about-photo4.svg"
         imageAlt="image"
         icon
+        imageSize='125%'
         reverse
         link="product-development#team-extension"
       />

@@ -18,7 +18,7 @@ const Team = () => {
         epidemiological situation, our office spaces in Vienna, Austria and Chisinau, Moldova remain open for everyone, with respect 
         to the local social distancing measures."
       />
-      <Section image="/assets/images/symbol.svg" title="Management">
+      <Section image="/assets/images/symbol.svg" titleBlack="Management">
         <TeamManagementItem
           image="/assets/images/team/Finhub2012.jpg"
           title="Vitali Chebanu"
@@ -46,7 +46,7 @@ const Team = () => {
           reverse="true"
         />
       </Section>
-      <Section image="/assets/images/symbol.svg" title="Legal">
+      <Section image="/assets/images/symbol.svg" titleBlack="Legal">
         <TeamManagementItem
           image="/assets/images/team/Finhub2011.jpg"
           title="Alexander Syrbu"
@@ -56,10 +56,11 @@ const Team = () => {
       </Section>
       <Section
         image="/assets/images/symbol.svg"
-        title="Information Technology"
+        titleBlack=' '
+        titleBlue="Information Technology"
         reverse="true"
       >
-        <div className="flex justify-evenly flex-wrap section-teamIT-container">
+        <div className="hidden sm:flex justify-evenly flex-wrap section-teamIT-container">
           <TeamIT
             image="/assets/images/team/Finhub2661.jpg"
             title="Alexandru Sterpu"
@@ -85,9 +86,37 @@ const Team = () => {
             email="liviul@finhubss.com"
           />
         </div>
+        <div className='block sm:hidden'>
+          <TeamManagementItem
+            image="/assets/images/team/Finhub2661.jpg"
+            title="Alexandru Sterpu"
+            jobTitle="Lead Software Developer"
+            email="asterpu@finhubss.com"
+          />
+          <TeamManagementItem
+            image="/assets/images/team/Finhub2700.jpg"
+            title="Marin Terentiev"
+            jobTitle="Lead Software Developer"
+            email="mterentiev@finhubss.com"
+            reverse
+          />
+          <TeamManagementItem
+            image="/assets/images/team/Finhub2735.jpg"
+            title="Andrei Tricolici"
+            jobTitle="Senior Software Developer"
+            email="tandrei@finhubss.com"
+          />
+          <TeamManagementItem
+            image="/assets/images/team/Finhub2724.jpg"
+            title="Liviu Leșan"
+            jobTitle="Senior Software Developer"
+            email="liviul@finhubss.com"
+            reverse="true"
+          />
+        </div>
       </Section>
-      <Section image="/assets/images/symbol.svg" title="Sales">
-        <div className="flex justify-evenly flex-wrap section-teamIT-container">
+      <Section image="/assets/images/symbol.svg" titleBlack="Sales">
+        <div className="hidden sm:flex justify-evenly flex-wrap section-teamIT-container">
           <TeamIT
             image="/assets/images/team/Finhub2595.jpg"
             title="Victor Uncuta"
@@ -111,6 +140,34 @@ const Team = () => {
             title="Lyubov Turcan"
             jobTitle="Business Development Representative"
             email="lturcanu@finhubss.com"
+          />
+        </div>
+        <div className='block sm:hidden'>
+          <TeamManagementItem
+            image="/assets/images/team/Finhub2595.jpg"
+            title="Victor Uncuta"
+            jobTitle="Account Executive"
+            email="uvictor@finhubss.com"
+          />
+          <TeamManagementItem
+            image="/assets/images/team/Finhub2917.jpg"
+            title="Tudor Craitamindra"
+            jobTitle="Business Development Representative"
+            email="ctudor@finhubss.com"
+            reverse
+          />
+          <TeamManagementItem
+            image="/assets/images/team/Finhub2579.jpg"
+            title="Ioan Ćorić"
+            jobTitle="Business Development Representative"
+            email="iciorici@finhubss.com"
+          />
+          <TeamManagementItem
+            image="/assets/images/team/Finhub2938.jpg"
+            title="Lyubov Turcan"
+            jobTitle="Business Development Representative"
+            email="lturcanu@finhubss.com"
+            reverse="true"
           />
         </div>
       </Section>

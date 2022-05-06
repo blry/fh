@@ -27,7 +27,6 @@ const Banner = (props: IBannerProps) => {
     title: {
       fontSize: '20pt',
       marginTop: '10px',
-      filter: 'drop-shadow(2px 4px 6px black)'
     },
     span: {
       display: props.description ? 'block' : 'none',
@@ -37,11 +36,10 @@ const Banner = (props: IBannerProps) => {
     },
     description: {
       display: props.description ? 'block' : 'none',
-      width: '60vw',
+      width: '63vw',
       fontSize: '10pt',
       marginTop: '10px',
       marginRight: '50px',
-      filter: 'drop-shadow(2px 4px 6px black)'
     },
   };
 
@@ -56,7 +54,7 @@ const Banner = (props: IBannerProps) => {
         viewport={{ once: true }}
       >
         <div style={styles.bannerContent} className="teamBannerContent">
-          <div style={styles.title} className="teamBannerTitle">
+          <div style={styles.title} className="teamBannerTitle whitespace-nowrap">
             {props.title}
           </div>
           <span style={styles.span}></span>

@@ -24,16 +24,18 @@ const TeamManagementItem = (props: ITeamItem) => {
     image: {
       background: `url(${props.image}) no-repeat`,
       backgroundSize: 'cover',
-      width: '200px',
-      height: '200px',
+      width: '220px',
+      height: '220px',
       position: 'relative' as 'relative',
       top: '-23px',
       left: props.reverse ? '-21px' : '22px',
       borderBottom: '5px solid white',
+      borderLeft: '5px solid white',
+      borderRight: '5px solid white',
     },
     rectangleImage: {
-      width: '200px',
-      height: '188px',
+      width: '220px',
+      height: '208px',
       border: '6px solid #2C4DCA',
       position: 'absolute' as 'absolute',
     },
@@ -44,6 +46,7 @@ const TeamManagementItem = (props: ITeamItem) => {
     contentContainer: {
       marginTop: '-11px',
       color: 'black',
+      marginLeft: '19px'
     },
     titleContainer: {
       flexDirection: props.reverse
@@ -82,7 +85,6 @@ const TeamManagementItem = (props: ITeamItem) => {
     },
     jobTitle: {
       margin: '0 8px',
-      color: '#2C4DCA',
       flexDirection: props.reverse
         ? ('row-reverse' as 'row-reverse')
         : ('row' as 'row'),
@@ -143,7 +145,7 @@ const TeamManagementItem = (props: ITeamItem) => {
                   />
                 </div>
               </div>
-              <div style={styles.jobTitle} className="flex">
+              <div style={styles.jobTitle} className="flex text-[16pt] text-app-color-600 hover:text-app-color-300">
                 {props.jobTitle}
               </div>
             </div>

@@ -90,31 +90,31 @@ const ContactFormUs = () => {
               name="name"
               ref={nameInput}
               style={styles.input}
-              className="modal-contactus-input first-line-modal-input"
+              className="modal-contactus-input first-line-modal-input font-thin"
             />
             <input
               type="text"
               placeholder="Company"
               name="company"
               style={styles.input}
-              className="modal-contactus-input first-line-modal-input"
+              className="modal-contactus-input first-line-modal-input font-thin"
             />
           </div>
-          <div>
+          <div className='md:mb-6'>
             <input
               type="email"
               placeholder="E-mail"
               name="email"
               required
               style={styles.inputLarge}
-              className="modal-contactus-input"
+              className="modal-contactus-input font-thin"
             />
             <textarea
               placeholder="Message"
               style={styles.textarea}
               name="message"
               required
-              className="modal-contactus-input"
+              className="modal-contactus-input font-thin"
             ></textarea>
           </div>
           <SendButton title="Send Message"/>

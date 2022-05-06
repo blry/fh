@@ -81,8 +81,8 @@ body {
 
 @media only screen and (max-width: 1422px) {
   .section-container {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
   }
 }
 
@@ -101,7 +101,6 @@ body {
     margin: 10px 40px;
   }
   .section-teamIT-container {
-    display: flex !important;
     justify-content: space-evenly !important;
   }
   .modal-content {
@@ -129,11 +128,12 @@ body {
     margin-right: unset !important;
   }
   .teamManagementItem-container {
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
     align-items: center !important;
   }
   .teamManagementItem-imageContainer {
     margin-bottom: 50px !important;
+    margin-top: 50px !important;
   }
 
   .vertical-feature-class {

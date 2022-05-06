@@ -7,7 +7,7 @@ const SalesSolution = () => {
   return (
     <>
       <Banner title="Sales Solution" />
-      <div className="max-w-screen-xl mx-auto px-3 mb-28">
+      <div className="max-w-screen-xl mx-auto mb-28">
         <VerticalFeatureRow
           title="Introduction"
           description="For startups, an outsourced sales force can assist the company in identifying untapped
@@ -71,7 +71,8 @@ const SalesSolution = () => {
       </div>
       <Section
         image="/assets/images/symbol.svg"
-        title="Tools and Technologies"
+        titleBlack="Tools"
+        titleBlue='and Technologies'
         reverse="true"
       >
         <SalesTools />

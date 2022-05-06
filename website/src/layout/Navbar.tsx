@@ -1,8 +1,10 @@
 import { useState } from 'react';
 
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion'
 
 import { ModalContactUs } from '../templates/ModalContactUs';
+import {NavbarItemLine} from '../utils/motion/NavbarItemLine';
 
 const primaryItems = [
   {
@@ -23,9 +25,29 @@ const primaryItems = [
   },
 ];
 
+const firstMenuItems = [
+  {
+    key: 10,
+    title: 'About',
+    link: '/about'
+  },
+  {
+    key: 11,
+    title: 'Team',
+    link: '/team'
+  },
+  {
+    key: 12,
+    title: 'Imprint',
+    link: '/imprint'
+  },
+]
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [modal, setModal] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1)
+  const [buttonHover, setButtonHover] = useState(false)
 
   const ModalHandler = (e: any) => {
     e.preventDefault();
@@ -37,25 +59,43 @@ export default function Navbar() {
     setModal(false);
   };
 
+  const styles = {
+    button: {
+      transition: '0.2s',
+      backgroundColor: buttonHover ? '#ffffff' : '#2C4DCA',
+      color: buttonHover ? '#2C4DCA' : '#ffffff',
+      border: '3px solid #2C4DCA'
+    }
+  }
+
   return (
     <>
-      <div className="fixed z-50 top-0 w-full bg-white">
-        <nav className="container flex justify-around z-20 mt-3">
+      <div className="fixed z-50 top-0 w-full bg-white lg:shadow flex flex-col items-center">
+        <nav className="container flex justify-around z-20 mt-2">
           <div></div>
-          <div className="hidden lg:block text-xs text-gray">
-            <Link href="/about">
-              <a className="mx-7 py-1 hover:text-black">About us</a>
-            </Link>
-            <Link href="/team">
-              <a className="mx-7 py-1 hover:text-black">Team</a>
-            </Link>
-            <Link href="/imprint">
-              <a className="mx-7 py-1 hover:text-black">Imprint</a>
-            </Link>
+          <div className="hidden lg:flex text-xs text-gray">
+            {
+              firstMenuItems.map(item => (
+                <Link href={item.link}>
+                  <motion.a 
+                    className="mx-7 py-1 relative flex flex-col items-center cursor-pointer"
+                    onMouseEnter={() => setActiveIndex(item.key)}
+                    onMouseLeave={() => setActiveIndex(-1)}
+                    initial={{color: '#1F1F1F'}}
+                    animate={{color: activeIndex === item.key ? '#2C4DCA' : ''}}
+                  >
+                    <AnimatePresence>
+                      {activeIndex === item.key && <NavbarItemLine top />}
+                    </AnimatePresence>
+                    {item.title}
+                  </motion.a>
+                </Link>
+              ))
+            }
           </div>
         </nav>
-        <nav className="container flex justify-between items-center z-20">
-          <div className="my-3">
+        <nav className="container mx-3 flex justify-between items-center z-20">
+          <div className="my-2">
             <Link href="/">
               <a onClick={() => setIsOpen(false)}>
                 <div className="flex items-center text-black navbar-logo-text" style={{width: '235px'}}>
@@ -70,19 +110,31 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="hidden lg:block text-sm font-bold text-black">
-            {primaryItems.map((navItem) => (
-              <Link href={navItem.link} key={`${navItem.title}`}>
-                <a className="mx-4 py-2 hover:gradient-border-bottom">
+          <div className="hidden lg:flex text-sm font-medium text-black">
+            {primaryItems.map((navItem, key) => (
+              <Link href={navItem.link} key={key}>
+                <motion.a 
+                  className="mx-4 py-2 relative flex flex-col items-center cursor-pointer" 
+                  onMouseEnter={() => setActiveIndex(key)}
+                  onMouseLeave={() => setActiveIndex(-1)}
+                  initial={{color: '#1F1F1F'}}
+                  animate={{color: activeIndex === key ? '#2C4DCA' : ''}}
+                >
                   {navItem.title}
-                </a>
+                  <AnimatePresence>
+                    {activeIndex === key && <NavbarItemLine bottom />}
+                  </AnimatePresence>
+                </motion.a>
               </Link>
             ))}
           </div>
 
           <button
-            className="hidden lg:block bg-blue-700 px-4 py-2 text-neutral-white text-sm font-bold hover:button-brightness focus:outline-none focus:ring"
+            className="hidden lg:block bg-blue-700 px-2 py-1 text-neutral-white text-[15px] font-bold"
+            style={styles.button}
             onClick={ModalHandler}
+            onMouseEnter={() => setButtonHover(true)}
+            onMouseLeave={() => setButtonHover(false)}
           >
             Contact Us
           </button>

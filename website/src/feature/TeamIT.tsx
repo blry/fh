@@ -84,16 +84,16 @@ const TeamIT = (props: ITeamITProps) => {
           <span style={styles.span}></span>
         </div>
         <div style={styles.content}>
-          <div style={styles.titleRow}>
+          <div className='mb-1' style={styles.titleRow}>
             <div>
               <img src="/icons/icon-in.svg" alt="in" style={styles.icon} />
             </div>
             {props.title}
           </div>
-          <div style={styles.jobTitle}>{props.jobTitle}</div>
+          <div className='my-1' style={styles.jobTitle}>{props.jobTitle}</div>
           <div style={styles.description}>{props.description}</div>
           <div style={styles.contact}>{props.phoneNumber}</div>
-          <div style={styles.contact}>{props.email}</div>
+          <div className='mb-3' style={styles.contact}>{props.email}</div>
         </div>
       </motion.div>
     </>

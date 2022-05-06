@@ -5,7 +5,8 @@ import { Section } from "../layout/Section";
 const OtherLinks = () => (
   
   <Section
-    title="Other Links"
+    titleBlack="Other"
+    titleBlue="Links"
     image="/assets/images/symbol.svg"
     reverse="True"
   >

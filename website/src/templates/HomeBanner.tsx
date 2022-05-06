@@ -5,11 +5,11 @@ const styles = {
   backgroundImage: {
     background: "url('/assets/images/home-banner-opacity.jpg') no-repeat",
     backgroundSize: 'cover',
-    height: 'calc(100vh - 75px)',
+    height: '638px',
   },
   backgroundColor: {
     backgroundColor: 'white' as 'white',
-    height: 'calc(100vh - 75px)',
+    height: '638px',
     transition: '1s'
   }
 }
@@ -71,25 +71,27 @@ const HomeBanner = () => {
 },[repeat])
 
   return (
-    <div
-      style={
-        backgroundImage ? styles.backgroundImage : styles.backgroundColor
-      }
-      className={`
-        ${opacityStyle ? 'opacity-0' : 'opacity-100'} 
-        ${scale ? 'scale-125' : ''} 
-        ${transitionFast ? 'transition-2s' : 'transition-30s'}
-      `}
-    >
-      <div className="container h-full flex flex-col justify-center items-center text-center text-white">
-        <p
-          className="text-3xl lg:text-6xl sm:my-8 transition"
-          style={{
-            filter: `${ logo ? '' : 'drop-shadow(2px 4px 6px black)'}`
-          }}
-        >
-          <MainBannerText title={title} start={start} logo={logo} />
-        </p>
+    <div className='overflow-hidden'>
+      <div
+        style={
+          backgroundImage ? styles.backgroundImage : styles.backgroundColor
+        }
+        className={`
+          ${opacityStyle ? 'opacity-0' : 'opacity-100'} 
+          ${scale ? 'scale-125' : ''} 
+          ${transitionFast ? 'transition-2s' : 'transition-30s'}
+        `}
+      >
+        <div className="container h-full flex flex-col justify-center items-center text-center text-white">
+          <p
+            className="text-3xl lg:text-6xl sm:my-8 transition"
+            style={{
+              filter: `${ logo ? '' : 'drop-shadow(2px 4px 6px black)'}`
+            }}
+          >
+            <MainBannerText title={title} start={start} logo={logo} />
+          </p>
+        </div>
       </div>
     </div>
   );
