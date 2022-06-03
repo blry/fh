@@ -5,7 +5,7 @@ const ProductDevelopment = () => {
   return (
     <>
       <Banner title="Product Development" />
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         <VerticalFeatureRow
           title="Description"
           description="A good understanding of the requirements, users, target audience, and prospective market is required for 
@@ -15,7 +15,10 @@ const ProductDevelopment = () => {
         extensive research that provides us with a clear picture of what the product is all about, what it offers users, and what 
         they require. The research produces a list of Requirement Specifications. The intricacies of the interface, navigation, 
         and how the information is displayed are identified and defined by functional and visual design."
+          descriptionWidth="88%"
           image="/assets/images/product-photo1.svg"
+          imageWidth="417px"
+          imageHeight="340px"
           imageAlt="image"
           icon
         />
@@ -23,6 +26,9 @@ const ProductDevelopment = () => {
           description="We can move forward with product development once we have the user requirements and functional design. 
           Software developers, the product manager, and at least one visual designer are normally involved in this stage."
           image="/assets/images/product-photo2.svg"
+          descriptionWidth="78%"
+          imageWidth="417px"
+          imageHeight="350px"
           imageAlt="image"
           listItems={[
             'The visual designer is in charge of translating the functional design into a visual representation, and he or she should be given as much leeway as possible while keeping in mind all of the functionality that is essential when creating a fantastically rich user experience. ',
@@ -38,8 +44,12 @@ const ProductDevelopment = () => {
           a good time with it. We employ a combination of heuristic evaluation techniques and user testing sessions. Our services 
           include a lot of support, updates, and product maintenance. We give technical assistance and are constantly adding new 
           features and functionality to the items we design."
+          descriptionWidth="88%"
           image="/assets/images/product-photo3.svg"
+          imageWidth="417px"
+          imageHeight="340px"
           imageAlt="image"
+          marginBottom="40px"
         />
       </div>
     </>

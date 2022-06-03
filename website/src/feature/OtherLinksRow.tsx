@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 import { motion } from 'framer-motion'
 import { OpacityVariants } from '../utils/motion/OpacityVariants'
+import { SendButton } from "../button/SendButton";
 
 type IOtherLinksRowProps = {
   title?: string;
@@ -46,16 +47,7 @@ const OtherLinksRow = (props: IOtherLinksRowProps) => {
       </div>
       <div className="flex flex-col-reverse sm:flex-row sm:grid-container sm:grid-cols-6 mb-2">
         <div className="w-36 sm:col-span-1">
-          <motion.div whileTap={{scale: 0.9}}>
-            <a className="float-right relative text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button">
-              <div className='bg-white z-10 w-[77px] whitespace-nowrap'>Read More</div>
-              <img
-                src="/icons/Blue Arrow.svg"
-                alt=""
-                className="h-4 mt-0.5 ml-1 text-gray-900 absolute right-2 mb-2 top-[5px]"
-              />
-            </a>
-          </motion.div>
+          <SendButton title="Read More" width={146} inputWidth={'87px'} />
         </div>
         <div className="w-full sm:col-span-5 pl-1 text-black mt-3">
           <div className="text-sm">{props.description}</div>

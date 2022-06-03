@@ -9,7 +9,7 @@ const NavbarItemLine = (props: INavbarItemLineProps) => {
   const styles = {
     container: {
       backgroundColor: '#2C4DCA',
-      bottom: props.bottom ? '-7px' : '',
+      bottom: props.bottom ? '-11px' : '',
       top: props.top ? '-9px': ''
     }
   }

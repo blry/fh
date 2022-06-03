@@ -40,7 +40,15 @@ body {
 }
 
 .modal-contactus-input:hover {
-  border-color: #2C4DCA !important;
+  border-color: #1F1F1F !important;
+}
+
+.input-error:focus {
+  border-color: red !important;
+}
+
+.modal-contactus-send-button{
+  transition: .5s;
 }
 
 .modal-contactus-send-button:hover {

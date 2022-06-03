@@ -32,7 +32,8 @@ const ModalContactUs = (props: any) => {
     closeContainer: {
       padding: '7px',
       backgroundColor: '#2C4DCA',
-      width: '27px',
+      width: '30px',
+      transition: '.5s'
     },
     footer: {
       height: '40px',

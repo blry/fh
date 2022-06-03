@@ -28,7 +28,7 @@ const primaryItems = [
 const firstMenuItems = [
   {
     key: 10,
-    title: 'About',
+    title: 'About us',
     link: '/about'
   },
   {
@@ -94,8 +94,8 @@ export default function Navbar() {
             }
           </div>
         </nav>
-        <nav className="container mx-3 flex justify-between items-center z-20">
-          <div className="my-2">
+        <nav className="w-[97%] mx-5 max-w-[1245px] flex justify-between items-center z-20">
+          <div className="my-3">
             <Link href="/">
               <a onClick={() => setIsOpen(false)}>
                 <div className="flex items-center text-black navbar-logo-text" style={{width: '235px'}}>
@@ -110,7 +110,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="hidden lg:flex text-sm font-medium text-black">
+          <div className="hidden lg:flex text-[15px] font-medium text-black">
             {primaryItems.map((navItem, key) => (
               <Link href={navItem.link} key={key}>
                 <motion.a 
@@ -130,7 +130,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="hidden lg:block bg-blue-700 px-2 py-1 text-neutral-white text-[15px] font-bold"
+            className="hidden lg:block bg-blue-700 px-2 py-1 text-neutral-white text-[15px] font-semibold"
             style={styles.button}
             onClick={ModalHandler}
             onMouseEnter={() => setButtonHover(true)}

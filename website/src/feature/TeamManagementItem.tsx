@@ -16,7 +16,7 @@ const TeamManagementItem = (props: ITeamItem) => {
     container: {
       display: 'flex',
       justifyContent: 'space-evenly',
-      margin: '50px 0',
+      margin: '70px 0 50px 0',
       flexDirection: props.reverse
         ? ('row-reverse' as 'row-reverse')
         : ('row' as 'row'),

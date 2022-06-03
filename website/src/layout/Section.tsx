@@ -50,19 +50,19 @@ const Section = (props: ISectionProps) => {
 
   return (
     <div
-      className={`px-4 ${
+      className={` ${
         props.yPadding ? props.yPadding : 'py-6'
       }`}
     >
       {(props.titleBlack || props.description) && (
         <motion.div
-          className={`section-container 2xl:justify-center mb-12 ${props.reverse ? 'ml-0 mr-[3.2rem]' : 'ml-[3.2rem] mr-0'} text-left flex items-center flex-start`}
+          className={`xl:justify-center mb-12 ${props.reverse ? 'ml-0 mr-3' : 'mr-0 ml-3'} text-left flex items-center flex-start`}
           initial={OpacityVariants.hidden}
           variants={OpacityVariants}
           whileInView={OpacityVariants.visible}
           viewport={{ once: true }}
         >
-          <div className="flex 2xl:max-w-screen-2xl items-center" style={style.content}>
+          <div className=" flex xl:max-w-[1400px] items-center" style={style.content}>
             {props.image && (
               <img
                 src={`${router.basePath}${props.image}`}

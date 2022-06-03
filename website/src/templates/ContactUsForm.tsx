@@ -16,7 +16,6 @@ const ContactFormUs = () => {
       justifyContent: 'space-between',
     },
     input: {
-      border: '1px solid #A3A3A3',
       fontSize: '12pt',
       height: '35px',
       width: '250px',
@@ -76,6 +75,7 @@ const ContactFormUs = () => {
             setSubmit(true);
           } else {
             nameInput.current.focus();
+            nameInput.current.classList.add('input-error')
           }
         }}
       >
@@ -90,14 +90,14 @@ const ContactFormUs = () => {
               name="name"
               ref={nameInput}
               style={styles.input}
-              className="modal-contactus-input first-line-modal-input font-thin"
+              className="modal-contactus-input first-line-modal-input font-thin border-app-color-300 border-[1px]"
             />
             <input
               type="text"
               placeholder="Company"
               name="company"
               style={styles.input}
-              className="modal-contactus-input first-line-modal-input font-thin"
+              className="modal-contactus-input first-line-modal-input font-thin border-app-color-300 border-[1px]"
             />
           </div>
           <div className='md:mb-6'>
@@ -117,7 +117,7 @@ const ContactFormUs = () => {
               className="modal-contactus-input font-thin"
             ></textarea>
           </div>
-          <SendButton title="Send Message"/>
+          <SendButton title="Send Message" width={153}/>
           <div style={styles.resultMessageContainer}>
             <p style={styles.rezultMessageText}>Your message has been sent</p>
           </div>

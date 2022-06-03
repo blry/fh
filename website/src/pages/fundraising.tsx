@@ -5,7 +5,7 @@ const Fundraising = () => {
   return (
     <>
       <Banner title="Fundraising" />
-      <div className="max-w-screen-xl mx-auto mb-28">
+      <div className="max-w-[1400px] mx-auto mb-28">
         <VerticalFeatureRow
           title="Introduction"
           description="Raising finance is an important component of starting and growing a business. After all, having enough funding 
@@ -16,6 +16,8 @@ const Fundraising = () => {
           rounds can range from EUR 10,000 to EUR 2 million. Companies can use early investment rounds to fund things like market 
           research and development."
           image="/assets/images/fund-photo1.svg"
+          imageWidth="400px"
+          imageHeight="315px"
           imageAlt="image"
           icon
         />
@@ -31,6 +33,8 @@ const Fundraising = () => {
           Private equity, strategic partners, or an initial public offering are all options for investors at this point."
           image="/assets/images/fund-photo2.svg"
           imageAlt="image"
+          imageWidth="400px"
+          imageHeight="315px"
           imageSize="120%"
           reverse
         />
@@ -46,6 +50,8 @@ const Fundraising = () => {
             that matches you, how you present, and how you want to represent your company."
           image="/assets/images/fund-photo3.svg"
           imageSize="120%"
+          imageWidth="400px"
+          imageHeight="315px"
           imageAlt="image"
         />
         <VerticalFeatureRow
@@ -59,6 +65,8 @@ const Fundraising = () => {
           Corporate Affairs & Communications."
           image="/assets/images/fund-photo4.svg"
           imageAlt="image"
+          imageWidth="450px"
+          imageHeight="315px"
           imageSize="120%"
           reverse
         />

@@ -1,35 +1,59 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
-const styles = {
-	buttonLink: {
-		width: '165px',
-	},
-	buttonContainer: {
-		display: 'flex',
-		justifyContent: 'center',
-	},
+type IProps = {
+    title: string,
+    width?: number,
+    top?: string,
+    inputWidth? : string,
 }
 
-const SendButton = ({title}: {title: string}) => {
+const SendButton = (props: IProps) => {
+    const [arrow, setArrow] = useState(false)
+
+    const styles = {
+        input: {
+            width: props.inputWidth ? props.inputWidth : '98px',
+        },
+        buttonContainer: {
+            display: 'flex',
+            justifyContent: 'center',
+        },
+    }
+
     return(
         <>
-            <div style={styles.buttonContainer}>
+            <div 
+                style={styles.buttonContainer} 
+                onMouseEnter={() => setArrow(true)}
+                onMouseLeave={() => setArrow(false)}
+            >
                 <motion.div 
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ scale: 0.95 }} 
                 >
                     <label
                         htmlFor="submit_form"
-                        style={styles.buttonLink}
-                        className=" text-gray-800 border-app-color-400 flex text-sm font-bold border-2 p-1.5 border-l-8 modal-contactus-send-button"
+                        style={{width: `${props.width}px`}}
+                        className="float-right transition relative text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button"
                     >
-                        <input id="submit_form" type="submit" value={title} />
+                        <input 
+                            id="submit_form" 
+                            className='bg-white font-bold hover:text-app-color-600 z-10 whitespace-nowrap'
+                            style={styles.input}
+                            type="submit" 
+                            value={props.title} 
+                        />
                         <img
-                            src="/icons/gray-arrow.svg"
+                            src={`/icons/${arrow ? 'Blue Arrow.svg' : 'gray-arrow.svg'}`}
                             alt=""
-                            className="h-4 mt-0.5 ml-1 text-gray-900"
+                            className="h-4 mt-0.5 ml-1 text-gray-900 absolute right-2 mb-2"
+                            style={{
+                                top: props.top ? props.top : '7px'
+                            }}
                         />
                     </label>
                 </motion.div>
+               
             </div>
             
         </>

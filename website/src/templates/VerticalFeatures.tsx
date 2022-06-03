@@ -15,8 +15,11 @@ const VerticalFeatures = () => (
       Our strong relationship with both organizations has a significant impact on the development
       of sports; education; mental, social, and physical well-being of the community. We are truly
       proud to partner with organizations that bring value to the society."
+      descriptionWidth='87%'
       image="/assets/images/index-photo1.svg"
       imageAlt="Second feature alt text"
+      imageWidth='430px'
+      imageHeight='300px'
       reverse
     />
     <VerticalFeatureRow
@@ -33,6 +36,7 @@ const VerticalFeatures = () => (
       imageFilter={true}
       imageSize="65%"
       imageAlt="two feature alt text"
+      hoverShadow
       fullRow
       line
     />
@@ -46,6 +50,7 @@ const VerticalFeatures = () => (
       image="/assets/images/index-photo3.png"
       imageFilter={true}
       imageAlt="feature alt text"
+      hoverShadow
       fullRow
       line
     />

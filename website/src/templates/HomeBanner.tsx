@@ -71,7 +71,7 @@ const HomeBanner = () => {
 },[repeat])
 
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden mb-10'>
       <div
         style={
           backgroundImage ? styles.backgroundImage : styles.backgroundColor

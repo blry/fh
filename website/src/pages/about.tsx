@@ -21,7 +21,7 @@ const About = () => (
       open for everyone with respect to the local COVID-19
       measures."
     />
-    <div className="max-w-screen-xl mx-auto px-3 mb-28">
+    <div className="max-w-[1427px] mx-auto px-3 mb-28">
       <VerticalFeatureRow
         title="Product Development"
         description="A good understanding of the requirements, users, target audience, and prospective market is required for 
@@ -32,6 +32,8 @@ const About = () => (
         they require. The research produces a list of Requirement Specifications. The intricacies of the interface, navigation, 
         and how the information is displayed are identified and defined by functional and visual design."
         image="/assets/images/about-photo1.svg"
+        imageWidth="400px"
+        imageHeight="300px"
         imageAlt="image"
         icon
         link="product-development"
@@ -45,7 +47,10 @@ const About = () => (
         sources like as incubators, accelerators, and angel investors, typically start with a pre-seed or seed round. These rounds 
         can range from EUR 10,000 to EUR 2 million. Companies can use early investment rounds to fund things like market research and 
         development."
+        descriptionWidth="92%"
         image="/assets/images/about-photo2.svg"
+        imageWidth="430px"
+        imageHeight="330px"
         imageAlt="image"
         icon
         reverse
@@ -63,6 +68,8 @@ const About = () => (
         markets. Our team consists of experienced, motivated, and intelligent individuals that speak English, German, French, Spanish, 
         Italian and Russian."
         image="/assets/images/about-photo3.svg"
+        imageWidth="400px"
+        imageHeight="330px"
         imageAlt="image"
         icon
         link="sales-solution"
@@ -78,7 +85,10 @@ const About = () => (
         dedicated L&D experts, we keep our employees up to date with the latest technology & market trends. We consider language and 
         communication skills a key factor for personal growth. Offering a comprehensive English course, for business and IT, we ensure 
         best quality cooperation with all of our partners and customers worldwide."
+        descriptionWidth="92%"
         image="/assets/images/about-photo4.svg"
+        imageWidth="490px"
+        imageHeight="330px"
         imageAlt="image"
         icon
         imageSize="125%"

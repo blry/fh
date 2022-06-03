@@ -10,7 +10,7 @@ const AboutUs = () => {
     titleBlack="About"
     titleBlue="Us"
   >
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mx-[13px]">
         <AboutUsItem
           title="Fundraising"
           description="We invest time in developing diligence documents for a seed round, an executive summary and a slide deck we can walk investors through and, potentially, leave behind so VCs can show to other partners. 

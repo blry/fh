@@ -26,7 +26,7 @@ const AboutUsItem = (props: IAboutUsItemProps) => {
 
   return (
     <motion.div 
-      className="p-5 text-black border-2 border-app-color-200 relative pb-9 hover:shadow-xl transition" 
+      className="p-5 text-black border-2 border-app-color-200 relative pb-9 hover:shadow-[0_0px_20px_4px_rgba(0,0,0,0.1)] transition" 
       initial={OpacityVariants.hidden}
       variants={OpacityVariants}
       whileInView={OpacityVariants.visible}

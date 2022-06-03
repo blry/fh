@@ -1,24 +1,30 @@
 import className from 'classnames';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useRef, MutableRefObject } from 'react'
 
 import { motion } from 'framer-motion'
 import { OpacityVariants } from '../utils/motion/OpacityVariants'
+import { SendButton } from '../button/SendButton';
 
 type IVerticalFeatureRowProps = {
   title?: string;
   description: string;
+  descriptionWidth?: string;
   listItems?: string[];
   image: string;
   imageFilter?: boolean;
   imageSize?: string;
+  imageWidth?: string;
+  imageHeight?: string;
   imageAlt: string;
   reverse?: boolean;
   icon?: boolean;
   line?: boolean;
   link?: string | undefined;
   fullRow?: boolean;
+  hoverShadow?: boolean;
+  marginTop?: string;
+  marginBottom?: string;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -77,7 +83,10 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
   return (
     <motion.div 
-      className={`${verticalFeatureClass} vertical-feature-class`} 
+      className={`
+        ${verticalFeatureClass} vertical-feature-class 
+        ${props.hoverShadow ? 'hover:shadow-[0_0px_20px_4px_rgba(0,0,0,0.1)]' : ''
+      }`} 
       onMouseOver={imageColorHandler} 
       onMouseLeave={imageColorLeaveHandler}
       ref={containerRef}
@@ -87,7 +96,13 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       whileInView={OpacityVariants.visible}
       viewport={{ once: true }}
     >
-      <div className="flex flex-col">
+      <div 
+        className="flex flex-col"
+        style={{
+          marginTop: props.marginTop ? props.marginTop : '',
+          marginBottom: props.marginBottom ? props.marginBottom : ''
+        }}
+      >
         {/* only mobile resolution */}
         <div className="mobTitle flex-col">
           <div
@@ -98,7 +113,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             <div
               className={`${
                 props.icon ? 'w-5 sm:w-8' : ''
-              } verticalFutureRow-imgCont`}
+              }`}
             >
               <img
                 src="/assets/images/symbol.svg"
@@ -131,7 +146,12 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
             props.reverse ? 'md:flex-row-reverse' : 'md:flex-row'
           }`}
         >
-          <div className={`mt-6 md:mt-0 ml-0 flex flex-col ${props.fullRow ? 'md:w-4/5' : 'md:w-1/2'} text-sm text-black leading-4`}>
+          <div 
+            className={
+              `mt-6 md:mt-0 flex flex-col ml-[16px] 
+              ${props.fullRow ? 'md:w-4/5' : 'md:w-1/2'} 
+              text-sm text-black leading-4`
+            }>
             {/* -------desktop version--------- */}
             <div className="desktopTitle flex-col">
               <div
@@ -151,7 +171,10 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
                   <img
                     src="/assets/images/symbol.svg"
                     alt="icon"
-                    style={styles.img}
+                    style={{
+                      display: props.icon ? '' : 'none',
+                      marginLeft: props.reverse ? '-21px' : '-21px' 
+                    }}
                   />
                 </div>
                 <h3
@@ -166,9 +189,19 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               <span style={styles.span}></span>
             </div>
             {/* ---------------------------------------------- */}
-            <div className='ml-1'>{props.description}</div>
+            <div style={{
+              width: props.descriptionWidth ? props.descriptionWidth : '100%'
+            }}>
+              {props.description}
+            </div>
             {props.listItems?.map((item: string) => (
-              <div className="flex items-start mt-1" key={item}>
+              <div 
+                className="flex items-start mt-1 ml-[2px]" 
+                style={{
+                  width: props.descriptionWidth ? props.descriptionWidth : '100%'
+                }}
+                key={item}
+              >
                 <img
                   src={`${router.basePath}/assets/images/ul_elem.svg`}
                   style={{ marginTop: '5px' }}
@@ -178,25 +211,18 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               </div>
             ))}
             <div style={styles.button}>
-              <Link href={`${props.link}`} passHref>
-                <motion.div whileTap={{scale: 0.9}}>
-                  <a className="float-right relative text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button">
-                    <div className='bg-white z-10 w-[77px] whitespace-nowrap'>Read More</div>
-                    <img
-                      src="/icons/Blue Arrow.svg"
-                      alt=""
-                      className="h-4 mt-0.5 ml-1 text-gray-900 absolute right-2 mb-2 top-[5px]"
-                    />
-                  </a>
-                </motion.div>
-              </Link>
+              <SendButton title='Read More' width={146} inputWidth={'87px'} top={'5px'} />
             </div>
           </div>
-          <div className="p-3 md:w-64 md:mt-12 md:ml-auto md:mr-auto lg:w-80 lg:max-h-56 flex items-center justify-center desktopTitle">
+          <div className="p-3 md:mt-12 md:ml-auto md:mr-auto lg:max-h-56 flex items-center justify-center desktopTitle">
             <img
               src={`${router.basePath}${props.image}`}
               alt={props.imageAlt}
-              style={{ maxWidth: props.imageSize ? props.imageSize : '100%' }}
+              style={{ 
+                maxWidth: props.imageSize ? props.imageSize : '100%',
+                width: props.imageWidth ? props.imageWidth : '',
+                height: props.imageHeight ? props.imageHeight : ''
+              }}
               className={`mb-3 sm:mb-0 ${ props.imageFilter ? 'image-gray-filter' : ''}`}
               ref={imageRef}
             />

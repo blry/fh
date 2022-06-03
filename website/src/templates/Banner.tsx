@@ -31,12 +31,12 @@ const Banner = (props: IBannerProps) => {
     span: {
       display: props.description ? 'block' : 'none',
       width: '1px',
-      borderLeft: '2px solid #1d4ed8',
+      borderLeft: '2px solid #ffffff',
       margin: '0 60px',
     },
     description: {
       display: props.description ? 'block' : 'none',
-      width: '63vw',
+      width: '62vw',
       fontSize: '10pt',
       marginTop: '10px',
       marginRight: '50px',

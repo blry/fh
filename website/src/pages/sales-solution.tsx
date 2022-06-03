@@ -7,7 +7,7 @@ const SalesSolution = () => {
   return (
     <>
       <Banner title="Sales Solution" />
-      <div className="max-w-screen-xl mx-auto mb-28">
+      <div className="max-w-[1400px] mx-auto mb-28">
         <VerticalFeatureRow
           title="Introduction"
           description="For startups, an outsourced sales force can assist the company in identifying untapped
@@ -21,6 +21,8 @@ const SalesSolution = () => {
           within the European markets. Our team consists of experienced, motivated, and intelligent
           individuals that speak English, German, French, Spanish, Italian and Russian."
           image="/assets/images/sales-photo1.svg"
+          imageWidth="400px"
+          imageHeight="320px"
           imageAlt="image"
           icon
         />
@@ -33,7 +35,10 @@ const SalesSolution = () => {
           development. A SaaS sales plan is critical to your company&apos;s capacity to expand and position
           itself for long-term success. Our plan is focused on the following to achieve the ultimate goal
           of producing revenue:'
+          descriptionWidth="92%"
           image="/assets/images/sales-photo2.svg"
+          imageWidth="400px"
+          imageHeight="350px"
           imageAlt="image"
           listItems={[
             'B2B lead generation refers to the process of developing client interest in a product in order to convert that interest into a sale.',
@@ -47,6 +52,8 @@ const SalesSolution = () => {
           description="The stages a company goes through to complete a deal with a potential customer are
           referred to as the SaaS sales process. We divide the SaaS sales process into five stages:"
           image="/assets/images/sales-photo3.svg"
+          imageWidth="400px"
+          imageHeight="350px"
           imageAlt="image"
           listItems={[
             'Customer interest in your product is generated through lead generation.',
@@ -59,13 +66,17 @@ const SalesSolution = () => {
         <VerticalFeatureRow
           title="Activity"
           description="There are three basic ways to sell SaaS:"
+          descriptionWidth="92%"
           image="/assets/images/sales-photo4.svg"
+          imageWidth="400px"
+          imageHeight="350px"
           imageAlt="image"
           listItems={[
             'Cold calling is when salesmen call potential customers to qualify them and set up a meeting.',
             'Outbound email is when a salesperson reaches prospects via emails that are rich in content, engaging, and personalized.',
             'Salespeople engage with prospects on social media sites in a process known as social selling (the main focus should be LinkedIn with B2B SaaS sales.',
           ]}
+          marginBottom="-70px"
           reverse
         />
       </div>
