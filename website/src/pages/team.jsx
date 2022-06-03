@@ -30,6 +30,7 @@ const Team = () => {
           title="Artiom Cebanu"
           jobTitle="Managing Director"
           email="acebanu@finhubss.com"
+          link="https://www.linkedin.com/in/artiom-cebanu-fhcf-fhss/"
           reverse
         />
         <TeamManagementItem
@@ -37,12 +38,14 @@ const Team = () => {
           title="Dorian Bujor"
           jobTitle="Vice-President of Business Development"
           email="dbujor@finhubss.com"
+          link="https://www.linkedin.com/in/dorianbujor/"
         />
         <TeamManagementItem
           image="/assets/images/team/Finhub2643.jpg"
           title="Igor Shorin"
           jobTitle="Chief Communications Officer"
           email="ishorin@finhubss.com"
+          link="https://www.linkedin.com/in/igor-shorin-441301215/"
           reverse="true"
         />
       </Section>
@@ -65,12 +68,14 @@ const Team = () => {
             image="/assets/images/team/Finhub2661.jpg"
             title="Alexandru Sterpu"
             jobTitle="Lead Software Developer"
+            link="https://www.linkedin.com/in/alex-sterpu/"
             email="asterpu@finhubss.com"
           />
           <TeamIT
             image="/assets/images/team/Finhub2700.jpg"
             title="Marin Terentiev"
             jobTitle="Lead Software Developer"
+            link="https://www.linkedin.com/in/marin-terentiev-915406161/"
             email="mterentiev@finhubss.com"
           />
           <TeamIT
@@ -121,23 +126,27 @@ const Team = () => {
             image="/assets/images/team/Finhub2595.jpg"
             title="Victor Uncuta"
             jobTitle="Account Executive"
+            link="https://www.linkedin.com/in/victor-uncuta-72bb13184/"
             email="uvictor@finhubss.com"
           />
           <TeamIT
             image="/assets/images/team/Finhub2917.jpg"
             title="Tudor Craitamindra"
+            link="https://www.linkedin.com/in/theodore-cray-ab1416196/"
             jobTitle="Business Development Representative"
             email="ctudor@finhubss.com"
           />
           <TeamIT
             image="/assets/images/team/Finhub2579.jpg"
             title="Ioan Ćorić"
+            link="https://www.linkedin.com/in/ioan-%C4%87ori%C4%87-fhss-bdr17/"
             jobTitle="Business Development Representative"
             email="iciorici@finhubss.com"
           />
           <TeamIT
             image="/assets/images/team/Finhub2938.jpg"
             title="Lyubov Turcan"
+            link="https://www.linkedin.com/in/liubov-turcan-2b2426224/"
             jobTitle="Business Development Representative"
             email="lturcanu@finhubss.com"
           />

@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react';
 import { OpacityVariants } from '../utils/motion/OpacityVariants'
 
 type ITeamItem = {
   image: string;
   title: string;
+  link: string;
   jobTitle: string;
   description: string;
   phoneNumber: string;
@@ -12,6 +14,8 @@ type ITeamItem = {
 };
 
 const TeamManagementItem = (props: ITeamItem) => {
+  const [titleMouseEnter, setTitleMouseEnter] = useState(false)
+
   const styles = {
     container: {
       display: 'flex',
@@ -78,7 +82,7 @@ const TeamManagementItem = (props: ITeamItem) => {
       margin: props.reverse ? '0 0 0 10px' : '0 10px 0 0',
     },
     iconIn: {
-      border: '1px solid #A3A3A3',
+      border: titleMouseEnter ? '1px solid #2C4DCA' : '1px solid #A3A3A3',
       padding: '3px',
       width: '21px',
       margin: props.reverse ? '0 10px 0 0' : '0 0 0 10px',
@@ -126,7 +130,12 @@ const TeamManagementItem = (props: ITeamItem) => {
           <div style={styles.image}></div>
         </div>
         <div style={styles.contentContainer}>
-          <div className="flex" style={styles.titleContainer}>
+          <div 
+            className="flex" 
+            style={styles.titleContainer}
+            onMouseEnter={() => setTitleMouseEnter(true)}
+            onMouseLeave={() => setTitleMouseEnter(false)}
+          >
             <div>
               <img
                 src="/icons/icon-cornir-blue.svg"
@@ -135,17 +144,30 @@ const TeamManagementItem = (props: ITeamItem) => {
               />
             </div>
             <div>
-              <div style={styles.titleRow}>
-                {props.title}
-                <div>
-                  <img
-                    src="/icons/icon-in.svg"
-                    alt="in"
-                    style={styles.iconIn}
-                  />
+              <a href={props.link} target="_blank">
+                <div 
+                  style={styles.titleRow} 
+                  className={`${props.link ? 'cursor-pointer' : ''}`}
+                >
+                  {props.title}
+                  <div>
+                    <img
+                      src={`
+                        ${titleMouseEnter ? '/icons/icon-in-blue.svg' : '/icons/icon-in.svg'}
+                      `}
+                      alt="in"
+                      style={styles.iconIn}
+                    />
+                  </div>
                 </div>
-              </div>
-              <div style={styles.jobTitle} className="flex text-[16pt] text-app-color-600 hover:text-app-color-300">
+              </a>
+              <div 
+                style={styles.jobTitle} 
+                className={`
+                  flex text-[16pt] 
+                  ${titleMouseEnter ? 'text-app-color-300' : 'text-app-color-600'}
+                `}
+              >
                 {props.jobTitle}
               </div>
             </div>

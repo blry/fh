@@ -1,16 +1,20 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react';
 import { OpacityVariants } from '../utils/motion/OpacityVariants'
 
 type ITeamITProps = {
   image: string;
   title: string;
   jobTitle: string;
+  link: string;
   description: string;
   phoneNumber: string;
   email: string;
 };
 
 const TeamIT = (props: ITeamITProps) => {
+  const [titleMouseEnter, setTitleMouseEnter] = useState(false)
+
   const styles = {
     container: {
       width: '200px',
@@ -49,7 +53,7 @@ const TeamIT = (props: ITeamITProps) => {
       padding: '5px',
     },
     icon: {
-      border: '1px solid #A3A3A3',
+      border: titleMouseEnter ? '1px solid #2C4DCA' : '1px solid #A3A3A3',
       padding: '3px',
       width: '21px',
       margin: '0 10px 0 0',
@@ -84,12 +88,22 @@ const TeamIT = (props: ITeamITProps) => {
           <span style={styles.span}></span>
         </div>
         <div style={styles.content}>
-          <div className='mb-1 mt-2' style={styles.titleRow}>
-            <div>
-              <img src="/icons/icon-in.svg" alt="in" style={styles.icon} />
+          <a href={props.link} target="_blank">
+            <div 
+              className={`${props.link ? 'cursor-pointer' : ''} mb-1 mt-2`}
+              style={styles.titleRow}
+              onMouseEnter={() => setTitleMouseEnter(true)}
+              onMouseLeave={() => setTitleMouseEnter(false)}
+            >
+              <div>
+                <img 
+                  src={`${titleMouseEnter ? '/icons/icon-in-blue.svg' : '/icons/icon-in.svg'}`} 
+                  alt="in" style={styles.icon} 
+                />
+              </div>
+              {props.title}
             </div>
-            {props.title}
-          </div>
+          </a>
           <div className='my-2' style={styles.jobTitle}>{props.jobTitle}</div>
           <div style={styles.description}>{props.description}</div>
           <div style={styles.contact}>{props.phoneNumber}</div>
