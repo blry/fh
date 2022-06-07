@@ -76,7 +76,7 @@ const HomeBanner = () => {
         style={
           backgroundImage ? styles.backgroundImage : styles.backgroundColor
         }
-        className={`
+        className={`flex sm:hidden
           ${opacityStyle ? 'opacity-0' : 'opacity-100'} 
           ${scale ? 'scale-125' : ''} 
           ${transitionFast ? 'transition-2s' : 'transition-30s'}
@@ -85,13 +85,18 @@ const HomeBanner = () => {
         <div className="container h-full flex flex-col justify-center items-center text-center text-white">
           <p
             className="text-3xl lg:text-6xl sm:my-8 transition"
-            style={{
-              filter: `${ logo ? '' : 'drop-shadow(2px 4px 6px black)'}`
-            }}
           >
             <MainBannerText title={title} start={start} logo={logo} />
           </p>
         </div>
+      </div>
+      <div className='hidden sm:flex'>
+        <video autoPlay loop muted>
+          <source
+            src="/video/banner.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
     </div>
   );

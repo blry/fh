@@ -52,7 +52,16 @@ export const MainBannerText = (props: Props) => {
 							/>
 						</div>
 					</div>
-				) : props.title
+				) : props.title == 'Trusted partner for thriving businesses' 
+					? (
+						<div className="flex text-lg sm:text-3xl lg:text-4xl items-center">
+							<img
+								src="/assets/images/home-banner/Asset2.svg"
+								className="h-6 sm:h-16"
+								alt="logo"
+							/>
+						</div>
+					) : props.title
 			}
 		</motion.div>
 	)
