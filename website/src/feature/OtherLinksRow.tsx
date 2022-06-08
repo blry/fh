@@ -1,6 +1,5 @@
 /* eslint-disable prettier/prettier */
 import { useRouter } from "next/router";
-
 import { motion } from 'framer-motion'
 import { OpacityVariants } from '../utils/motion/OpacityVariants'
 import { SendButton } from "../button/SendButton";
@@ -47,7 +46,9 @@ const OtherLinksRow = (props: IOtherLinksRowProps) => {
       </div>
       <div className="flex flex-col-reverse sm:flex-row sm:grid-container sm:grid-cols-6 mb-2">
         <div className="w-36 sm:col-span-1">
-          <SendButton title="Read More" width={146} inputWidth={'87px'} />
+          <a target="_blank" href={props.link}>
+            <SendButton title="Read More" width={146} inputWidth={'87px'} />
+          </a>
         </div>
         <div className="w-full sm:col-span-5 pl-1 text-black mt-3">
           <div className="text-sm">{props.description}</div>

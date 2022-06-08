@@ -1,7 +1,6 @@
 import className from 'classnames';
 import { useRouter } from 'next/router';
 import { useRef, MutableRefObject } from 'react'
-
 import { motion } from 'framer-motion'
 import { OpacityVariants } from '../utils/motion/OpacityVariants'
 import { SendButton } from '../button/SendButton';
@@ -20,7 +19,7 @@ type IVerticalFeatureRowProps = {
   reverse?: boolean;
   icon?: boolean;
   line?: boolean;
-  link?: string | undefined;
+  link?: string;
   fullRow?: boolean;
   hoverShadow?: boolean;
   marginTop?: string;
@@ -211,7 +210,14 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               </div>
             ))}
             <div style={styles.button}>
-              <SendButton title='Read More' width={146} inputWidth={'87px'} top={'5px'} />
+              
+                <SendButton 
+                  title='Read More' 
+                  width={146} inputWidth={'87px'} 
+                  top={'5px'} 
+                  link={props.link}
+                />
+              
             </div>
           </div>
           <div className="p-3 md:mt-12 md:ml-auto md:mr-auto lg:max-h-56 flex items-center justify-center desktopTitle">

@@ -93,7 +93,7 @@ const About = () => (
         icon
         imageSize="125%"
         reverse
-        link="product-development#team-extension"
+        link="team-extension"
       />
     </div>
   </>

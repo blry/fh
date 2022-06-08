@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { useState } from 'react'
 
 type IProps = {
@@ -6,6 +7,7 @@ type IProps = {
     width?: number,
     top?: string,
     inputWidth? : string,
+    link?: string;
 }
 
 const SendButton = (props: IProps) => {
@@ -24,21 +26,22 @@ const SendButton = (props: IProps) => {
     return(
         <>
             <div 
-                style={styles.buttonContainer} 
+                style={styles.buttonContainer}
                 onMouseEnter={() => setArrow(true)}
                 onMouseLeave={() => setArrow(false)}
             >
+                <Link href={props.link ? props.link : ''} passHref>
                 <motion.div 
-                    whileTap={{ scale: 0.95 }} 
+                    whileTap={{ scale: 0.95 }}
                 >
                     <label
                         htmlFor="submit_form"
                         style={{width: `${props.width}px`}}
-                        className="float-right transition relative text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button"
+                        className="float-right cursor-pointer transition relative text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button"
                     >
                         <input 
                             id="submit_form" 
-                            className='bg-white font-bold hover:text-app-color-600 z-10 whitespace-nowrap'
+                            className='bg-white cursor-pointer font-bold hover:text-app-color-600 z-10 whitespace-nowrap'
                             style={styles.input}
                             type="submit" 
                             value={props.title} 
@@ -53,7 +56,7 @@ const SendButton = (props: IProps) => {
                         />
                     </label>
                 </motion.div>
-               
+                </Link>
             </div>
             
         </>
