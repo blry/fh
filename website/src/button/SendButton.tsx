@@ -3,16 +3,15 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 type IProps = {
-    title: string,
-    width?: number,
-    top?: string,
-    inputWidth? : string,
+    title: string;
+    width?: number;
+    top?: string;
+    inputWidth? : string;
     link?: string;
 }
 
 const SendButton = (props: IProps) => {
     const [arrow, setArrow] = useState(false)
-
     const styles = {
         input: {
             width: props.inputWidth ? props.inputWidth : '98px',
@@ -30,7 +29,7 @@ const SendButton = (props: IProps) => {
                 onMouseEnter={() => setArrow(true)}
                 onMouseLeave={() => setArrow(false)}
             >
-                <Link href={props.link ? props.link : ''} passHref>
+                <Link href={encodeURIComponent(props.link!)} passHref={true}>
                 <motion.div 
                     whileTap={{ scale: 0.95 }}
                 >

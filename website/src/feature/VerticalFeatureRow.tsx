@@ -210,14 +210,12 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
               </div>
             ))}
             <div style={styles.button}>
-              
                 <SendButton 
                   title='Read More' 
                   width={146} inputWidth={'87px'} 
                   top={'5px'} 
-                  link={props.link}
+                  link={props.link ? props.link : ''}
                 />
-              
             </div>
           </div>
           <div className="p-3 md:mt-12 md:ml-auto md:mr-auto lg:max-h-56 flex items-center justify-center desktopTitle">

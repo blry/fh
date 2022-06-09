@@ -2,18 +2,20 @@
 import { useRouter } from "next/router";
 import { motion } from 'framer-motion'
 import { OpacityVariants } from '../utils/motion/OpacityVariants'
-import { SendButton } from "../button/SendButton";
+import {useState} from 'react'
 
 type IOtherLinksRowProps = {
   title?: string;
   description: string;
   image: string;
   imageAlt: string;
-  link: string;
+  link?: string;
 };
 
 const OtherLinksRow = (props: IOtherLinksRowProps) => {
   const router = useRouter();
+  const [arrow, setArrow] = useState(false)
+
   const styles = {
     span: {
       display: props.title ? 'block' : 'none',
@@ -46,8 +48,32 @@ const OtherLinksRow = (props: IOtherLinksRowProps) => {
       </div>
       <div className="flex flex-col-reverse sm:flex-row sm:grid-container sm:grid-cols-6 mb-2">
         <div className="w-36 sm:col-span-1">
-          <a target="_blank" href={props.link}>
-            <SendButton title="Read More" width={146} inputWidth={'87px'} />
+          <a href={props.link} target="_blank">
+          <div 
+                className="flex justify-center"
+                onMouseEnter={() => setArrow(true)}
+                onMouseLeave={() => setArrow(false)}
+            >
+                <motion.div 
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <div
+                        style={{width: `138px`}}
+                        className="float-right cursor-pointer transition relative text-gray-800 w-32 flex text-sm font-bold border-2 p-1.5 mr-4 mt-4 border-l-8 border-gray-800 modal-contactus-send-button"
+                    >
+                        <p
+                            className='bg-white w-[77px] cursor-pointer font-bold hover:text-app-color-600 z-10 whitespace-nowrap'
+                           
+                        >Read More</p>
+                        <img
+                            src={`/icons/${arrow ? 'Blue Arrow.svg' : 'gray-arrow.svg'}`}
+                            alt=""
+                            className="h-4 t-[7px] mt-0.5 ml-1 text-gray-900 absolute right-2 mb-2"
+                            
+                        />
+                    </div>
+                </motion.div>
+            </div>
           </a>
         </div>
         <div className="w-full sm:col-span-5 pl-1 text-black mt-3">

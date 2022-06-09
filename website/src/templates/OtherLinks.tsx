@@ -22,7 +22,7 @@ const OtherLinks = () => (
         Part of net income the Fund generates will be reinvested and reflected in the value of your Shares."
         image="/icons/icon-finhub.svg"
         imageAlt="Finhub image"
-        link="https://www.finhubfund.com/"
+        link="https://finhubfund.com"
       />
       <OtherLinksRow
         title="Crowdfunding"
