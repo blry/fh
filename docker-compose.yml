@@ -1,5 +1,9 @@
 version: '3.4'
 
+secrets:
+  smtp_password:
+    file: ${SMTP_PASSWORD_FILE}
+
 services:
 
   traefik:
@@ -57,6 +61,9 @@ services:
     environment:
       - XDEBUG_CONFIG
       - PHP_IDE_CONFIG
+      - SMTP_PASSWORD_FILE=/run/secrets/smtp_password
+    secrets:
+      - smtp_password
     # network_mode: host # 9000
     # ports:
     #   - 9000:9000

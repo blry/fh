@@ -52,6 +52,18 @@ const ContactFormUs = () => {
     },
   };
 
+  const sendEmail = (name: string, sender: string, message: string) => {
+    const formData  = new FormData();
+    formData.append('name', name)
+    formData.append('sender', sender)
+    formData.append('message', message)
+
+    fetch('https://api.' + window.location.host, {
+      method: 'POST',
+      body: formData
+    });
+  }
+
   return (
     <>
       <form
@@ -63,15 +75,12 @@ const ContactFormUs = () => {
             email: { value: string };
             message: { value: string };
           };
-          const name = target.name?.value;
-          const company = target.company?.value;
+          const name = target.name?.value || target.company?.value;
           const email = target.email?.value;
           const message = target.message?.value;
 
-          if (
-            name !== '' ||
-            (company !== '' && email !== '' && message !== '')
-          ) {
+          if (name && email && message) {
+            sendEmail(name, email, message);
             setSubmit(true);
           } else {
             nameInput.current.focus();

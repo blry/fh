@@ -1,2 +1,51 @@
 <?php
-    echo "hello world!";
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    
+    require '../PHPMailer/src/Exception.php';
+    require '../PHPMailer/src/PHPMailer.php';
+    require '../PHPMailer/src/SMTP.php';
+
+    if (
+        !isset($_POST['sender']) ||
+        !filter_var($_POST['sender'], FILTER_VALIDATE_EMAIL) ||
+        !isset($_POST['name']) ||
+        !isset($_POST['message'])
+    ) {
+        echo 'Validation required';
+        die();
+    }
+
+    $sender = $_POST['sender'];
+    $name = $_POST['name'];
+    $message = $_POST['message'];
+
+    $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+    try {
+        $mail->SMTPDebug = 2;
+        $mail->isSMTP();
+        $mail->Host = "smtp.gmail.com";
+        $mail->Port = 465;
+        $mail->SMTPAuth = true;
+        $mail->Username = 'asterpu@finhubss.com';
+        $mail->Password = file_get_contents($_ENV['SMTP_PASSWORD_FILE']);
+        $mail->SMTPSecure = 'ssl';
+
+        //Recipients
+        $mail->setFrom('asterpu@finhubss.com', 'FINHUBSS.COM Contact Form');
+        //$mail->addAddress('dbujor@finhubss.com');
+        $mail->addAddress('asterpu@finhubss.com');
+        $mail->addReplyTo($sender, $name);
+        //$mail->addCC('cc@example.com');
+        //$mail->addBCC('bcc@example.com');
+
+        $mail->isHTML(false);
+        $mail->Subject = 'FinHub Concact Form - ' . $name;
+        $mail->Body = "Name: $name\r\nEmail: $sender\r\nMessage: $message";
+
+        $mail->send();
+        echo 'Message has been sent';
+    } catch (Exception $e) {
+        echo 'Message could not be sent.';
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
+    }
