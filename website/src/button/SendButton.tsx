@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import { useState } from 'react'
 
 type IProps = {
@@ -8,6 +7,7 @@ type IProps = {
     top?: string;
     inputWidth? : string;
     link?: string;
+    onClick?: CallableFunction;
 }
 
 const SendButton = (props: IProps) => {
@@ -28,8 +28,8 @@ const SendButton = (props: IProps) => {
                 style={styles.buttonContainer}
                 onMouseEnter={() => setArrow(true)}
                 onMouseLeave={() => setArrow(false)}
+                onClick={() => props.onClick && props.onClick()}
             >
-                <Link href={props.link ? encodeURIComponent(props.link!) : '#'} passHref={!!props.link}>
                 <motion.div 
                     whileTap={{ scale: 0.95 }}
                 >
@@ -55,7 +55,6 @@ const SendButton = (props: IProps) => {
                         />
                     </label>
                 </motion.div>
-                </Link>
             </div>
             
         </>
