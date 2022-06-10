@@ -19,8 +19,9 @@
     $sender = $_POST['sender'];
     $name = $_POST['name'];
     $message = $_POST['message'];
+    $ip = $_SERVER['REMOTE_ADDR'];
 
-    $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+    $mail = new PHPMailer(true);
     try {
         $mail->SMTPDebug = 2;
         $mail->isSMTP();
@@ -33,15 +34,14 @@
 
         //Recipients
         $mail->setFrom('asterpu@finhubss.com', 'FINHUBSS.COM Contact Form');
-        //$mail->addAddress('dbujor@finhubss.com');
-        $mail->addAddress('asterpu@finhubss.com');
+        $mail->addAddress('dbujor@finhubss.com');
         $mail->addReplyTo($sender, $name);
         //$mail->addCC('cc@example.com');
         //$mail->addBCC('bcc@example.com');
 
         $mail->isHTML(false);
         $mail->Subject = 'FinHub Concact Form - ' . $name;
-        $mail->Body = "Name: $name\r\nEmail: $sender\r\nMessage: $message";
+        $mail->Body = "Name: $name\r\nEmail: $sender\r\nIP:$ip\r\nMessage: $message";
 
         $mail->send();
         echo 'Message has been sent';
