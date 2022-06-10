@@ -29,7 +29,7 @@ const SendButton = (props: IProps) => {
                 onMouseEnter={() => setArrow(true)}
                 onMouseLeave={() => setArrow(false)}
             >
-                <Link href={encodeURIComponent(props.link!)} passHref={true}>
+                <Link href={props.link ? encodeURIComponent(props.link!) : '#'} passHref={!!props.link}>
                 <motion.div 
                     whileTap={{ scale: 0.95 }}
                 >
