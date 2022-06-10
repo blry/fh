@@ -73,7 +73,7 @@ export default function Navbar() {
       <div className="fixed z-50 top-0 w-full bg-white lg:shadow flex flex-col items-center">
         <nav className="container flex justify-around z-20 mt-2">
           <div></div>
-          <div className="hidden lg:flex text-[13px] text-gray">
+          <div className="hidden lg:flex text-[15px] text-gray">
             {
               firstMenuItems.map(item => (
                 <Link href={item.link}>
