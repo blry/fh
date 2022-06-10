@@ -126,7 +126,7 @@ const ContactFormUs = () => {
               className="modal-contactus-input font-thin"
             ></textarea>
           </div>
-          <SendButton title="Send Message" width={153}/>
+          <SendButton title="Send Message" width={153} disabled={submit}/>
           <div style={styles.resultMessageContainer}>
             <p style={styles.rezultMessageText}>Your message has been sent</p>
           </div>

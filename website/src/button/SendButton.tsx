@@ -8,6 +8,7 @@ type IProps = {
     inputWidth? : string;
     link?: string;
     onClick?: CallableFunction;
+    disabled?: boolean;
 }
 
 const SendButton = (props: IProps) => {
@@ -44,6 +45,7 @@ const SendButton = (props: IProps) => {
                             style={styles.input}
                             type="submit" 
                             value={props.title} 
+                            disabled={props.disabled || false }
                         />
                         <img
                             src={`/icons/${arrow ? 'Blue Arrow.svg' : 'gray-arrow.svg'}`}

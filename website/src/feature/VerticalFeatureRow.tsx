@@ -214,6 +214,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
                   title='Read More' 
                   width={146} inputWidth={'87px'} 
                   top={'5px'} 
+                  onClick={() => props.link && router.push(props.link)}
                   link={props.link ? props.link : ''}
                 />
             </div>
