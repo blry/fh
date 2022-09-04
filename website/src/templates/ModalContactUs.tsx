@@ -9,7 +9,7 @@ const ModalContactUs = (props: any) => {
 
   const styles = {
     modalContainer: {
-      display: props.modal ? 'flex' : 'none',
+      display: 'flex',
       position: 'absolute' as 'absolute',
       width: '100%',
       height: '100vh',
@@ -28,6 +28,7 @@ const ModalContactUs = (props: any) => {
     closeRow: {
       display: 'flex',
       justifyContent: 'end',
+      zIndex: 9999
     },
     closeContainer: {
       padding: '7px',
@@ -68,7 +69,14 @@ const ModalContactUs = (props: any) => {
   return (
     <>
       <div className="flex text-app-color-500" style={styles.modalContainer}>
-        <div className="flex modal-content" style={styles.modalContent}>
+        <div className="flex modal-content relative" style={styles.modalContent}>
+          <div className='hidden lg:block absolute w-full mt-2'>
+            <div className='flex justify-center'>
+              <div className='bg-[#D23C77] text-white text-sm px-10 py-2'>
+                We are going through a rebranding phase - our new website is under development.
+              </div>
+            </div>
+          </div>
           <div style={styles.closeRow}>
             <div
               style={styles.closeContainer}

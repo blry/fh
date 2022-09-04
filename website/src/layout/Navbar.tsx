@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 import { ModalContactUs } from '../templates/ModalContactUs';
 import {NavbarItemLine} from '../utils/motion/NavbarItemLine';
+import { useRouter } from 'next/router';
 
 const primaryItems = [
   {
@@ -49,13 +50,17 @@ export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(-1)
   const [buttonHover, setButtonHover] = useState(false)
 
+  const router = useRouter()
+
   const ModalHandler = (e: any) => {
     e.preventDefault();
+    router.push(router.pathname + "?contact=true")
     setModal(!modal);
     setIsOpen(false);
   };
 
   const closeModalCallback = () => {
+    router.push(router.pathname)
     setModal(false);
   };
 
@@ -154,10 +159,12 @@ export default function Navbar() {
               alt=""
             />
           </button>
-          <ModalContactUs
-            closeModalCallback={closeModalCallback}
-            modal={modal}
-          />
+          { router.query.contact && 
+            <ModalContactUs
+              closeModalCallback={closeModalCallback}
+              modal={modal}
+            />
+          }
         </nav>
       </div>
 
