@@ -1,4 +1,5 @@
 import { Banner } from '../templates/Banner';
+import Script from 'next/script'
 
 const styles = {
   textContainer: {
@@ -15,6 +16,29 @@ const styles = {
 const Imprint = () => {
   return (
     <>
+      
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-3C568ZT9DR"></Script>
+      <Script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-3C568ZT9DR');
+        `}
+      </Script>
+      <Script>
+        {`
+          (function(h,o,t,j,a,r){
+              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:3143548,hjsv:6};
+              a=o.getElementsByTagName('head')[0];
+              r=o.createElement('script');r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+          })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        `}
+      </Script>
       <Banner title="Imprint" />
       <div className="flex md:flex-row flex-col justify-center align-center md:justify-evenly mt-16 mb-32 lg:ml-12 xl:ml-32 pl-3">
         <div className="flex items-center md:mb-0">

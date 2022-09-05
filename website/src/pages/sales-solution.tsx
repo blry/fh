@@ -2,10 +2,33 @@ import { VerticalFeatureRow } from '../feature/VerticalFeatureRow';
 import { Section } from '../layout/Section';
 import { Banner } from '../templates/Banner';
 import SalesTools from '../templates/SalesTools';
+import Script from 'next/script'
 
 const SalesSolution = () => {
   return (
     <>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-3C568ZT9DR"></Script>
+      <Script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-3C568ZT9DR');
+        `}
+      </Script>
+      <Script>
+        {`
+          (function(h,o,t,j,a,r){
+              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+              h._hjSettings={hjid:3143548,hjsv:6};
+              a=o.getElementsByTagName('head')[0];
+              r=o.createElement('script');r.async=1;
+              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+              a.appendChild(r);
+          })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        `}
+      </Script>
       <Banner title="Sales Solution" />
       <div className="max-w-[1400px] mx-auto mb-28">
         <VerticalFeatureRow
