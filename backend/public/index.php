@@ -6,8 +6,6 @@
     require '../PHPMailer/src/PHPMailer.php';
     require '../PHPMailer/src/SMTP.php';
 
-    header('Access-Control-Allow-Origin: *');
-
     if (
         !isset($_POST['sender']) ||
         !filter_var($_POST['sender'], FILTER_VALIDATE_EMAIL) ||
