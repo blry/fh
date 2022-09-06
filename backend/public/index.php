@@ -6,6 +6,8 @@
     require '../PHPMailer/src/PHPMailer.php';
     require '../PHPMailer/src/SMTP.php';
 
+    header('Access-Control-Allow-Origin: *');
+
     if (
         !isset($_POST['sender']) ||
         !filter_var($_POST['sender'], FILTER_VALIDATE_EMAIL) ||
@@ -34,7 +36,7 @@
 
         //Recipients
         $mail->setFrom('asterpu@finhubss.com', 'FINHUBSS.COM Contact Form');
-        $mail->addAddress('dbujor@finhubss.com');
+        $mail->addAddress('info@finhubss.com')
         $mail->addReplyTo($sender, $name);
         //$mail->addCC('cc@example.com');
         //$mail->addBCC('bcc@example.com');
