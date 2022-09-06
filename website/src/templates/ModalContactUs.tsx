@@ -19,7 +19,7 @@ const ModalContactUs = (props: any) => {
     },
     modalContent: {
       width: '980px',
-      height: '560px',
+      height: '605px',
       margin: 'auto',
       backgroundColor: 'white',
       flexDirection: 'column' as 'column',

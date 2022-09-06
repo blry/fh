@@ -1,10 +1,16 @@
 /* eslint-disable unused-imports/no-unused-vars */
 import React, { MutableRefObject, useRef, useState } from 'react';
+
 import { SendButton } from '../button/SendButton';
+import useDownloader from "react-use-downloader";
 
 const ContactFormUs = () => {
   const [submit, setSubmit] = useState(false);
   const nameInput = useRef() as MutableRefObject<HTMLInputElement>;
+  const { download } = useDownloader();
+
+  const fileUrl = "/Finhub - Company Presentation.pdf";
+  const filename = "Finhub - Company Presentation.pdf";
 
   const styles = {
     container: {
@@ -51,6 +57,10 @@ const ContactFormUs = () => {
       fontSize: '12pt',
     },
   };
+
+  const downloadClick = () => {
+    download(fileUrl, filename)
+  }
 
   const sendEmail = (name: string, sender: string, message: string) => {
     const formData  = new FormData();
@@ -129,6 +139,15 @@ const ContactFormUs = () => {
           <SendButton title="Send Message" width={153} disabled={submit}/>
           <div style={styles.resultMessageContainer}>
             <p style={styles.rezultMessageText}>Your message has been sent</p>
+          </div>
+          <div className='text-[13px] font-bold absolute mt-2'>
+            <p>Want to learn more about our company? Click &nbsp;
+              <span 
+                className='text-[#d23c77] underline underline-offset-2 cursor-pointer'
+                onClick={downloadClick}
+              >
+                here
+              </span>&nbsp; to download the company's presentation.</p>
           </div>
         </div>
       </form>

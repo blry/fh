@@ -118,6 +118,7 @@ body {
     height: auto !important;
     flex-direction: column !important;
     align-items: center !important;
+    margin-top: 45px;
   }
   .modal-footer * {
     margin: 5px 0;
