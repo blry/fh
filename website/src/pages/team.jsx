@@ -40,14 +40,7 @@ const Team = () => {
           email="dbujor@finhubss.com"
           link="https://www.linkedin.com/in/dorianbujor/"
         />
-        <TeamManagementItem
-          image="/assets/images/team/Finhub2643.jpg"
-          title="Igor Shorin"
-          jobTitle="Chief Communications Officer"
-          email="ishorin@finhubss.com"
-          link="https://www.linkedin.com/in/igor-shorin-441301215/"
-          reverse="true"
-        />
+        
       </Section>
       <Section image="/assets/images/symbol.svg" titleBlack="Legal">
         <TeamManagementItem
