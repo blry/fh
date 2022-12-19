@@ -26,7 +26,7 @@ const Imprint = () => {
               <div>Company nr. FN 529227 a </div>
               <div>UID (VAT)-Number: ATU75318826</div>
             </div>
-            <div>Address: Beatrixgasse 27-2-15, 1030 Wien, Austria</div>
+            <div>Address: Beatrixgasse 27-2-29, 1030 Wien, Austria</div>
           </div>
         </div>
         <div className="flex items-center w-full md:w-72 mt-12 md:mt-0">

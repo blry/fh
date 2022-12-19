@@ -79,9 +79,9 @@ const Team = () => {
           />
           <TeamIT
             image="/assets/images/team/Finhub2724.jpg"
-            title="Liviu Leșan"
-            jobTitle="Senior Software Developer"
-            email="liviul@finhubss.com"
+            title="Valeria Achirus"
+            jobTitle="Middle Front End Developer"
+            email="vachirus@finhubss.com"
           />
         </div>
         <div className="block sm:hidden">

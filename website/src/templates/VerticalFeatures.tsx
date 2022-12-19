@@ -40,20 +40,7 @@ const VerticalFeatures = () => (
       fullRow
       line
     />
-    <VerticalFeatureRow
-      title="Moldavian Cycling Federation"
-      description="The Moldavian Cycling Federation (FCRM) is a public sports organization founded in late 1993. Today it includes 8 
-      members. The Moldavian Cycling Federation is recognized by the National Olympic Committee of the Republic of Moldova, by the 
-      Ministry of Education, Culture and Research of the Republic of Moldova, as well as by the International Cycling Union (UCI) and 
-      the European Cycling Union (UEC) as the exclusive organization in Moldova having priority right to control the development of 
-      cycling at the national level."
-      image="/assets/images/index-photo3.png"
-      imageFilter={true}
-      imageAlt="feature alt text"
-      hoverShadow
-      fullRow
-      line
-    />
+
   </Section>
 );
 

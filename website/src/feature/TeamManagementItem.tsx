@@ -5,7 +5,7 @@ import { OpacityVariants } from '../utils/motion/OpacityVariants'
 type ITeamItem = {
   image: string;
   title: string;
-  link: string;
+  link?: string;
   jobTitle: string;
   description: string;
   phoneNumber: string;

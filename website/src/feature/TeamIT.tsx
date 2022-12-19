@@ -97,8 +97,7 @@ const TeamIT = (props: ITeamITProps) => {
             >
               <div>
                 <img 
-                  src={`${titleMouseEnter ? '/icons/icon-in-blue.svg' : '/icons/icon-in.svg'}`} 
-                  alt="in" style={styles.icon} 
+                
                 />
               </div>
               {props.title}
