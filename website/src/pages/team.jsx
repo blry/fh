@@ -40,7 +40,6 @@ const Team = () => {
           email="dbujor@finhubss.com"
           link="https://www.linkedin.com/in/dorianbujor/"
         />
-        
       </Section>
       <Section image="/assets/images/symbol.svg" titleBlack="Legal">
         <TeamManagementItem
