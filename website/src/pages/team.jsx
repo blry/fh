@@ -77,7 +77,7 @@ const Team = () => {
             email="tandrei@finhubss.com"
           />
           <TeamIT
-            image="/assets/images/team/Finhub2724.jpg"
+            image="/assets/images/team/valeria.jpg"
             title="Valeria Achirus"
             jobTitle="Middle Front End Developer"
             email="vachirus@finhubss.com"
