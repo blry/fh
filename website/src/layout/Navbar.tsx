@@ -78,9 +78,7 @@ export default function Navbar() {
       <div className="fixed z-50 top-0 w-full bg-white lg:shadow flex flex-col items-center">
         <div className='w-full'>
           <div className='flex justify-center'>
-            <div className='bg-[#D23C77] text-white text-sm px-10 py-2 w-full flex justify-center'>
-              We are going through a rebranding phase - our new website is under development.
-            </div>
+            
           </div>
         </div>
         <nav className="container flex justify-around z-20 mt-2">
