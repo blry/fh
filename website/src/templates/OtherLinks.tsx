@@ -46,10 +46,9 @@ const OtherLinks = () => (
         link="https://anderscapital.eu/"
       />
       <OtherLinksRow
-        title="Kodeson"
         description="Kodeson is an expert team with over 10 years of experience in software development that adjusts to your specific needs without wasting your time. We provide custom solutions in Product Development and Outstaffing on the European market since 2015."
         image="/icons/Kodeson_logo.svg"
-        imageAlt="Kodeson image"
+        imageAlt="Finhub image"
         link="https://kodeson.com/"
       />
     </div>
