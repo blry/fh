@@ -59,7 +59,7 @@ const Footer = () => (
             alt="phone"
           />
           <p style={styles.footerElemText}>
-            Beatrixgasse 27, 1030 Wien, Austria
+            Kärntner Ring 14, Top 11, 1010 Wien, Austria
           </p>
         </div>
       </div>
